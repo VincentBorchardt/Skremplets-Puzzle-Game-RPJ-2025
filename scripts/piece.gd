@@ -14,8 +14,7 @@ enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 enum Type {RED, BLUE, YELLOW, WILD, NONE}
 
 func is_touching(piece2):
-	#TODO This doesn't account for WILD yet
-	if self == piece2 or self.type != piece2.type:
+	if self == piece2 or (self.type != piece2.type and piece2.type != Type.WILD):
 		return false
 	else:
 		for point1 in self.secondary_points:
@@ -25,6 +24,13 @@ func is_touching(piece2):
 				if x_dist <= 1 and y_dist <= 1 and not (x_dist == 1 and y_dist == 1):
 					return true
 	return false
+
+func rotate(new_rotation_angle):
+		rotation = rotation + new_rotation_angle
+		translation = Vector2i(Vector2(translation).rotated(new_rotation_angle).round())
+		for i in range(secondary_points.size()):
+			var point = secondary_points[i]
+			secondary_points[i] = Vector2i(Vector2(point).rotated(new_rotation_angle).round())
 
 # This function is going to be hard--right now I'm not going to check for off-the-grid
 # and that will cause false positives, but they can be caught elsewhere
@@ -38,13 +44,20 @@ func get_adjacent_points():
 				adjacent_points.append(candidate)
 	return adjacent_points
 
-func points_on_grid():
-	#TODO This hardcodes the grid size, change that in the final code
+func points_on_grid(grid_x, grid_y):
 	for point in self.secondary_points:
-		if (point.x < 0 or point.y < 0 or point.x > 4 or point.y > 4):
+		if (point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y):
 			return false
 		else:
 			return true
+
+func pick_up_piece(player):
+	self.owner = player
+	for i in range(secondary_points.size()):
+		secondary_points[i] = secondary_points[i] - root_point_location
+	root_point_location = Vector2i(0, 0)
+	rotate_piece(-(rotation))
+	
 
 func _to_string() -> String:
 	return "Piece at " + str(root_point_location) + ", " + str(secondary_points)
