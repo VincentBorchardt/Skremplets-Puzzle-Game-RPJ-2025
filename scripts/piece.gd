@@ -10,6 +10,7 @@ class_name Piece extends Resource
 @export var rotation: float
 
 #TODO These need to be updated for the final project
+# They should also be in a better place to not be duplicated everywhere
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 enum Type {RED, BLUE, YELLOW, WILD, NONE}
 

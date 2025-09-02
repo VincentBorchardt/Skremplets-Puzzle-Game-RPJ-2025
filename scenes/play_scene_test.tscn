@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgdtshogglm73"]
+
+[ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/grid.tscn" id="1_g6us7"]
+
+[node name="PlaySceneTest" type="Node2D"]
+
+[node name="Player1Grid" parent="." instance=ExtResource("1_g6us7")]
+position = Vector2(120, 280)
+
+[node name="Player2Grid" parent="." instance=ExtResource("1_g6us7")]
+position = Vector2(1255, 280)
+grid_owner = 1
