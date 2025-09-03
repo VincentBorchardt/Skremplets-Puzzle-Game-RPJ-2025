@@ -9,7 +9,7 @@ class_name Piece extends Resource
 # currently in radians (so 90 degrees = TAU/4), 
 @export var rotation: float
 
-#TODO These need to be updated for the final project
+# TODO These need to be updated for the final project
 # They should also be in a better place to not be duplicated everywhere
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 enum Type {RED, BLUE, YELLOW, WILD, NONE}
@@ -58,7 +58,6 @@ func pick_up_piece(player):
 		secondary_points[i] = secondary_points[i] - root_point_location
 	root_point_location = Vector2i(0, 0)
 	rotate(-(rotation))
-	
 
 func _to_string() -> String:
 	return "Piece at " + str(root_point_location) + ", " + str(secondary_points)
