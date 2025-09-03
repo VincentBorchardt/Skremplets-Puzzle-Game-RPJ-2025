@@ -18,7 +18,9 @@ var space_group = "Grid Spaces " + str(space_owner)
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 
 func _ready() -> void:
-	add_to_group("Grid Spaces")
+	space_group = "Grid Spaces " + str(space_owner)
+	#print(space_group)
+	add_to_group(space_group)
 	grid_image = $SpaceImage.texture
 
 # TODO is_covered might be redundant at this point--I'm not removing it now,

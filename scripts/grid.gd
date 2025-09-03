@@ -18,6 +18,8 @@ enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 enum Type {RED, BLUE, YELLOW, WILD, NONE}
 
 func _ready() -> void:
+	grid_group = "Grid Spaces " + str(grid_owner)
+	print(grid_group)
 	if grid_owner == Player.UNOWNED:
 		pass
 
@@ -49,7 +51,8 @@ func _on_grid_space_add_new_piece(new_piece, new_location, player):
 		var point = new_piece.secondary_points[i]
 		new_piece.secondary_points[i] = point + new_location
 	piece_dict[new_piece] = piece_points
-	for node in get_tree().get_nodes_in_group("Grid Spaces"):
+	print(get_tree().get_nodes_in_group(grid_group).size())
+	for node in get_tree().get_nodes_in_group(grid_group):
 		node._on_add_new_piece(new_piece, new_location)
 	Inventory.current_piece = null
 	try_to_clear_pieces()
@@ -61,7 +64,7 @@ func try_to_clear_pieces():
 		print("removing pieces")
 		for piece in pieces_to_clear:
 			piece_dict.erase(piece)
-		for node in get_tree().get_nodes_in_group("Grid Spaces"):
+		for node in get_tree().get_nodes_in_group(grid_group):
 			node.remove_pieces(pieces_to_clear)
 		try_to_clear_pieces()
 
