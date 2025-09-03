@@ -10,8 +10,12 @@ var is_covered = false
 #TODO Not sure if these variables are needed for anything, or if it's better to work with the Sprite2Ds directly
 var grid_image: Texture2D
 var piece_image: Texture2D
+var space_group = "Grid Spaces " + str(space_owner)
 
 @export var location: Vector2i
+@export var space_owner: Player
+
+enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 
 func _ready() -> void:
 	add_to_group("Grid Spaces")
@@ -28,6 +32,7 @@ func _on_add_new_piece(new_piece, piece_location):
 		$PieceImage.position = new_piece.translation
 		$PieceImage.rotation = new_piece.rotation
 		$PieceImage.visible = true
+		$PieceImage.z_index = 100
 	var piece_points = new_piece.secondary_points
 	for point in piece_points:
 		if location == point:
@@ -43,6 +48,7 @@ func remove_pieces(piece_array):
 			piece_image = null
 			$PieceImage.texture = null
 			$PieceImage.visible = false
+			$PieceImage.z_index = 1
 		var piece_points = piece.secondary_points
 		for point in piece_points:
 			if location == point:
@@ -55,7 +61,8 @@ func _on_input_event(viewport, event, shape_idx):
 		print("clicked on grid space " + str(location))
 		if not is_covered and Inventory.current_piece:
 			print("adding new piece")
-			add_new_piece.emit(Inventory.current_piece.duplicate(), location)
+			# TODO PLAYER_1 is hardcoded for a click; this needs to change if MP becomes a thing
+			add_new_piece.emit(Inventory.current_piece.duplicate(), location, Player.PLAYER_1)
 
 func str():
 	return str(location)

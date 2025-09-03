@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgdtshogglm73"]
+[gd_scene load_steps=3 format=3 uid="uid://bgdtshogglm73"]
 
 [ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/grid.tscn" id="1_g6us7"]
+[ext_resource type="PackedScene" uid="uid://ccanpro3dipby" path="res://scenes/piece_box.tscn" id="2_lixwp"]
 
 [node name="PlaySceneTest" type="Node2D"]
 
@@ -10,3 +11,9 @@ position = Vector2(120, 280)
 [node name="Player2Grid" parent="." instance=ExtResource("1_g6us7")]
 position = Vector2(1255, 280)
 grid_owner = 1
+
+[node name="PieceBoxTest" parent="." instance=ExtResource("2_lixwp")]
+offset_left = 725.0
+offset_top = 436.0
+offset_right = 925.0
+offset_bottom = 607.0

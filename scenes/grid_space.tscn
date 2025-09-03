@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bapgvd2psgvpj"]
+[gd_scene load_steps=5 format=3 uid="uid://bapgvd2psgvpj"]
 
 [ext_resource type="Script" uid="uid://f2ajmd5fuvtk" path="res://scripts/grid_space.gd" id="1_htyn4"]
 [ext_resource type="Texture2D" uid="uid://bfbiqxym3pyx1" path="res://assets/grid/temp_grid_space.png" id="2_2pu0k"]
+[ext_resource type="Texture2D" uid="uid://dif3f3v6718bm" path="res://assets/blank_image.png" id="3_2pu0k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e42ob"]
 size = Vector2(50, 50)
@@ -9,14 +10,16 @@ size = Vector2(50, 50)
 [node name="GridSpace" type="Area2D"]
 script = ExtResource("1_htyn4")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_e42ob")
+
 [node name="SpaceImage" type="Sprite2D" parent="."]
 texture = ExtResource("2_2pu0k")
 
 [node name="PieceImage" type="Sprite2D" parent="."]
 visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_e42ob")
+visibility_layer = 2
+texture = ExtResource("3_2pu0k")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccanpro3dipby"]
+
+[ext_resource type="Script" uid="uid://brfejf8qerh56" path="res://scripts/piece_box_test.gd" id="1_dcvx8"]
+
+[node name="PieceBoxTest" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -852.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dcvx8")
+
+[node name="RedLineButton" type="Button" parent="."]
+layout_mode = 2
+text = "Red Line"
+
+[node name="YellowSquareButton" type="Button" parent="."]
+layout_mode = 2
+text = "Yellow Square"
+
+[node name="BlueTButton" type="Button" parent="."]
+layout_mode = 2
+text = "Blue T"
+
+[node name="RotateCWButton" type="Button" parent="."]
+layout_mode = 2
+text = "Rotate Clockwise"
+
+[node name="RotateCCWButton" type="Button" parent="."]
+layout_mode = 2
+text = "Rotate Counterclockwise
+"
+
+[connection signal="pressed" from="RedLineButton" to="." method="_on_red_line_button_pressed"]
+[connection signal="pressed" from="YellowSquareButton" to="." method="_on_yellow_square_button_pressed"]
+[connection signal="pressed" from="BlueTButton" to="." method="_on_blue_t_button_pressed"]
+[connection signal="pressed" from="RotateCWButton" to="." method="_on_rotate_cw_button_pressed"]
+[connection signal="pressed" from="RotateCCWButton" to="." method="_on_rotate_ccw_button_pressed"]

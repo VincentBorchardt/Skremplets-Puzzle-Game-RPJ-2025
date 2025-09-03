@@ -1,5 +1,9 @@
 class_name Grid extends Node2D
 
+# TODO This is hardcoded based on a specific string that has to be the same in Grid and GridSpace
+# Smells very bad
+var grid_group = "Grid Spaces " + str(grid_owner)
+
 #TODO Should this create a grid dynamically? The most annoying part there is connecting the signals
 @export var grid_x: int
 @export var grid_y: int
@@ -18,8 +22,13 @@ func _ready() -> void:
 		pass
 
 #TODO Check if the returns are needed in this function specifically
-func _on_grid_space_add_new_piece(new_piece, new_location):
+func _on_grid_space_add_new_piece(new_piece, new_location, player):
+	print("in _on_grid_space_add_new_piece")
+	print(grid_owner)
 	print(str(new_location))
+	if player != grid_owner:
+		print("Not Player 1's Grid")
+		return false
 	for piece in piece_dict:
 		for point in new_piece.secondary_points:
 			if piece_dict[piece].has(point + new_location):

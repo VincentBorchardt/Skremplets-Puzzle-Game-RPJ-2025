@@ -57,7 +57,7 @@ func pick_up_piece(player):
 	for i in range(secondary_points.size()):
 		secondary_points[i] = secondary_points[i] - root_point_location
 	root_point_location = Vector2i(0, 0)
-	rotate_piece(-(rotation))
+	rotate(-(rotation))
 	
 
 func _to_string() -> String:
