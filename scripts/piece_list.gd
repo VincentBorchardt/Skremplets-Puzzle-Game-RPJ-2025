@@ -15,6 +15,15 @@ func remove_pieces(pieces_to_clear):
 	for piece in pieces_to_clear:
 		list.erase(piece)
 
+func get_piece_at_location(location):
+	for piece in list:
+		print(location)
+		print(piece)
+		print(list[piece])
+		if list[piece].has(location):
+			return piece
+	return null
+
 func has_overlaps(new_piece, new_location):
 	for piece in list:
 		for point in new_piece.secondary_points:

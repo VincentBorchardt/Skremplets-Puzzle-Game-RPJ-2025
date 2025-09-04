@@ -37,6 +37,17 @@ func _on_grid_space_add_new_piece(new_piece, new_location, player):
 		try_to_clear_pieces()
 		return true
 
+func _on_grid_space_grab_neutral_piece(location, player) -> void:
+	#print("in _on_grid_space_grab_neutral_piece")
+	var piece = piece_list.get_piece_at_location(location)
+	if piece:
+		var pieces_to_clear = [piece]
+		piece_list.remove_pieces(pieces_to_clear)
+		for node in spaces_list:
+			node.remove_pieces(pieces_to_clear)
+		piece.pick_up_piece(player)
+		Inventory.current_piece = piece
+
 func is_legal_place(new_piece, new_location, player):
 	if player != grid_owner:
 		print("Not Player 1's Grid")
@@ -55,13 +66,12 @@ func place_piece(new_piece, new_location):
 	var piece_points = []
 	new_piece.root_point_location = new_location
 	for i in range(new_piece.secondary_points.size()):
-		var point = new_piece.secondary_points[i]
+		var point = new_piece.secondary_points[i] + new_location
 		piece_points.append(point)
-		new_piece.secondary_points[i] = point + new_location
+		new_piece.secondary_points[i] = point
 	piece_list.add(new_piece, piece_points)
 	for node in spaces_list:
 		node._on_add_new_piece(new_piece, new_location)
-	print(piece_list)
 	return true
 
 func try_to_clear_pieces():
@@ -85,4 +95,4 @@ func populate_neutral_grid():
 		var location = Vector2i(((2 * i) + 1), 1)
 		# TODO This doesn't check if the space is legal, it shouldn't in this hack but likely will eventually
 		place_piece(piece, location)
-	#print(piece_list)
+	print(piece_list)
