@@ -4,10 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://bapgvd2psgvpj" path="res://scenes/grid_space.tscn" id="1_t5fjg"]
 [ext_resource type="Texture2D" uid="uid://buaqf06iwirva" path="res://assets/grid/temp_grid_border.png" id="1_w88cy"]
 
-[node name="Grid" type="Node2D"]
+[node name="PlayGrid" type="Node2D"]
 script = ExtResource("1_2s7k2")
 grid_x = 6
 grid_y = 12
+metadata/_custom_type_script = "uid://rdtmqgtehayh"
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(125, 275)

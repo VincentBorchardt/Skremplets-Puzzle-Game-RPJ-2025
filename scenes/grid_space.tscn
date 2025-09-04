@@ -9,6 +9,7 @@ size = Vector2(50, 50)
 
 [node name="GridSpace" type="Area2D"]
 script = ExtResource("1_htyn4")
+metadata/_custom_type_script = "uid://f2ajmd5fuvtk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.5)

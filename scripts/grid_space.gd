@@ -3,6 +3,7 @@ class_name GridSpace extends Area2D
 #TODO This should combine both the GridSpace and PieceSpace classes from the sandbox
 # Make sure everything works once I get the grid itself working
 signal add_new_piece
+signal grab_neutral_piece
 
 var is_root_node = false
 var root_piece: Piece
@@ -10,7 +11,7 @@ var is_covered = false
 #TODO Not sure if these variables are needed for anything, or if it's better to work with the Sprite2Ds directly
 var grid_image: Texture2D
 var piece_image: Texture2D
-var space_group = "Grid Spaces " + str(space_owner)
+#var space_group = "Grid Spaces " + str(space_owner)
 
 @export var location: Vector2i
 @export var space_owner: Player
@@ -18,9 +19,9 @@ var space_group = "Grid Spaces " + str(space_owner)
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 
 func _ready() -> void:
-	space_group = "Grid Spaces " + str(space_owner)
+	#space_group = "Grid Spaces " + str(space_owner)
 	#print(space_group)
-	add_to_group(space_group)
+	#add_to_group(space_group)
 	grid_image = $SpaceImage.texture
 
 # TODO is_covered might be redundant at this point--I'm not removing it now,
@@ -61,10 +62,12 @@ func remove_pieces(piece_array):
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("clicked on grid space " + str(location))
+		if space_owner == Player.UNOWNED and not Inventory.current_piece:
+			grab_neutral_piece.emit(Player.PLAYER_1)
 		if not is_covered and Inventory.current_piece:
 			print("adding new piece")
 			# TODO PLAYER_1 is hardcoded for a click; this needs to change if MP becomes a thing
 			add_new_piece.emit(Inventory.current_piece.duplicate(), location, Player.PLAYER_1)
 
-func str():
+func _to_string() -> String:
 	return str(location)

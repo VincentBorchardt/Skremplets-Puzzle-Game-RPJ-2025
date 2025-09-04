@@ -1,0 +1,373 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2w6sitg20dna"]
+
+[ext_resource type="Script" uid="uid://rdtmqgtehayh" path="res://scripts/grid.gd" id="1_mgtwh"]
+[ext_resource type="PackedScene" uid="uid://bapgvd2psgvpj" path="res://scenes/grid_space.tscn" id="2_3uut6"]
+
+[node name="NeutralGrid" type="Node2D"]
+script = ExtResource("1_mgtwh")
+grid_x = 12
+grid_y = 6
+grid_owner = 2
+metadata/_custom_type_script = "uid://rdtmqgtehayh"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Spaces" type="Node2D" parent="."]
+
+[node name="GridSpace" parent="Spaces" instance=ExtResource("2_3uut6")]
+space_owner = 2
+
+[node name="GridSpace2" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(50, 0)
+location = Vector2i(0, 1)
+space_owner = 2
+
+[node name="GridSpace3" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(100, 0)
+location = Vector2i(0, 2)
+space_owner = 2
+
+[node name="GridSpace4" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(150, 0)
+location = Vector2i(0, 3)
+space_owner = 2
+
+[node name="GridSpace5" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(200, 0)
+location = Vector2i(0, 4)
+space_owner = 2
+
+[node name="GridSpace6" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(250, 0)
+location = Vector2i(0, 5)
+space_owner = 2
+
+[node name="GridSpace7" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(300, 0)
+location = Vector2i(0, 6)
+space_owner = 2
+
+[node name="GridSpace8" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(350, 0)
+location = Vector2i(0, 7)
+space_owner = 2
+
+[node name="GridSpace9" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(400, 0)
+location = Vector2i(0, 8)
+space_owner = 2
+
+[node name="GridSpace10" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(450, 0)
+location = Vector2i(0, 9)
+space_owner = 2
+
+[node name="GridSpace11" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(500, 0)
+location = Vector2i(0, 10)
+space_owner = 2
+
+[node name="GridSpace12" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(550, 0)
+location = Vector2i(0, 11)
+space_owner = 2
+
+[node name="GridSpace13" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(0, 50)
+location = Vector2i(0, 1)
+space_owner = 2
+
+[node name="GridSpace14" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(50, 50)
+location = Vector2i(1, 1)
+space_owner = 2
+
+[node name="GridSpace15" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(100, 50)
+location = Vector2i(2, 1)
+space_owner = 2
+
+[node name="GridSpace16" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(150, 50)
+location = Vector2i(3, 1)
+space_owner = 2
+
+[node name="GridSpace17" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(200, 50)
+location = Vector2i(4, 1)
+space_owner = 2
+
+[node name="GridSpace18" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(250, 50)
+location = Vector2i(5, 1)
+space_owner = 2
+
+[node name="GridSpace19" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(300, 50)
+location = Vector2i(6, 1)
+space_owner = 2
+
+[node name="GridSpace20" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(350, 50)
+location = Vector2i(7, 1)
+space_owner = 2
+
+[node name="GridSpace21" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(400, 50)
+location = Vector2i(8, 1)
+space_owner = 2
+
+[node name="GridSpace22" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(450, 50)
+location = Vector2i(9, 1)
+space_owner = 2
+
+[node name="GridSpace23" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(500, 50)
+location = Vector2i(10, 1)
+space_owner = 2
+
+[node name="GridSpace24" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(550, 50)
+location = Vector2i(11, 1)
+space_owner = 2
+
+[node name="GridSpace25" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(0, 100)
+location = Vector2i(0, 2)
+space_owner = 2
+
+[node name="GridSpace26" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(50, 100)
+location = Vector2i(1, 2)
+space_owner = 2
+
+[node name="GridSpace27" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(100, 100)
+location = Vector2i(2, 2)
+space_owner = 2
+
+[node name="GridSpace28" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(150, 100)
+location = Vector2i(3, 2)
+space_owner = 2
+
+[node name="GridSpace29" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(200, 100)
+location = Vector2i(4, 2)
+space_owner = 2
+
+[node name="GridSpace30" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(250, 100)
+location = Vector2i(5, 2)
+space_owner = 2
+
+[node name="GridSpace31" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(300, 100)
+location = Vector2i(6, 2)
+space_owner = 2
+
+[node name="GridSpace32" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(350, 100)
+location = Vector2i(7, 2)
+space_owner = 2
+
+[node name="GridSpace33" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(400, 100)
+location = Vector2i(8, 2)
+space_owner = 2
+
+[node name="GridSpace34" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(450, 100)
+location = Vector2i(9, 2)
+space_owner = 2
+
+[node name="GridSpace35" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(500, 100)
+location = Vector2i(10, 2)
+space_owner = 2
+
+[node name="GridSpace36" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(550, 100)
+location = Vector2i(11, 2)
+space_owner = 2
+
+[node name="GridSpace37" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(0, 150)
+location = Vector2i(0, 3)
+space_owner = 2
+
+[node name="GridSpace38" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(50, 150)
+location = Vector2i(1, 3)
+space_owner = 2
+
+[node name="GridSpace39" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(100, 150)
+location = Vector2i(2, 3)
+space_owner = 2
+
+[node name="GridSpace40" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(150, 150)
+location = Vector2i(3, 3)
+space_owner = 2
+
+[node name="GridSpace41" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(200, 150)
+location = Vector2i(4, 3)
+space_owner = 2
+
+[node name="GridSpace42" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(250, 150)
+location = Vector2i(5, 3)
+space_owner = 2
+
+[node name="GridSpace43" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(300, 150)
+location = Vector2i(6, 3)
+space_owner = 2
+
+[node name="GridSpace44" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(350, 150)
+location = Vector2i(7, 3)
+space_owner = 2
+
+[node name="GridSpace45" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(400, 150)
+location = Vector2i(8, 3)
+space_owner = 2
+
+[node name="GridSpace46" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(450, 150)
+location = Vector2i(9, 3)
+space_owner = 2
+
+[node name="GridSpace47" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(500, 150)
+location = Vector2i(10, 3)
+space_owner = 2
+
+[node name="GridSpace48" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(550, 150)
+location = Vector2i(11, 3)
+space_owner = 2
+
+[node name="GridSpace49" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(0, 200)
+location = Vector2i(0, 4)
+space_owner = 2
+
+[node name="GridSpace50" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(50, 200)
+location = Vector2i(1, 4)
+space_owner = 2
+
+[node name="GridSpace51" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(100, 200)
+location = Vector2i(2, 4)
+space_owner = 2
+
+[node name="GridSpace52" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(150, 200)
+location = Vector2i(3, 4)
+space_owner = 2
+
+[node name="GridSpace53" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(200, 200)
+location = Vector2i(4, 4)
+space_owner = 2
+
+[node name="GridSpace54" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(250, 200)
+location = Vector2i(5, 4)
+space_owner = 2
+
+[node name="GridSpace55" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(300, 200)
+location = Vector2i(6, 4)
+space_owner = 2
+
+[node name="GridSpace56" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(350, 200)
+location = Vector2i(7, 4)
+space_owner = 2
+
+[node name="GridSpace57" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(400, 200)
+location = Vector2i(8, 4)
+space_owner = 2
+
+[node name="GridSpace58" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(450, 200)
+location = Vector2i(9, 4)
+space_owner = 2
+
+[node name="GridSpace59" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(500, 200)
+location = Vector2i(10, 4)
+space_owner = 2
+
+[node name="GridSpace60" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(550, 200)
+location = Vector2i(11, 4)
+space_owner = 2
+
+[node name="GridSpace61" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(0, 250)
+location = Vector2i(0, 5)
+space_owner = 2
+
+[node name="GridSpace62" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(50, 250)
+location = Vector2i(1, 5)
+space_owner = 2
+
+[node name="GridSpace63" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(100, 250)
+location = Vector2i(2, 5)
+space_owner = 2
+
+[node name="GridSpace64" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(150, 250)
+location = Vector2i(3, 5)
+space_owner = 2
+
+[node name="GridSpace65" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(200, 250)
+location = Vector2i(4, 5)
+space_owner = 2
+
+[node name="GridSpace66" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(250, 250)
+location = Vector2i(5, 5)
+space_owner = 2
+
+[node name="GridSpace67" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(300, 250)
+location = Vector2i(6, 5)
+space_owner = 2
+
+[node name="GridSpace68" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(350, 250)
+location = Vector2i(7, 5)
+space_owner = 2
+
+[node name="GridSpace69" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(400, 250)
+location = Vector2i(8, 5)
+space_owner = 2
+
+[node name="GridSpace70" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(450, 250)
+location = Vector2i(9, 5)
+space_owner = 2
+
+[node name="GridSpace71" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(500, 250)
+location = Vector2i(10, 5)
+space_owner = 2
+
+[node name="GridSpace72" parent="Spaces" instance=ExtResource("2_3uut6")]
+position = Vector2(550, 250)
+location = Vector2i(11, 5)
+space_owner = 2

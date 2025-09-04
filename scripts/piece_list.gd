@@ -54,3 +54,6 @@ func extended_piece_touching_check(initial_pair):
 						pieces_to_check.append(new_piece)
 						found_new_piece = true
 	return pieces_to_check
+
+func _to_string() -> String:
+	return str(list)
