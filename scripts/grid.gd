@@ -1,6 +1,6 @@
 class_name Grid extends Node2D
 
-var spaces_list = []
+signal removing_pieces
 
 #TODO Should this create a grid dynamically? The most annoying part there is connecting the signals
 @export var grid_x: int
@@ -8,6 +8,7 @@ var spaces_list = []
 @export var grid_owner: Player
 
 var piece_list = PieceList.new()
+var spaces_list = []
 
 # TODO This is a temporary hack to make neutral grids work in a basic form
 # This should probably be in a global, or maybe tied to the specific level if/when they get implemented
@@ -78,6 +79,7 @@ func try_to_clear_pieces():
 	var pieces_to_clear = piece_list.get_touching_pieces()
 	if not pieces_to_clear.is_empty():
 		print("removing pieces")
+		removing_pieces.emit(pieces_to_clear, grid_owner)
 		piece_list.remove_pieces(pieces_to_clear)
 		for node in spaces_list:
 			node.remove_pieces(pieces_to_clear)
