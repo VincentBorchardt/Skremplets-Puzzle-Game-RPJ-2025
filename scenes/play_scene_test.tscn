@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgdtshogglm73"]
+[gd_scene load_steps=5 format=3 uid="uid://bgdtshogglm73"]
 
 [ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/play_grid.tscn" id="1_g6us7"]
 [ext_resource type="PackedScene" uid="uid://b2w6sitg20dna" path="res://scenes/neutral_grid.tscn" id="2_ehd68"]
 [ext_resource type="PackedScene" uid="uid://ccanpro3dipby" path="res://scenes/piece_box.tscn" id="2_lixwp"]
+[ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/preview_box.tscn" id="4_4xqvm"]
 
 [node name="PlaySceneTest" type="Node2D"]
 
@@ -21,3 +22,9 @@ offset_left = 698.0
 offset_top = 167.0
 offset_right = 898.0
 offset_bottom = 338.0
+
+[node name="PreviewBox" parent="." instance=ExtResource("4_4xqvm")]
+offset_left = 248.0
+offset_top = 122.0
+offset_right = 248.0
+offset_bottom = 122.0

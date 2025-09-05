@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1xn1nbqsoyaa"]
+
+[ext_resource type="Script" uid="uid://bvlth5wolcpjw" path="res://scripts/power_up_bar.gd" id="1_3tbmx"]
+
+[node name="PowerUpBar" type="ProgressBar"]
+offset_right = 40.0
+offset_bottom = 400.0
+fill_mode = 3
+script = ExtResource("1_3tbmx")

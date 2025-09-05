@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctskks742behs"]
+
+[ext_resource type="Script" uid="uid://bmj0rr4aesvfo" path="res://scripts/preview_box.gd" id="1_gkx2b"]
+[ext_resource type="Texture2D" uid="uid://wwiebtlnffft" path="res://assets/preview_box_temp.png" id="2_2yskm"]
+
+[node name="PreviewBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gkx2b")
+metadata/_custom_type_script = "uid://bmj0rr4aesvfo"
+
+[node name="BoxImage" type="Sprite2D" parent="."]
+texture = ExtResource("2_2yskm")
+
+[node name="PieceImage" type="Sprite2D" parent="."]
