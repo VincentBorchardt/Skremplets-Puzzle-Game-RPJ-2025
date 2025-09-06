@@ -14,7 +14,7 @@ class_name Piece extends Resource
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 # TODO Consider making the value of each "Type" the string to preload its resource?
 # Definitely wait until things are more finalized (and only in one place)
-enum Type {RED, BLUE, YELLOW, WILD, NONE}
+enum Type {RED, BLUE, YELLOW, GARBAGE, POWERUP, WILD, NONE}
 
 func is_touching(piece2):
 	if self == piece2 or (self.type != piece2.type and piece2.type != Type.WILD):
@@ -60,6 +60,9 @@ func pick_up_piece(player):
 		secondary_points[i] = secondary_points[i] - root_point_location
 	root_point_location = Vector2i(0, 0)
 	rotate(-(rotation))
+
+func should_not_be_matched():
+	return (type == Type.WILD or type == Type.GARBAGE or type == Type.POWERUP)
 
 func _to_string() -> String:
 	return "Piece at " + str(root_point_location) + ", " + str(secondary_points)

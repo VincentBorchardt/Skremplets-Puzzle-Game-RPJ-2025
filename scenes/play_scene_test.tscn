@@ -1,24 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgdtshogglm73"]
+[gd_scene load_steps=6 format=3 uid="uid://bgdtshogglm73"]
 
-[ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/play_grid.tscn" id="1_g6us7"]
 [ext_resource type="Script" uid="uid://c11y2smjvgn31" path="res://scripts/play_scene.gd" id="1_qlfe2"]
 [ext_resource type="PackedScene" uid="uid://b2w6sitg20dna" path="res://scenes/neutral_grid.tscn" id="2_ehd68"]
 [ext_resource type="PackedScene" uid="uid://ccanpro3dipby" path="res://scenes/piece_box.tscn" id="2_lixwp"]
-[ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/preview_box.tscn" id="4_4xqvm"]
-[ext_resource type="PackedScene" uid="uid://b1xn1nbqsoyaa" path="res://scenes/power_up_bar.tscn" id="5_r4feo"]
+[ext_resource type="PackedScene" uid="uid://3lepfkvo1yvi" path="res://scenes/player_1_grid.tscn" id="2_rq1sk"]
+[ext_resource type="PackedScene" uid="uid://c2bsuixqkm7yo" path="res://scenes/player_2_grid.tscn" id="3_qlfe2"]
 
 [node name="PlaySceneTest" type="Node2D"]
 script = ExtResource("1_qlfe2")
 
-[node name="Player1Grid" parent="." instance=ExtResource("1_g6us7")]
-position = Vector2(120, 280)
+[node name="Player1Grid" parent="." instance=ExtResource("2_rq1sk")]
+position = Vector2(103, 216)
 
-[node name="Player2Grid" parent="." instance=ExtResource("1_g6us7")]
-position = Vector2(1255, 280)
-grid_owner = 1
+[node name="Player2Grid" parent="." instance=ExtResource("3_qlfe2")]
+position = Vector2(1255, 216)
 
 [node name="NeutralGrid" parent="." instance=ExtResource("2_ehd68")]
-position = Vector2(550, 600)
+position = Vector2(525, 600)
 
 [node name="PieceBoxTest" parent="." instance=ExtResource("2_lixwp")]
 offset_left = 698.0
@@ -26,18 +24,4 @@ offset_top = 167.0
 offset_right = 898.0
 offset_bottom = 338.0
 
-[node name="PreviewBox" parent="." instance=ExtResource("4_4xqvm")]
-offset_left = 248.0
-offset_top = 122.0
-offset_right = 248.0
-offset_bottom = 122.0
-
-[node name="PowerUpBar" parent="." instance=ExtResource("5_r4feo")]
-offset_left = 435.0
-offset_top = 459.0
-offset_right = 475.0
-offset_bottom = 859.0
-rounded = true
-bar_size = 27
-
-[connection signal="removing_pieces" from="Player1Grid" to="." method="_on_grid_removing_pieces"]
+[connection signal="send_garbage" from="PieceBoxTest" to="." method="_on_piece_box_test_send_garbage"]

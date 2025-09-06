@@ -1,5 +1,9 @@
 extends VBoxContainer
 
+signal send_garbage
+
+enum Player {PLAYER_1, PLAYER_2, UNOWNED}
+
 func _on_red_line_button_pressed() -> void:
 	Inventory.current_piece = preload("res://resources/pieces/red_four_line.tres").duplicate()
 
@@ -14,3 +18,6 @@ func _on_rotate_cw_button_pressed() -> void:
 
 func _on_rotate_ccw_button_pressed() -> void:
 	Inventory.rotate_current_piece(-TAU/4)
+
+func _on_place_player_garbage_pressed() -> void:
+	send_garbage.emit(3, Player.PLAYER_1)

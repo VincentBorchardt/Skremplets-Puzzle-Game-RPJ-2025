@@ -6,7 +6,13 @@ var list = {}
 
 #TODO This needs to be updated for the final project and not duplicated everywhere
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
-enum Type {RED, BLUE, YELLOW, WILD, NONE}
+enum Type {RED, BLUE, YELLOW, GARBAGE, POWERUP, WILD, NONE}
+
+#static func piece_list_from_array(piece_array):
+	#var new_list = new()
+	#for piece in piece_array:
+		#new_list.add(piece, piece.secondary_points)
+	#return new_list
 
 func add(piece, points):
 	list[piece] = points
@@ -31,13 +37,22 @@ func has_overlaps(new_piece, new_location):
 				print(str(new_location) + " is already covered")
 				return true
 
+func get_special_touching_pieces(clearing_pieces):
+	var special_to_be_cleared = []
+	for piece1 in list:
+		if piece1.type == Type.GARBAGE or piece1.type == Type.POWERUP:
+			for piece2 in list:
+				if piece1.is_touching(piece2):
+					special_to_be_cleared.append(piece1)
+	return special_to_be_cleared
+
 func get_touching_pieces():
 	print("in check_pieces_touching")
 	var placed_pieces = list.keys()
 	var num_pieces = placed_pieces.size()
 	for i in range(num_pieces):
 		var piece_1 = placed_pieces[i]
-		if piece_1.type != Type.WILD:
+		if not piece_1.should_not_be_matched():
 			for j in range(num_pieces):
 				var piece_2 = placed_pieces[j]
 				if piece_1.is_touching(piece_2):

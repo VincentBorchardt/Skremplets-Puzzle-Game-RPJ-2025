@@ -4,6 +4,7 @@
 
 [node name="PowerUpBar" type="ProgressBar"]
 offset_right = 40.0
-offset_bottom = 400.0
+offset_bottom = 300.0
+rounded = true
 fill_mode = 3
 script = ExtResource("1_3tbmx")

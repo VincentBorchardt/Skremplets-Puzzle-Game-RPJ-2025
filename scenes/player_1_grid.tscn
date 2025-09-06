@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://3lepfkvo1yvi"]
+
+[ext_resource type="Script" uid="uid://dnuriqma2yov2" path="res://scripts/human_grid.gd" id="1_7leco"]
+[ext_resource type="Texture2D" uid="uid://cbr4bbxfrd8gl" path="res://assets/grid/temp_dumpster_background_3.png" id="2_7leco"]
+[ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/play_grid.tscn" id="2_ec8he"]
+[ext_resource type="PackedScene" uid="uid://b1xn1nbqsoyaa" path="res://scenes/power_up_bar.tscn" id="3_7leco"]
+[ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/preview_box.tscn" id="4_ec8he"]
+
+[node name="Player1Grid" type="Node2D"]
+script = ExtResource("1_7leco")
+
+[node name="GridBackground" type="Sprite2D" parent="."]
+position = Vector2(250, 300)
+texture = ExtResource("2_7leco")
+
+[node name="PlayGrid" parent="." instance=ExtResource("2_ec8he")]
+
+[node name="PowerUpBar" parent="." instance=ExtResource("3_7leco")]
+offset_left = 345.0
+offset_top = -15.0
+offset_right = 385.0
+offset_bottom = 285.0
+bar_size = 27
+
+[node name="PreviewBox" parent="." instance=ExtResource("4_ec8he")]
+offset_left = 123.0
+offset_top = -130.0
+offset_right = 123.0
+offset_bottom = -130.0
+
+[connection signal="removing_pieces" from="PlayGrid" to="." method="_on_grid_removing_pieces"]
+[connection signal="removing_special_pieces" from="PlayGrid" to="." method="_on_grid_removing_special_pieces"]

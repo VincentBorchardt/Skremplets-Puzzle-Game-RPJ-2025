@@ -11,6 +11,7 @@ grid_y = 12
 metadata/_custom_type_script = "uid://rdtmqgtehayh"
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(125, 275)
 texture = ExtResource("1_w88cy")
 
