@@ -18,7 +18,7 @@ var piece_storage = ["res://resources/pieces/blue_four_t.tres", "res://resources
 
 #TODO This needs to be updated for the final project and not duplicated everywhere
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
-enum Type {RED, BLUE, YELLOW, GARBAGE, POWERUP, WILD, NONE}
+enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
 
 func _ready() -> void:
 	spaces_list = $Spaces.get_children()

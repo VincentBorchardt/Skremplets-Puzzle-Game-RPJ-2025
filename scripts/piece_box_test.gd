@@ -13,6 +13,9 @@ func _on_yellow_square_button_pressed() -> void:
 func _on_blue_t_button_pressed() -> void:
 	Inventory.current_piece = preload("res://resources/pieces/blue_four_t.tres").duplicate()
 
+func _on_green_bottle_button_pressed() -> void:
+	Inventory.current_piece = preload("res://resources/pieces/green_three_three_bottle.tres").duplicate()
+
 func _on_rotate_cw_button_pressed() -> void:
 	Inventory.rotate_current_piece(TAU/4)
 

@@ -21,6 +21,7 @@ func convert_pieces(pieces, player):
 		add_to_bar(total_spaces)
 
 func add_to_bar(num_spaces):
+	print("adding " + str(num_spaces) + " to powerup bar")
 	if (max_value - value) >= num_spaces:
 		value = value + num_spaces
 		if value >= max_value:

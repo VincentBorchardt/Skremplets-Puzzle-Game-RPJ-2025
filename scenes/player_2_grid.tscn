@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2bsuixqkm7yo"]
 
-[ext_resource type="Texture2D" uid="uid://cfqduuyyl581o" path="res://assets/grid/temp_dumpster_background_3_mirrored.png" id="1_nuaq7"]
+[ext_resource type="Texture2D" uid="uid://cs6soxfyp2f73" path="res://assets/grid/temp_dumpster_right.png" id="1_nuaq7"]
 [ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/play_grid.tscn" id="2_u0dkv"]
 [ext_resource type="PackedScene" uid="uid://b1xn1nbqsoyaa" path="res://scenes/power_up_bar.tscn" id="3_kg485"]
 [ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/preview_box.tscn" id="4_14sy7"]
@@ -8,7 +8,7 @@
 [node name="Player2Grid" type="Node2D"]
 
 [node name="GridBackground" type="Sprite2D" parent="."]
-position = Vector2(0, 300)
+position = Vector2(60, 300)
 texture = ExtResource("1_nuaq7")
 
 [node name="PlayGrid" parent="." instance=ExtResource("2_u0dkv")]

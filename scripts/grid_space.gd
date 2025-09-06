@@ -39,7 +39,7 @@ func _on_add_new_piece(new_piece, piece_location):
 	var piece_points = new_piece.secondary_points
 	for point in piece_points:
 		if location == point:
-			print("covering " + str(location))
+			#print("covering " + str(location))
 			is_covered = true
 
 func remove_pieces(piece_array):
@@ -55,7 +55,7 @@ func remove_pieces(piece_array):
 		var piece_points = piece.secondary_points
 		for point in piece_points:
 			if location == point:
-				print("uncovering " + str(location))
+				#print("uncovering " + str(location))
 				is_covered = false
 
 #TODO Inventory is still a global, not sure if that's the right design atm
