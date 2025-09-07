@@ -4,6 +4,9 @@ extends Node
 # Global singleton works if we're going to differentiate player/AI, but I want MP to be a possibility
 signal current_piece_changed
 
+# TODO putting this here since it should be a singleton somewhere, and it'll help with debugging
+enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
+
 var current_piece = null:
 	set(piece):
 		current_piece = piece

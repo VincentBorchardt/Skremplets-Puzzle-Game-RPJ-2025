@@ -13,6 +13,8 @@ func _ready() -> void:
 	max_value = bar_size
 
 func convert_pieces(pieces, player):
+	print("in convert_pieces")
+	print(pieces)
 	if player == bar_owner:
 		var total_spaces = 0
 		for piece in pieces:

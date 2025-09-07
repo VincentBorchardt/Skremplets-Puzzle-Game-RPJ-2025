@@ -18,7 +18,7 @@ var piece_storage = ["res://resources/pieces/blue_four_t.tres", "res://resources
 
 #TODO This needs to be updated for the final project and not duplicated everywhere
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
-enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
+#enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
 
 func _ready() -> void:
 	spaces_list = $Spaces.get_children()
@@ -102,6 +102,7 @@ func try_to_clear_pieces():
 	var pieces_to_clear = piece_list.get_touching_pieces()
 	if not pieces_to_clear.is_empty():
 		print("removing pieces")
+		print(pieces_to_clear)
 		removing_pieces.emit(pieces_to_clear, grid_owner)
 		var special_pieces_to_clear = piece_list.get_special_touching_pieces(pieces_to_clear)
 		print(special_pieces_to_clear)

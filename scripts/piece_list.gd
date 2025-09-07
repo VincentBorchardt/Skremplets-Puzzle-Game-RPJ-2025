@@ -6,7 +6,7 @@ var list = {}
 
 #TODO This needs to be updated for the final project and not duplicated everywhere
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
-enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
+#enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
 
 #static func piece_list_from_array(piece_array):
 	#var new_list = new()
@@ -42,9 +42,9 @@ func has_overlaps(new_piece, new_location):
 func get_special_touching_pieces(clearing_pieces):
 	var special_to_be_cleared = []
 	for piece1 in list:
-		if piece1.type == Type.GARBAGE or piece1.type == Type.POWERUP:
-			for piece2 in list:
-				if piece1.is_touching(piece2):
+		if piece1.type == Inventory.Type.GARBAGE or piece1.type == Inventory.Type.POWERUP:
+			for piece2 in clearing_pieces:
+				if piece2.is_special_touching(piece1):
 					special_to_be_cleared.append(piece1)
 	return special_to_be_cleared
 
@@ -76,7 +76,7 @@ func extended_piece_touching_check(initial_pair):
 			var new_piece = placed_pieces[i]
 			if not pieces_to_check.has(new_piece):
 				for piece in pieces_to_check:
-					if piece.is_touching(new_piece):
+					if piece.is_touching(new_piece) and not pieces_to_check.has(new_piece):
 						pieces_to_check.append(new_piece)
 						found_new_piece = true
 	return pieces_to_check
