@@ -1,4 +1,4 @@
-extends ProgressBar
+extends TextureProgressBar
 # TODO This probably will become TextureProgressBar once final graphics come in
 # TODO Should this be tied to a character? That would work to differentiate powerups?
 
@@ -11,6 +11,7 @@ enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 
 func _ready() -> void:
 	max_value = bar_size
+	$PowerUpLabel.text = str(value) + "/" + str(max_value)
 
 func convert_pieces(pieces, player):
 	print("in convert_pieces")
@@ -37,3 +38,4 @@ func add_to_bar(num_spaces):
 		activate_powerup.emit(bar_owner)
 		value = 0
 		add_to_bar(num_spaces - intermediate_add)
+	$PowerUpLabel.text = str(value) + "/" + str(max_value)

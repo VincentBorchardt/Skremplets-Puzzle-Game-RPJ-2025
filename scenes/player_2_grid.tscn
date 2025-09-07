@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cs6soxfyp2f73" path="res://assets/grid/temp_dumpster_right.png" id="1_nuaq7"]
 [ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/play_grid.tscn" id="2_u0dkv"]
-[ext_resource type="PackedScene" uid="uid://b1xn1nbqsoyaa" path="res://scenes/power_up_bar.tscn" id="3_kg485"]
+[ext_resource type="PackedScene" uid="uid://cabi4v55xf72d" path="res://scenes/player_2_power_up_bar.tscn" id="3_nuaq7"]
 [ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/preview_box.tscn" id="4_14sy7"]
 
 [node name="Player2Grid" type="Node2D"]
@@ -14,12 +14,11 @@ texture = ExtResource("1_nuaq7")
 [node name="PlayGrid" parent="." instance=ExtResource("2_u0dkv")]
 grid_owner = 1
 
-[node name="PowerUpBar" parent="." instance=ExtResource("3_kg485")]
+[node name="Player2PowerUpBar" parent="." instance=ExtResource("3_nuaq7")]
 offset_left = -135.0
 offset_top = -20.0
-offset_right = -95.0
+offset_right = -75.0
 offset_bottom = 280.0
-bar_size = 27
 
 [node name="PreviewBox" parent="." instance=ExtResource("4_14sy7")]
 visible = false

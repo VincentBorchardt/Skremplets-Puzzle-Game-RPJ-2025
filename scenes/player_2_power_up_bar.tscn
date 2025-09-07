@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cabi4v55xf72d"]
+
+[ext_resource type="Texture2D" uid="uid://5gbnwqm6qkke" path="res://assets/grid/meter_right.png" id="1_1sok4"]
+[ext_resource type="Texture2D" uid="uid://dcrw1f55i63d6" path="res://assets/grid/temp_meter_left_fill.png" id="2_8f868"]
+[ext_resource type="Script" uid="uid://bvlth5wolcpjw" path="res://scripts/power_up_bar.gd" id="3_drec8"]
+
+[node name="Player2PowerUpBar" type="TextureProgressBar"]
+offset_right = 40.0
+offset_bottom = 300.0
+rounded = true
+fill_mode = 3
+texture_under = ExtResource("1_1sok4")
+texture_progress = ExtResource("2_8f868")
+texture_progress_offset = Vector2(10, 10)
+script = ExtResource("3_drec8")
+bar_size = 27
+
+[node name="PowerUpLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -65.0
+offset_top = 230.0
+offset_right = -25.0
+offset_bottom = 253.0
+text = "0/27"
