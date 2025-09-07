@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Piece" load_steps=3 format=3 uid="uid://cp4dautmudtjn"]
 
-[ext_resource type="Texture2D" uid="uid://gt7ekck3yu2f" path="res://assets/pieces/blue_four_t.png" id="1_ewmfe"]
+[ext_resource type="Texture2D" uid="uid://blgwcf0scrlxd" path="res://assets/pieces/final_pieces/blue_four_t.png" id="1_ewmfe"]
 [ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/piece.gd" id="1_r10d6"]
 
 [resource]

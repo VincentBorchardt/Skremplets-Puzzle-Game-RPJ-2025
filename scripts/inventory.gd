@@ -5,7 +5,7 @@ extends Node
 signal current_piece_changed
 
 # TODO putting this here since it should be a singleton somewhere, and it'll help with debugging
-enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
+enum Type {RED, BLUE, YELLOW, GREEN, PURPLE, GARBAGE, POWERUP, WILD, NONE}
 
 var current_piece = null:
 	set(piece):

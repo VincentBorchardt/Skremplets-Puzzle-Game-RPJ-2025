@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Piece" load_steps=3 format=3 uid="uid://cd8e1ipwgbtab"]
 
-[ext_resource type="Texture2D" uid="uid://c6iju10bjawc1" path="res://assets/pieces/garbage_temp.png" id="1_vlafm"]
+[ext_resource type="Texture2D" uid="uid://cqvtngxkcx5he" path="res://assets/pieces/base_blocks/block6_black.png" id="1_vlafm"]
 [ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/piece.gd" id="1_yswxx"]
 
 [resource]
@@ -9,7 +9,7 @@ owner = 0
 root_point_location = Vector2i(0, 0)
 secondary_points = Array[Vector2i]([Vector2i(0, 0)])
 image = ExtResource("1_vlafm")
-type = 4
+type = 5
 translation = Vector2(0, 0)
 rotation = 0.0
 metadata/_custom_type_script = "uid://6oywq2cixv6v"
