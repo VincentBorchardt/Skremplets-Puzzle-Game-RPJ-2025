@@ -24,4 +24,6 @@ offset_top = 167.0
 offset_right = 898.0
 offset_bottom = 338.0
 
-[connection signal="send_garbage" from="PieceBoxTest" to="." method="_on_piece_box_test_send_garbage"]
+[connection signal="send_garbage" from="Player1Grid" to="." method="_on_send_garbage"]
+[connection signal="send_garbage" from="Player2Grid" to="." method="_on_send_garbage"]
+[connection signal="send_garbage" from="PieceBoxTest" to="." method="_on_send_garbage"]

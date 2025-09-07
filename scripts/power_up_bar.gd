@@ -4,24 +4,12 @@ extends TextureProgressBar
 
 signal activate_powerup
 
-@export var bar_owner: Player
+@export var bar_owner: Inventory.Player
 @export var bar_size: int
-
-enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 
 func _ready() -> void:
 	max_value = bar_size
 	$PowerUpLabel.text = str(value) + "/" + str(max_value)
-
-func convert_pieces(pieces, player):
-	print("in convert_pieces")
-	print(pieces)
-	if player == bar_owner:
-		var total_spaces = 0
-		for piece in pieces:
-			var piece_spaces = piece.secondary_points.size()
-			total_spaces = total_spaces + piece_spaces
-		add_to_bar(total_spaces)
 
 func add_to_bar(num_spaces):
 	print("adding " + str(num_spaces) + " to powerup bar")
@@ -29,13 +17,13 @@ func add_to_bar(num_spaces):
 		value = value + num_spaces
 		if value >= max_value:
 			print("Go Powerup!")
-			activate_powerup.emit(bar_owner)
+			activate_powerup.emit()
 			value = 0
 	else:
 		var intermediate_add = max_value - value
 		value = value + intermediate_add
 		print("Go Powerup!")
-		activate_powerup.emit(bar_owner)
+		activate_powerup.emit()
 		value = 0
 		add_to_bar(num_spaces - intermediate_add)
 	$PowerUpLabel.text = str(value) + "/" + str(max_value)
