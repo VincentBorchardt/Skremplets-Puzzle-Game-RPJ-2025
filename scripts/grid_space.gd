@@ -2,8 +2,9 @@ class_name GridSpace extends Area2D
 
 #TODO This should combine both the GridSpace and PieceSpace classes from the sandbox
 # Make sure everything works once I get the grid itself working
-signal add_new_piece
-signal grab_neutral_piece
+signal add_new_piece(piece, location, player)
+signal grab_neutral_piece(location, player)
+signal clicked_on_piece(location, player)
 
 var is_root_node = false
 var root_piece: Piece
@@ -62,6 +63,8 @@ func remove_pieces(piece_array):
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("clicked on grid space " + str(location))
+		clicked_on_piece.emit(location, space_owner)
+		
 		if space_owner == Player.UNOWNED and not Inventory.current_piece:
 			grab_neutral_piece.emit(location, Player.PLAYER_1)
 		if not is_covered and Inventory.current_piece:

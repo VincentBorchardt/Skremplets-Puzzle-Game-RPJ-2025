@@ -3,6 +3,7 @@ class_name BasePlayArea extends Node2D
 signal send_garbage(num_garbage, sending_player)
 
 #TODO put an inventory in here, then rework everything inventory-wise to work with signals
+var current_piece: Piece
 
 @export var grid_owner: Inventory.Player
 

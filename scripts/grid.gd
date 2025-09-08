@@ -1,3 +1,5 @@
+# TODO should this be split into multiple classes like I did with PlayArea?
+# It's getting long and is doing both player grid and neutral grid things
 class_name Grid extends Node2D
 
 signal removing_pieces
@@ -12,13 +14,8 @@ signal removing_special_pieces
 var piece_list = PieceList.new()
 var spaces_list = []
 
-# TODO This is a temporary hack to make neutral grids work in a basic form
-# This should probably be in a global, or maybe tied to the specific level if/when they get implemented
-var piece_storage = ["res://resources/pieces/blue_four_t.tres", "res://resources/pieces/red_four_line.tres", "res://resources/pieces/yellow_four_square.tres"]
 
-#TODO This needs to be updated for the final project and not duplicated everywhere
-#enum Player {PLAYER_1, PLAYER_2, UNOWNED}
-#enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
+
 
 func _ready() -> void:
 	spaces_list = $Spaces.get_children()
@@ -27,9 +24,7 @@ func _ready() -> void:
 		space.space_owner = grid_owner
 	if background_image:
 		$Background.texture = background_image
-	if grid_owner == Inventory.Player.UNOWNED:
-		print("Populating Neutral Grid")
-		populate_neutral_grid()
+
 
 #TODO Check if the returns are needed in this function specifically beyond breaks
 func _on_grid_space_add_new_piece(new_piece, new_location, player):
@@ -41,17 +36,6 @@ func _on_grid_space_add_new_piece(new_piece, new_location, player):
 		Inventory.current_piece = null
 		try_to_clear_pieces()
 		return true
-
-func _on_grid_space_grab_neutral_piece(location, player) -> void:
-	#print("in _on_grid_space_grab_neutral_piece")
-	var piece = piece_list.get_piece_at_location(location)
-	if piece:
-		var pieces_to_clear = [piece]
-		piece_list.remove_pieces(pieces_to_clear)
-		for node in spaces_list:
-			node.remove_pieces(pieces_to_clear)
-		piece.pick_up_piece(player)
-		Inventory.current_piece = piece
 
 func is_legal_place(new_piece, new_location, player):
 	if player != grid_owner:
@@ -78,6 +62,7 @@ func place_piece(new_piece, new_location):
 		node._on_add_new_piece(new_piece, new_location)
 	return true
 
+# TODO should this be a generic place_random_place function? or should be in NeutralGrid only?
 func place_garbage(num_garbage):
 	for i in range (num_garbage):
 		var new_garbage = load("res://resources/pieces/garbage_block.tres").duplicate()
@@ -116,13 +101,3 @@ func try_to_clear_pieces():
 func point_is_off_grid(point):
 	# TODO This should be removed and point to the piece off_grid function?
 	return point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y
-
-# TODO THIS IS EXTREMELY HARDCODED FOR NOW
-func populate_neutral_grid():
-	for i in range(5):
-		var index = randi() % 3
-		var piece = load(piece_storage[index]).duplicate()
-		var location = Vector2i(((2 * i) + 1), 1)
-		# TODO This doesn't check if the space is legal, it shouldn't in this hack but likely will eventually
-		place_piece(piece, location)
-	#print(piece_list)

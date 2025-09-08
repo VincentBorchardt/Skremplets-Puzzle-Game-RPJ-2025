@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2w6sitg20dna"]
 
-[ext_resource type="Script" uid="uid://rdtmqgtehayh" path="res://scripts/grid.gd" id="1_mgtwh"]
+[ext_resource type="Script" uid="uid://2hhfcg1ksay3" path="res://scripts/neutral_grid.gd" id="1_3uut6"]
 [ext_resource type="PackedScene" uid="uid://bapgvd2psgvpj" path="res://scenes/grid_space.tscn" id="2_3uut6"]
 
 [node name="NeutralGrid" type="Node2D"]
-script = ExtResource("1_mgtwh")
+script = ExtResource("1_3uut6")
 grid_x = 12
 grid_y = 6
 grid_owner = 2
-metadata/_custom_type_script = "uid://rdtmqgtehayh"
+metadata/_custom_type_script = "uid://2hhfcg1ksay3"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
