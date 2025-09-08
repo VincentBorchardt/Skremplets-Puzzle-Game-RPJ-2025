@@ -13,14 +13,17 @@ func _ready() -> void:
 
 func grab_neutral_piece(location, player) -> void:
 	#print("in _on_grid_space_grab_neutral_piece")
+	print("grabbing piece at " + str(location))
 	var piece = piece_list.get_piece_at_location(location)
 	if piece:
+		var root = piece.root_point_location
 		var pieces_to_clear = [piece]
 		piece_list.remove_pieces(pieces_to_clear)
 		for node in spaces_list:
 			node.remove_pieces(pieces_to_clear)
 		piece.pick_up_piece(player)
 		get_neutral_piece.emit(piece, player)
+		repopulate_neutral_grid(root)
 
 # TODO THIS IS EXTREMELY HARDCODED FOR NOW
 func populate_neutral_grid():
@@ -31,3 +34,8 @@ func populate_neutral_grid():
 		# TODO This doesn't check if the space is legal, it shouldn't in this hack but likely will eventually
 		place_piece(piece, location)
 	#print(piece_list)
+
+func repopulate_neutral_grid(location):
+	var index = randi() % 3
+	var piece = load(piece_storage[index]).duplicate()
+	place_piece(piece, location)
