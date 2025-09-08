@@ -4,7 +4,7 @@ class_name GridSpace extends Area2D
 # Make sure everything works once I get the grid itself working
 signal add_new_piece(piece, location, player)
 signal grab_neutral_piece(location, player)
-signal clicked_on_piece(location, player)
+signal clicked_on_space(location, player)
 
 var is_root_node = false
 var root_piece: Piece
@@ -63,7 +63,7 @@ func remove_pieces(piece_array):
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("clicked on grid space " + str(location))
-		clicked_on_piece.emit(location, space_owner)
+		clicked_on_space.emit(location, space_owner)
 		
 		if space_owner == Player.UNOWNED and not Inventory.current_piece:
 			grab_neutral_piece.emit(location, Player.PLAYER_1)

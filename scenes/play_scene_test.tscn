@@ -26,4 +26,7 @@ offset_bottom = 338.0
 
 [connection signal="send_garbage" from="Player1Grid" to="." method="_on_send_garbage"]
 [connection signal="send_garbage" from="Player2Grid" to="." method="_on_send_garbage"]
+[connection signal="clicked_on_space" from="NeutralGrid" to="." method="_on_neutral_grid_clicked_on_space"]
+[connection signal="get_neutral_piece" from="NeutralGrid" to="." method="_on_neutral_grid_get_neutral_piece"]
+[connection signal="get_neutral_piece" from="PieceBoxTest" to="." method="_on_neutral_grid_get_neutral_piece"]
 [connection signal="send_garbage" from="PieceBoxTest" to="." method="_on_send_garbage"]

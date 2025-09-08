@@ -4,6 +4,8 @@ class_name Grid extends Node2D
 
 signal removing_pieces
 signal removing_special_pieces
+signal set_current_piece(piece)
+signal clicked_on_space(location, player)
 
 #TODO Should this create a grid dynamically? The most annoying part there is connecting the signals
 @export var grid_x: int
@@ -14,12 +16,8 @@ signal removing_special_pieces
 var piece_list = PieceList.new()
 var spaces_list = []
 
-
-
-
 func _ready() -> void:
 	spaces_list = $Spaces.get_children()
-	#print(spaces_list)
 	for space in spaces_list:
 		space.space_owner = grid_owner
 	if background_image:
@@ -33,9 +31,12 @@ func _on_grid_space_add_new_piece(new_piece, new_location, player):
 		return false
 	else:
 		place_piece(new_piece, new_location)
-		Inventory.current_piece = null
+		set_current_piece.emit(null)
 		try_to_clear_pieces()
 		return true
+
+func _on_grid_space_clicked_on_space(location: Vector2i, player: Inventory.Player) -> void:
+	clicked_on_space.emit(location, player)
 
 func is_legal_place(new_piece, new_location, player):
 	if player != grid_owner:
@@ -99,5 +100,4 @@ func try_to_clear_pieces():
 		try_to_clear_pieces()
 
 func point_is_off_grid(point):
-	# TODO This should be removed and point to the piece off_grid function?
 	return point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y

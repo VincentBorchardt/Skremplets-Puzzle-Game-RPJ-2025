@@ -7,6 +7,11 @@ var current_piece: Piece
 
 @export var grid_owner: Inventory.Player
 
+func set_current_piece(piece):
+	current_piece = piece
+	# TODO This is temporary to make sure things work as I slowly decouple things
+	Inventory.current_piece = piece
+
 func _on_grid_removing_pieces(pieces, player) -> void:
 	print("in _on_grid_removing_pieces")
 	var total_spaces = convert_pieces(pieces)
