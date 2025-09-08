@@ -6,7 +6,7 @@ signal removing_special_pieces
 #TODO Should this create a grid dynamically? The most annoying part there is connecting the signals
 @export var grid_x: int
 @export var grid_y: int
-@export var grid_owner: Player
+@export var grid_owner: Inventory.Player
 @export var background_image: Texture2D
 
 var piece_list = PieceList.new()
@@ -17,7 +17,7 @@ var spaces_list = []
 var piece_storage = ["res://resources/pieces/blue_four_t.tres", "res://resources/pieces/red_four_line.tres", "res://resources/pieces/yellow_four_square.tres"]
 
 #TODO This needs to be updated for the final project and not duplicated everywhere
-enum Player {PLAYER_1, PLAYER_2, UNOWNED}
+#enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 #enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
 
 func _ready() -> void:
@@ -27,7 +27,7 @@ func _ready() -> void:
 		space.space_owner = grid_owner
 	if background_image:
 		$Background.texture = background_image
-	if grid_owner == Player.UNOWNED:
+	if grid_owner == Inventory.Player.UNOWNED:
 		print("Populating Neutral Grid")
 		populate_neutral_grid()
 
@@ -67,7 +67,6 @@ func is_legal_place(new_piece, new_location, player):
 	return true
 
 func place_piece(new_piece, new_location):
-	# This is the actual modifying the piece and adding it, since it's good now
 	var piece_points = []
 	new_piece.root_point_location = new_location
 	for i in range(new_piece.secondary_points.size()):
@@ -102,10 +101,10 @@ func try_to_clear_pieces():
 	var pieces_to_clear = piece_list.get_touching_pieces()
 	if not pieces_to_clear.is_empty():
 		print("removing pieces")
-		print(pieces_to_clear)
+		#print(pieces_to_clear)
 		removing_pieces.emit(pieces_to_clear, grid_owner)
 		var special_pieces_to_clear = piece_list.get_special_touching_pieces(pieces_to_clear)
-		print(special_pieces_to_clear)
+		#print(special_pieces_to_clear)
 		if not special_pieces_to_clear.is_empty():
 			removing_special_pieces.emit(special_pieces_to_clear, grid_owner)
 		pieces_to_clear.append_array(special_pieces_to_clear)

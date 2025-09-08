@@ -5,7 +5,7 @@ class_name PieceList extends Resource
 var list = {}
 
 #TODO This needs to be updated for the final project and not duplicated everywhere
-enum Player {PLAYER_1, PLAYER_2, UNOWNED}
+#enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 #enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
 
 #static func piece_list_from_array(piece_array):

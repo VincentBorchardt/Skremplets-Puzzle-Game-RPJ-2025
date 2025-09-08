@@ -2,8 +2,6 @@ extends VBoxContainer
 
 signal send_garbage
 
-#enum Player {PLAYER_1, PLAYER_2, UNOWNED}
-
 func _on_red_line_button_pressed() -> void:
 	Inventory.current_piece = preload("res://resources/pieces/red_four_line.tres").duplicate()
 

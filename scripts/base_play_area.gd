@@ -41,6 +41,7 @@ func calculate_garbage(spaces):
 
 func _on_power_up_bar_activate_powerup() -> void:
 	print("activating powerup for " + str(grid_owner))
+	# TODO This is going to be hardcoded to Grymmt's apples for now
 
 func _on_grid_removing_special_pieces(pieces, player) -> void:
 	pass # Replace with function body.
