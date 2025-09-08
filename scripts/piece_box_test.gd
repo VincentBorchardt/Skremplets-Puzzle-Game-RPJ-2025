@@ -15,11 +15,5 @@ func _on_blue_t_button_pressed() -> void:
 func _on_green_bottle_button_pressed() -> void:
 	get_neutral_piece.emit(preload("res://resources/pieces/green_three_three_bottle.tres").duplicate(), Inventory.Player.PLAYER_1)
 
-func _on_rotate_cw_button_pressed() -> void:
-	Inventory.rotate_current_piece(TAU/4)
-
-func _on_rotate_ccw_button_pressed() -> void:
-	Inventory.rotate_current_piece(-TAU/4)
-
 func _on_place_player_garbage_pressed() -> void:
 	send_garbage.emit(3, Inventory.Player.PLAYER_2)

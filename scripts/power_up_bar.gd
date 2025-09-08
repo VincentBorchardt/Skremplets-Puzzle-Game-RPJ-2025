@@ -1,5 +1,5 @@
 extends TextureProgressBar
-# TODO This probably will become TextureProgressBar once final graphics come in
+
 # TODO Should this be tied to a character? That would work to differentiate powerups?
 
 signal activate_powerup

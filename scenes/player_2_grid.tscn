@@ -26,7 +26,6 @@ offset_bottom = 280.0
 bar_owner = 1
 
 [node name="PreviewBox" parent="." instance=ExtResource("4_14sy7")]
-visible = false
 offset_left = 101.0
 offset_top = -139.0
 offset_right = 101.0

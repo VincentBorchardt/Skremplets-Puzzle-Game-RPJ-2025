@@ -1,5 +1,4 @@
-# TODO should this be split into multiple classes like I did with PlayArea?
-# It's getting long and is doing both player grid and neutral grid things
+# TODO Consider making a play_grid class, a neutral_grid class already extends this
 class_name Grid extends Node2D
 
 signal removing_pieces
@@ -25,7 +24,7 @@ func _ready() -> void:
 
 
 #TODO Check if the returns are needed in this function specifically beyond breaks
-func _on_grid_space_add_new_piece(new_piece, new_location, player):
+func add_new_piece(new_piece, new_location, player):
 	print("in _on_grid_space_add_new_piece")
 	if not is_legal_place(new_piece, new_location, player):
 		return false

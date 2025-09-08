@@ -9,13 +9,6 @@ class_name Piece extends Resource
 # currently in radians (so 90 degrees = TAU/4), 
 @export var rotation: float
 
-# TODO These need to be updated for the final project
-# They should also be in a better place to not be duplicated everywhere
-#enum Player {PLAYER_1, PLAYER_2, UNOWNED}
-# TODO Consider making the value of each "Type" the string to preload its resource?
-# Definitely wait until things are more finalized (and only in one place)
-#enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
-
 func is_special_touching(piece2):
 	if piece2.type == Inventory.Type.GARBAGE or piece2.type == Inventory.Type.POWERUP:
 		for point1 in self.secondary_points:
@@ -57,12 +50,13 @@ func get_adjacent_points():
 				adjacent_points.append(candidate)
 	return adjacent_points
 
-func points_on_grid(grid_x, grid_y):
-	for point in self.secondary_points:
-		if (point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y):
-			return false
-		else:
-			return true
+# TODO This isn't called anywhere, and I think it's broken
+#func points_on_grid(grid_x, grid_y):
+	#for point in self.secondary_points:
+		#if (point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y):
+			#return false
+		#else:
+			#return true
 
 func pick_up_piece(player):
 	self.owner = player

@@ -4,16 +4,6 @@ class_name PieceList extends Resource
 # one of the points of this class is to hide that implementation detail
 var list = {}
 
-#TODO This needs to be updated for the final project and not duplicated everywhere
-#enum Player {PLAYER_1, PLAYER_2, UNOWNED}
-#enum Type {RED, BLUE, YELLOW, GREEN, GARBAGE, POWERUP, WILD, NONE}
-
-#static func piece_list_from_array(piece_array):
-	#var new_list = new()
-	#for piece in piece_array:
-		#new_list.add(piece, piece.secondary_points)
-	#return new_list
-
 func add(piece, points):
 	print("adding " + str(piece) + " to piece_list")
 	if not list.has(piece):

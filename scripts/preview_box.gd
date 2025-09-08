@@ -1,12 +1,9 @@
 class_name PreviewBox extends Control
 
-# TODO Boxes are currently linked, need to say owner as well
-# Won't come until Inventory is generalized, coming later
-
 func _ready() -> void:
-	Inventory.current_piece_changed.connect(_on_inventory_current_piece_changed)
+	pass
 
-func _on_inventory_current_piece_changed(new_piece):
+func current_piece_changed(new_piece):
 	if new_piece == null:
 		$PieceImage.visible = false
 	else:

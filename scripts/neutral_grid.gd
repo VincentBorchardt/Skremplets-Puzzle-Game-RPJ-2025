@@ -21,7 +21,6 @@ func grab_neutral_piece(location, player) -> void:
 			node.remove_pieces(pieces_to_clear)
 		piece.pick_up_piece(player)
 		get_neutral_piece.emit(piece, player)
-		#Inventory.current_piece = piece
 
 # TODO THIS IS EXTREMELY HARDCODED FOR NOW
 func populate_neutral_grid():

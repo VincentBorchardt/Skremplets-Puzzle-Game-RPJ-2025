@@ -3,14 +3,20 @@ class_name BasePlayArea extends Node2D
 signal send_garbage(num_garbage, sending_player)
 
 #TODO put an inventory in here, then rework everything inventory-wise to work with signals
-var current_piece: Piece
+var current_piece: Piece:
+	set(piece):
+		current_piece = piece
+		$PreviewBox.current_piece_changed(piece)
 
 @export var grid_owner: Inventory.Player
 
 func set_current_piece(piece):
 	current_piece = piece
-	# TODO This is temporary to make sure things work as I slowly decouple things
-	#Inventory.current_piece = piece
+
+func rotate_current_piece(rotation_angle):
+	if current_piece:
+		current_piece.rotate(rotation_angle)
+		$PreviewBox.current_piece_changed(current_piece)
 
 func _on_grid_removing_pieces(pieces, player) -> void:
 	print("in _on_grid_removing_pieces")
@@ -50,6 +56,7 @@ func _on_power_up_bar_activate_powerup() -> void:
 	# TODO This is going to be hardcoded to Grymmt's apples for now
 
 func _on_grid_removing_special_pieces(pieces, player) -> void:
+	# TODO this will do things when you clear powerups
 	pass # Replace with function body.
 
 func receive_garbage(num_garbage):
