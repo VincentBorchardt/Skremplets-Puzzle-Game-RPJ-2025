@@ -65,8 +65,8 @@ func _on_input_event(viewport, event, shape_idx):
 		print("clicked on grid space " + str(location))
 		clicked_on_space.emit(location, space_owner)
 		
-		if space_owner == Player.UNOWNED and not Inventory.current_piece:
-			grab_neutral_piece.emit(location, Player.PLAYER_1)
+		#if space_owner == Player.UNOWNED and not Inventory.current_piece:
+			#grab_neutral_piece.emit(location, Player.PLAYER_1)
 		if not is_covered and Inventory.current_piece:
 			print("adding new piece")
 			# TODO PLAYER_1 is hardcoded for a click; this needs to change if MP becomes a thing

@@ -11,7 +11,7 @@ func _ready() -> void:
 		print("Populating Neutral Grid")
 		populate_neutral_grid()
 
-func _on_grid_space_grab_neutral_piece(location, player) -> void:
+func grab_neutral_piece(location, player) -> void:
 	#print("in _on_grid_space_grab_neutral_piece")
 	var piece = piece_list.get_piece_at_location(location)
 	if piece:

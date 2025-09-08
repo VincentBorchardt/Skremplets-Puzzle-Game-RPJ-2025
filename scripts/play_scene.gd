@@ -17,5 +17,8 @@ func _on_neutral_grid_get_neutral_piece(piece: Piece, player: Inventory.Player) 
 
 
 func _on_neutral_grid_clicked_on_space(location: Variant, player: Variant) -> void:
-	# TODO needs to connect down and finish this (and the other side of it)
-	pass # Replace with function body.
+	# TODO going to fix as Player 1 for now, might need to add Player 2 support, or use a different path
+	# TODO Not checking Inventory is null, won't need to at the end obviously, but might cause problems now
+	if not $Player1Grid.current_piece:
+		# TODO change this name if this is how I decide to do it
+		$NeutralGrid.grab_neutral_piece(location, Inventory.Player.PLAYER_1)
