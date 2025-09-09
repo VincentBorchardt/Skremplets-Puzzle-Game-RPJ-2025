@@ -50,13 +50,12 @@ func get_adjacent_points():
 				adjacent_points.append(candidate)
 	return adjacent_points
 
-# TODO This isn't called anywhere, and I think it's broken
-#func points_on_grid(grid_x, grid_y):
-	#for point in self.secondary_points:
-		#if (point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y):
-			#return false
-		#else:
-			#return true
+# TODO I think this might be broken, but it wasn't in the sandbox
+func points_on_grid(grid_x, grid_y):
+	for point in self.secondary_points:
+		if (point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y):
+			return false
+	return true
 
 func pick_up_piece(player):
 	self.owner = player

@@ -47,6 +47,7 @@ text = "Rotate Counterclockwise"
 [connection signal="removing_pieces" from="PlayGrid" to="." method="_on_grid_removing_pieces"]
 [connection signal="removing_special_pieces" from="PlayGrid" to="." method="_on_grid_removing_special_pieces"]
 [connection signal="set_current_piece" from="PlayGrid" to="." method="set_current_piece"]
+[connection signal="start_ai_place" from="PlayGrid" to="." method="_on_play_grid_start_ai_place"]
 [connection signal="activate_powerup" from="PowerUpBar" to="." method="_on_power_up_bar_activate_powerup"]
 [connection signal="pressed" from="RotateCWButton" to="." method="_on_rotate_cw_button_pressed"]
 [connection signal="pressed" from="RotateCCWButton" to="." method="_on_rotate_ccw_button_pressed"]

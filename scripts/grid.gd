@@ -1,10 +1,12 @@
 # TODO Consider making a play_grid class, a neutral_grid class already extends this
+# also consider an ai_grid class
 class_name Grid extends Node2D
 
 signal removing_pieces
 signal removing_special_pieces
 signal set_current_piece(piece)
 signal clicked_on_space(location, player)
+signal start_ai_place
 
 #TODO Should this create a grid dynamically? The most annoying part there is connecting the signals
 @export var grid_x: int
@@ -32,6 +34,8 @@ func add_new_piece(new_piece, new_location, player):
 		place_piece(new_piece, new_location)
 		set_current_piece.emit(null)
 		try_to_clear_pieces()
+		if player == Inventory.Player.PLAYER_1:
+			start_ai_place.emit()
 		return true
 
 func _on_grid_space_clicked_on_space(location: Vector2i, player: Inventory.Player) -> void:

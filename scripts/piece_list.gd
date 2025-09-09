@@ -16,6 +16,9 @@ func remove_pieces(pieces_to_clear):
 func size():
 	return list.size()
 
+func is_empty():
+	return list.is_empty()
+
 func get_piece_at_location(location):
 	for piece in list:
 		print(location)
@@ -24,6 +27,9 @@ func get_piece_at_location(location):
 		if list[piece].has(location):
 			return piece
 	return null
+
+func get_pieces():
+	return list.keys()
 
 func get_piece_at_index(index):
 	return list.keys()[index]

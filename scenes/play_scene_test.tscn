@@ -29,6 +29,7 @@ offset_right = 898.0
 offset_bottom = 338.0
 
 [connection signal="send_garbage" from="Player1Grid" to="." method="_on_send_garbage"]
+[connection signal="start_ai_place" from="Player1Grid" to="." method="_on_player_1_grid_start_ai_place"]
 [connection signal="send_garbage" from="Player2Grid" to="." method="_on_send_garbage"]
 [connection signal="clicked_on_space" from="NeutralGrid" to="." method="_on_neutral_grid_clicked_on_space"]
 [connection signal="get_neutral_piece" from="NeutralGrid" to="." method="_on_neutral_grid_get_neutral_piece"]
