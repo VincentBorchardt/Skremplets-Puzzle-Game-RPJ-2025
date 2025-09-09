@@ -41,16 +41,26 @@ func add_new_piece(new_piece, new_location, player):
 func _on_grid_space_clicked_on_space(location: Vector2i, player: Inventory.Player) -> void:
 	clicked_on_space.emit(location, player)
 
+func ensure_legal_piece(piece):
+	var test_piece = piece.duplicate()
+	for i in range(4):
+		test_piece.rotate(i * TAU/4)
+		for x in range(grid_x):
+			for y in range(grid_y):
+				if is_legal_place(test_piece, Vector2i(x, y), grid_owner):
+					return true
+	return false
+
 func is_legal_place(new_piece, new_location, player):
 	if player != grid_owner:
-		print("Not Player 1's Grid")
+		#print("Not Player 1's Grid")
 		return false
 	if piece_list.has_overlaps(new_piece, new_location):
 		return false
 	for point in new_piece.secondary_points:
 		var new_point = point + new_location
 		if point_is_off_grid(new_point):
-			print(str(new_point) + " is off the grid")
+			#print(str(new_point) + " is off the grid")
 			return false
 	return true
 
@@ -81,8 +91,9 @@ func place_garbage(num_garbage):
 				place_piece(new_garbage, rand_location)
 			else:
 				num_tries = num_tries + 1
-				if num_tries > 50:
+				if num_tries > 500:
 					print("failed placing garbage")
+					print(str(grid_owner) + " loses")
 				else:
 					failed_placement = true
 

@@ -18,7 +18,7 @@ texture = ExtResource("1_nuaq7")
 [node name="PlayGrid" parent="." instance=ExtResource("2_u0dkv")]
 grid_owner = 1
 
-[node name="Player2PowerUpBar" parent="." instance=ExtResource("3_nuaq7")]
+[node name="PowerUpBar" parent="." instance=ExtResource("3_nuaq7")]
 offset_left = -135.0
 offset_top = -20.0
 offset_right = -75.0
@@ -30,3 +30,7 @@ offset_left = 101.0
 offset_top = -139.0
 offset_right = 101.0
 offset_bottom = -139.0
+
+[connection signal="removing_pieces" from="PlayGrid" to="." method="_on_grid_removing_pieces"]
+[connection signal="removing_special_pieces" from="PlayGrid" to="." method="_on_grid_removing_special_pieces"]
+[connection signal="set_current_piece" from="PlayGrid" to="." method="set_current_piece"]

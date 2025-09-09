@@ -29,8 +29,6 @@ func _on_neutral_grid_start_ai_pick(piece_list, player) -> void:
 	#print("in _on_neutral_grid_start_ai_pick")
 	var preferred_piece = $Player2Grid.get_preferred_piece(piece_list)
 	$NeutralGrid.grab_neutral_piece(preferred_piece.root_point_location, player)
-	
-
 
 func _on_player_1_grid_start_ai_place() -> void:
 	$Player2Grid.start_ai_place()

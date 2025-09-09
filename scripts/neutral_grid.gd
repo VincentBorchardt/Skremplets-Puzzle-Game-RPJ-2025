@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func grab_neutral_piece(location, player) -> void:
 	#print("in _on_grid_space_grab_neutral_piece")
-	print("grabbing piece at " + str(location))
+	#print("grabbing piece at " + str(location))
 	var piece = piece_list.get_piece_at_location(location)
 	if piece:
 		var root = piece.root_point_location

@@ -7,6 +7,9 @@ var current_piece: Piece:
 	set(piece):
 		current_piece = piece
 		$PreviewBox.current_piece_changed(piece)
+		if piece != null:
+			if not $PlayGrid.ensure_legal_piece(piece):
+				print(str(grid_owner) + " loses")
 
 @export var character: Character
 @export var grid_owner: Inventory.Player

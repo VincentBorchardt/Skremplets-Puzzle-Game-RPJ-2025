@@ -31,7 +31,6 @@ func place_fully_random_piece(num_of_failures):
 	rotate_current_piece(rand_rotation * (TAU / 4))
 	if $PlayGrid.add_new_piece(current_piece, rand_coord, grid_owner):
 		print("successful adding piece")
-		current_piece = null
 		return true
 	else:
 		var new_failures = num_of_failures + 1

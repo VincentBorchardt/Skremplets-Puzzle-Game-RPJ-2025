@@ -38,7 +38,7 @@ func has_overlaps(new_piece, new_location):
 	for piece in list:
 		for point in new_piece.secondary_points:
 			if list[piece].has(point + new_location):
-				print(str(new_location) + " is already covered")
+				#print(str(new_location) + " is already covered")
 				return true
 
 func get_special_touching_pieces(clearing_pieces):
