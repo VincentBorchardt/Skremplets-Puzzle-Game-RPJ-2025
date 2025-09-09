@@ -4,3 +4,5 @@ extends Node
 # Probably should get renamed at some point
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 enum Type {RED, BLUE, YELLOW, GREEN, PURPLE, GARBAGE, POWERUP, WILD, NONE}
+enum AIPickingPattern {RANDOM, MOST, BIGGEST}
+enum AIPlacementPattern {RANDOM_MATCHING, ANTI_GARBAGE}

@@ -1,19 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgdtshogglm73"]
+[gd_scene load_steps=8 format=3 uid="uid://bgdtshogglm73"]
 
 [ext_resource type="Script" uid="uid://c11y2smjvgn31" path="res://scripts/play_scene.gd" id="1_qlfe2"]
 [ext_resource type="PackedScene" uid="uid://b2w6sitg20dna" path="res://scenes/neutral_grid.tscn" id="2_ehd68"]
 [ext_resource type="PackedScene" uid="uid://ccanpro3dipby" path="res://scenes/piece_box.tscn" id="2_lixwp"]
 [ext_resource type="PackedScene" uid="uid://3lepfkvo1yvi" path="res://scenes/player_1_grid.tscn" id="2_rq1sk"]
+[ext_resource type="Resource" uid="uid://b4reyngalkwyh" path="res://resources/characters/grymmt_dundle.tres" id="3_oco0s"]
 [ext_resource type="PackedScene" uid="uid://c2bsuixqkm7yo" path="res://scenes/player_2_grid.tscn" id="3_qlfe2"]
+[ext_resource type="Resource" uid="uid://cck3y4synutqo" path="res://resources/characters/orchk.tres" id="5_rq1sk"]
 
 [node name="PlaySceneTest" type="Node2D"]
 script = ExtResource("1_qlfe2")
 
 [node name="Player1Grid" parent="." instance=ExtResource("2_rq1sk")]
 position = Vector2(103, 216)
+character = ExtResource("3_oco0s")
 
 [node name="Player2Grid" parent="." instance=ExtResource("3_qlfe2")]
 position = Vector2(1255, 216)
+character = ExtResource("5_rq1sk")
 
 [node name="NeutralGrid" parent="." instance=ExtResource("2_ehd68")]
 position = Vector2(525, 600)
@@ -28,5 +32,6 @@ offset_bottom = 338.0
 [connection signal="send_garbage" from="Player2Grid" to="." method="_on_send_garbage"]
 [connection signal="clicked_on_space" from="NeutralGrid" to="." method="_on_neutral_grid_clicked_on_space"]
 [connection signal="get_neutral_piece" from="NeutralGrid" to="." method="_on_neutral_grid_get_neutral_piece"]
+[connection signal="start_ai_pick" from="NeutralGrid" to="." method="_on_neutral_grid_start_ai_pick"]
 [connection signal="get_neutral_piece" from="PieceBoxTest" to="." method="_on_neutral_grid_get_neutral_piece"]
 [connection signal="send_garbage" from="PieceBoxTest" to="." method="_on_send_garbage"]

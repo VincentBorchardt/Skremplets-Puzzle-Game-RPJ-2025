@@ -1,6 +1,8 @@
 class_name NeutralGrid extends Grid
 
 signal get_neutral_piece(piece, player)
+signal start_ai_pick(piece_list, player)
+
 # TODO This is a temporary hack to make neutral grids work in a basic form
 # This should probably be in a global, or maybe tied to the specific level if/when they get implemented
 var piece_storage = ["res://resources/pieces/blue_four_t.tres", "res://resources/pieces/red_four_line.tres", "res://resources/pieces/yellow_four_square.tres"]
@@ -23,6 +25,9 @@ func grab_neutral_piece(location, player) -> void:
 			node.remove_pieces(pieces_to_clear)
 		piece.pick_up_piece(player)
 		get_neutral_piece.emit(piece, player)
+		# TODO hardcoding Human versus AI here
+		if player == Inventory.Player.PLAYER_1:
+			start_ai_pick.emit(piece_list, Inventory.Player.PLAYER_2)
 		repopulate_neutral_grid(root)
 
 # TODO THIS IS EXTREMELY HARDCODED FOR NOW

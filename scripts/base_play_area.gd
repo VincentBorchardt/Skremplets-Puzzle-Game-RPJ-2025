@@ -8,6 +8,7 @@ var current_piece: Piece:
 		current_piece = piece
 		$PreviewBox.current_piece_changed(piece)
 
+@export var character: Character
 @export var grid_owner: Inventory.Player
 
 func set_current_piece(piece):

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://cck3y4synutqo"]
+
+[ext_resource type="Script" uid="uid://b58oxslgqt4ox" path="res://scripts/character.gd" id="1_dhin1"]
+
+[resource]
+script = ExtResource("1_dhin1")
+name = "Orchk"
+depowered = null
+ai_picking_pattern = 0
+metadata/_custom_type_script = "uid://b58oxslgqt4ox"

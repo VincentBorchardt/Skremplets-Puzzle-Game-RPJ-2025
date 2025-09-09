@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://b4reyngalkwyh"]
+
+[ext_resource type="Script" uid="uid://b58oxslgqt4ox" path="res://scripts/character.gd" id="1_vo0tv"]
+
+[resource]
+script = ExtResource("1_vo0tv")
+name = "Grymmt Dundle"
+depowered = null
+ai_picking_pattern = 1
+ai_placement_pattern = 1
+metadata/_custom_type_script = "uid://b58oxslgqt4ox"
