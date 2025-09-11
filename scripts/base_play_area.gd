@@ -1,6 +1,6 @@
 class_name BasePlayArea extends Node2D
 
-signal send_garbage(num_garbage, sending_player)
+signal send_pieces(piece, num_pieces, sending_player)
 
 #TODO put an inventory in here, then rework everything inventory-wise to work with signals
 var current_piece: Piece:
@@ -26,7 +26,8 @@ func _on_grid_removing_pieces(pieces, player) -> void:
 	print("in _on_grid_removing_pieces")
 	var total_spaces = convert_pieces(pieces)
 	var total_garbage = calculate_garbage(total_spaces)
-	send_garbage.emit(total_garbage, grid_owner)
+	var garbage_piece = preload("res://resources/pieces/garbage_block.tres").duplicate()
+	send_pieces.emit(garbage_piece, total_garbage, grid_owner)
 	$PowerUpBar.add_to_bar(total_spaces)
 
 func convert_pieces(pieces):
@@ -69,5 +70,5 @@ func _on_grid_activate_special_pieces(pieces, player) -> void:
 			_:
 				pass
 
-func receive_garbage(num_garbage):
-	$PlayGrid.place_garbage(num_garbage)
+func receive_pieces(piece, num_pieces):
+	$PlayGrid.place_multiple_pieces(piece, num_pieces)

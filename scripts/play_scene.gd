@@ -6,11 +6,11 @@ extends Node2D
 # TODO Change most of these to matches based on the given player
 
 # TODO These should probably act like the grid spaces in grid to make them less hard-coded
-func _on_send_garbage(num_garbage, sending_player) -> void:
+func _on_send_pieces(piece, num_pieces, sending_player) -> void:
 	if sending_player == Inventory.Player.PLAYER_2:
-		$Player1Grid.receive_garbage(num_garbage)
+		$Player1Grid.receive_pieces(piece, num_pieces)
 	elif sending_player == Inventory.Player.PLAYER_1:
-		$Player2Grid.receive_garbage(num_garbage)
+		$Player2Grid.receive_pieces(piece, num_pieces)
 
 func _on_neutral_grid_get_neutral_piece(piece: Piece, player: Inventory.Player) -> void:
 	if player == Inventory.Player.PLAYER_1:

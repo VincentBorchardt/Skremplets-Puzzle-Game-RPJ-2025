@@ -77,9 +77,9 @@ func place_piece(new_piece, new_location):
 	return true
 
 # TODO should this be a generic place_random_place function? or should be in NeutralGrid only?
-func place_garbage(num_garbage):
-	for i in range (num_garbage):
-		var new_garbage = load("res://resources/pieces/garbage_block.tres").duplicate()
+func place_multiple_pieces(piece, num_pieces):
+	for i in range (num_pieces):
+		var new_piece = piece.duplicate()
 		var num_tries = 0
 		var failed_placement = true
 		while failed_placement:
@@ -87,12 +87,12 @@ func place_garbage(num_garbage):
 			var rand_x = randi() % grid_x
 			var rand_y = randi() % grid_y
 			var rand_location = Vector2i(rand_x, rand_y)
-			if is_legal_place(new_garbage, rand_location, grid_owner):
-				place_piece(new_garbage, rand_location)
+			if is_legal_place(new_piece, rand_location, grid_owner):
+				place_piece(new_piece, rand_location)
 			else:
 				num_tries = num_tries + 1
 				if num_tries > 500:
-					print("failed placing garbage")
+					print("failed placing piece")
 					print(str(grid_owner) + " loses")
 				else:
 					failed_placement = true

@@ -23,17 +23,16 @@ character = ExtResource("5_rq1sk")
 position = Vector2(525, 600)
 
 [node name="PieceBoxTest" parent="." instance=ExtResource("2_lixwp")]
-visible = false
 offset_left = 698.0
 offset_top = 167.0
 offset_right = 898.0
 offset_bottom = 338.0
 
-[connection signal="send_garbage" from="Player1Grid" to="." method="_on_send_garbage"]
+[connection signal="send_pieces" from="Player1Grid" to="." method="_on_send_pieces"]
 [connection signal="start_ai_place" from="Player1Grid" to="." method="_on_player_1_grid_start_ai_place"]
-[connection signal="send_garbage" from="Player2Grid" to="." method="_on_send_garbage"]
+[connection signal="send_pieces" from="Player2Grid" to="." method="_on_send_pieces"]
 [connection signal="clicked_on_space" from="NeutralGrid" to="." method="_on_neutral_grid_clicked_on_space"]
 [connection signal="get_neutral_piece" from="NeutralGrid" to="." method="_on_neutral_grid_get_neutral_piece"]
 [connection signal="start_ai_pick" from="NeutralGrid" to="." method="_on_neutral_grid_start_ai_pick"]
 [connection signal="get_neutral_piece" from="PieceBoxTest" to="." method="_on_neutral_grid_get_neutral_piece"]
-[connection signal="send_garbage" from="PieceBoxTest" to="." method="_on_send_garbage"]
+[connection signal="send_pieces" from="PieceBoxTest" to="." method="_on_send_pieces"]
