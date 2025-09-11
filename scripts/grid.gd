@@ -120,7 +120,7 @@ func check_special_pieces(pieces_to_check):
 	for piece in pieces_to_check:
 		match piece.power_up_type:
 			Inventory.PowerUpType.ORCHK_TWO:
-				var location = piece_list[piece]
+				var location = piece.root_point_location
 				piece_list.remove_pieces([piece])
 				for node in spaces_list:
 					node.remove_pieces([piece])

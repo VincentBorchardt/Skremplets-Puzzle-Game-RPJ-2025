@@ -32,8 +32,13 @@ text = "Green 3x3 Bottle"
 layout_mode = 2
 text = "Send 3 Garbage to Player"
 
+[node name="PlacePlayerSound" type="Button" parent="."]
+layout_mode = 2
+text = "Send 2 Sound2 to Player"
+
 [connection signal="pressed" from="RedLineButton" to="." method="_on_red_line_button_pressed"]
 [connection signal="pressed" from="YellowSquareButton" to="." method="_on_yellow_square_button_pressed"]
 [connection signal="pressed" from="BlueTButton" to="." method="_on_blue_t_button_pressed"]
 [connection signal="pressed" from="GreenBottleButton" to="." method="_on_green_bottle_button_pressed"]
 [connection signal="pressed" from="PlacePlayerGarbage" to="." method="_on_place_player_garbage_pressed"]
+[connection signal="pressed" from="PlacePlayerSound" to="." method="_on_place_player_sound_pressed"]

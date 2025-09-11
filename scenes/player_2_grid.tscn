@@ -33,3 +33,4 @@ offset_bottom = -139.0
 
 [connection signal="removing_pieces" from="PlayGrid" to="." method="_on_grid_removing_pieces"]
 [connection signal="set_current_piece" from="PlayGrid" to="." method="set_current_piece"]
+[connection signal="activate_powerup" from="PowerUpBar" to="." method="_on_power_up_bar_activate_powerup"]

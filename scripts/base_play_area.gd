@@ -11,6 +11,8 @@ var current_piece: Piece:
 			if not $PlayGrid.ensure_legal_piece(piece):
 				print(str(grid_owner) + " loses")
 
+var garbage_piece = preload("res://resources/pieces/garbage_block.tres").duplicate()
+
 @export var character: Character
 @export var grid_owner: Inventory.Player
 
@@ -26,8 +28,7 @@ func _on_grid_removing_pieces(pieces, player) -> void:
 	print("in _on_grid_removing_pieces")
 	var total_spaces = convert_pieces(pieces)
 	var total_garbage = calculate_garbage(total_spaces)
-	var garbage_piece = preload("res://resources/pieces/garbage_block.tres").duplicate()
-	send_pieces.emit(garbage_piece, total_garbage, grid_owner)
+	send_pieces.emit(garbage_piece.duplicate(), total_garbage, grid_owner)
 	$PowerUpBar.add_to_bar(total_spaces)
 
 func convert_pieces(pieces):
@@ -59,13 +60,21 @@ func calculate_garbage(spaces):
 func _on_power_up_bar_activate_powerup() -> void:
 	print("activating powerup for " + str(grid_owner))
 	match character:
-		pass
+		preload("res://resources/characters/grymmt_dundle.tres"):
+			var powerup = preload("res://resources/pieces/apple_power_up.tres").duplicate()
+			$PlayGrid.place_multiple_pieces(powerup, 2)
+		preload("res://resources/characters/orchk.tres"):
+			var powerup = preload("res://resources/pieces/sound_at_two_power_up.tres")
+			send_pieces.emit(powerup, 2, grid_owner)
+		_:
+			print("currently not implemented")
 
 func _on_grid_activate_special_pieces(pieces, player) -> void:
 	# TODO this will do things when you clear powerups
 	for piece in pieces:
 		match piece.power_up_type:
 			Inventory.PowerUpType.GRYMMT:
+				send_pieces.emit(garbage_piece.duplicate(), 2, grid_owner)
 				$PowerUpBar.add_to_bar(3)
 			_:
 				pass
