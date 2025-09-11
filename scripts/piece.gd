@@ -5,6 +5,7 @@ class_name Piece extends Resource
 @export var secondary_points: Array[Vector2i]
 @export var image: Texture2D
 @export var type: Inventory.Type
+@export var power_up_type: Inventory.PowerUpType
 @export var translation: Vector2
 # currently in radians (so 90 degrees = TAU/4), 
 @export var rotation: float

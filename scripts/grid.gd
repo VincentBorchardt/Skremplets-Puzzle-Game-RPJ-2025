@@ -3,7 +3,7 @@
 class_name Grid extends Node2D
 
 signal removing_pieces
-signal removing_special_pieces
+signal activate_special_pieces(pieces, player)
 signal set_current_piece(piece)
 signal clicked_on_space(location, player)
 signal start_ai_place
@@ -103,15 +103,32 @@ func try_to_clear_pieces():
 		print("removing pieces")
 		#print(pieces_to_clear)
 		removing_pieces.emit(pieces_to_clear, grid_owner)
-		var special_pieces_to_clear = piece_list.get_special_touching_pieces(pieces_to_clear)
+		var special_pieces_to_check = piece_list.get_special_touching_pieces(pieces_to_clear)
+		var special_pieces_to_clear = []
 		#print(special_pieces_to_clear)
-		if not special_pieces_to_clear.is_empty():
-			removing_special_pieces.emit(special_pieces_to_clear, grid_owner)
-		pieces_to_clear.append_array(special_pieces_to_clear)
+		if not special_pieces_to_check.is_empty():
+			activate_special_pieces.emit(special_pieces_to_check, grid_owner)
+			special_pieces_to_clear = check_special_pieces(special_pieces_to_check)
+		#pieces_to_clear.append_array(special_pieces_to_clear)
 		piece_list.remove_pieces(pieces_to_clear)
 		for node in spaces_list:
 			node.remove_pieces(pieces_to_clear)
 		try_to_clear_pieces()
+
+func check_special_pieces(pieces_to_check):
+	var pieces_to_clear = []
+	for piece in pieces_to_check:
+		match piece.power_up_type:
+			Inventory.PowerUpType.ORCHK_TWO:
+				var location = piece_list[piece]
+				piece_list.remove_pieces([piece])
+				for node in spaces_list:
+					node.remove_pieces([piece])
+				var new_piece = preload("res://resources/pieces/sound_at_two_power_up.tres")
+				place_piece(new_piece, location)
+			_:
+				pieces_to_clear.append(piece)
+	return pieces_to_clear
 
 func point_is_off_grid(point):
 	return point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y

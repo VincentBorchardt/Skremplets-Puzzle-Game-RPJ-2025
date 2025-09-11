@@ -59,9 +59,14 @@ func _on_power_up_bar_activate_powerup() -> void:
 	print("activating powerup for " + str(grid_owner))
 	# TODO This is going to be hardcoded to Grymmt's apples for now
 
-func _on_grid_removing_special_pieces(pieces, player) -> void:
+func _on_grid_activate_special_pieces(pieces, player) -> void:
 	# TODO this will do things when you clear powerups
-	pass # Replace with function body.
+	for piece in pieces:
+		match piece.power_up_type:
+			Inventory.PowerUpType.GRYMMT:
+				$PowerUpBar.add_to_bar(3)
+			_:
+				pass
 
 func receive_garbage(num_garbage):
 	$PlayGrid.place_garbage(num_garbage)

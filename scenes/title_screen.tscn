@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2ao1qh6laidk"]
+
+[ext_resource type="Script" uid="uid://bosrbphhitant" path="res://scripts/title_screen.gd" id="1_fgkus"]
+[ext_resource type="Script" uid="uid://cvukyo7xt2voj" path="res://scripts/scene_button.gd" id="2_sa3yf"]
+[ext_resource type="PackedScene" uid="uid://bgdtshogglm73" path="res://scenes/play_scene_test.tscn" id="3_s4lrb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s4lrb"]
+font_size = 48
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_fgkus")
+
+[node name="SceneButton" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 325.0
+offset_right = 262.0
+offset_bottom = 356.0
+text = "Test Match: Grymmt vs Orchk"
+script = ExtResource("2_sa3yf")
+attached_scene = ExtResource("3_s4lrb")
+metadata/_custom_type_script = "uid://cvukyo7xt2voj"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 389.0
+offset_top = 37.0
+offset_right = 958.0
+offset_bottom = 104.0
+text = "Skremplets Puzzle Game"
+label_settings = SubResource("LabelSettings_s4lrb")
+
+[connection signal="pressed_with_scene" from="SceneButton" to="." method="_on_scene_button_pressed_with_scene"]

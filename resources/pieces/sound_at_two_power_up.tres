@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Piece" load_steps=3 format=3 uid="uid://cwxmpyd60hdr0"]
+
+[ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/piece.gd" id="1_eulid"]
+[ext_resource type="Texture2D" uid="uid://bdbc7niogiei6" path="res://assets/pieces/orchk_two_powerup_temp.png" id="1_vxrys"]
+
+[resource]
+script = ExtResource("1_eulid")
+owner = 0
+root_point_location = Vector2i(0, 0)
+secondary_points = Array[Vector2i]([])
+image = ExtResource("1_vxrys")
+type = 6
+power_up_type = 2
+translation = Vector2(0, 0)
+rotation = 0.0
+metadata/_custom_type_script = "uid://6oywq2cixv6v"

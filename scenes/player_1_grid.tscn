@@ -43,9 +43,9 @@ offset_right = 420.0
 offset_bottom = -91.0
 text = "Rotate Counterclockwise"
 
+[connection signal="activate_special_pieces" from="PlayGrid" to="." method="_on_grid_activate_special_pieces"]
 [connection signal="clicked_on_space" from="PlayGrid" to="." method="_on_play_grid_clicked_on_space"]
 [connection signal="removing_pieces" from="PlayGrid" to="." method="_on_grid_removing_pieces"]
-[connection signal="removing_special_pieces" from="PlayGrid" to="." method="_on_grid_removing_special_pieces"]
 [connection signal="set_current_piece" from="PlayGrid" to="." method="set_current_piece"]
 [connection signal="start_ai_place" from="PlayGrid" to="." method="_on_play_grid_start_ai_place"]
 [connection signal="activate_powerup" from="PowerUpBar" to="." method="_on_power_up_bar_activate_powerup"]
