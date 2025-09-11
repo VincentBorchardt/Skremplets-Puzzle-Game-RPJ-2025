@@ -23,6 +23,7 @@ character = ExtResource("5_rq1sk")
 position = Vector2(525, 600)
 
 [node name="PieceBoxTest" parent="." instance=ExtResource("2_lixwp")]
+visible = false
 offset_left = 698.0
 offset_top = 167.0
 offset_right = 898.0

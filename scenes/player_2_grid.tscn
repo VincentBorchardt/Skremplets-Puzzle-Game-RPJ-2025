@@ -32,5 +32,4 @@ offset_right = 101.0
 offset_bottom = -139.0
 
 [connection signal="removing_pieces" from="PlayGrid" to="." method="_on_grid_removing_pieces"]
-[connection signal="removing_special_pieces" from="PlayGrid" to="." method="_on_grid_removing_special_pieces"]
 [connection signal="set_current_piece" from="PlayGrid" to="." method="set_current_piece"]

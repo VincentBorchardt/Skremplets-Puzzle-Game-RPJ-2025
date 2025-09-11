@@ -27,7 +27,7 @@ func _ready() -> void:
 
 #TODO Check if the returns are needed in this function specifically beyond breaks
 func add_new_piece(new_piece, new_location, player):
-	print("in _on_grid_space_add_new_piece")
+	#print("in _on_grid_space_add_new_piece")
 	if not is_legal_place(new_piece, new_location, player):
 		return false
 	else:
@@ -124,7 +124,7 @@ func check_special_pieces(pieces_to_check):
 				piece_list.remove_pieces([piece])
 				for node in spaces_list:
 					node.remove_pieces([piece])
-				var new_piece = preload("res://resources/pieces/sound_at_one_power_up.tres")
+				var new_piece = preload("res://resources/pieces/sound_at_one_power_up.tres").duplicate()
 				place_piece(new_piece, location)
 			_:
 				pieces_to_clear.append(piece)

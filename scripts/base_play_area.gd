@@ -57,7 +57,8 @@ func calculate_garbage(spaces):
 
 func _on_power_up_bar_activate_powerup() -> void:
 	print("activating powerup for " + str(grid_owner))
-	# TODO This is going to be hardcoded to Grymmt's apples for now
+	match character:
+		pass
 
 func _on_grid_activate_special_pieces(pieces, player) -> void:
 	# TODO this will do things when you clear powerups
