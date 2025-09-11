@@ -109,7 +109,7 @@ func try_to_clear_pieces():
 		if not special_pieces_to_check.is_empty():
 			activate_special_pieces.emit(special_pieces_to_check, grid_owner)
 			special_pieces_to_clear = check_special_pieces(special_pieces_to_check)
-		#pieces_to_clear.append_array(special_pieces_to_clear)
+		pieces_to_clear.append_array(special_pieces_to_clear)
 		piece_list.remove_pieces(pieces_to_clear)
 		for node in spaces_list:
 			node.remove_pieces(pieces_to_clear)
@@ -124,7 +124,7 @@ func check_special_pieces(pieces_to_check):
 				piece_list.remove_pieces([piece])
 				for node in spaces_list:
 					node.remove_pieces([piece])
-				var new_piece = preload("res://resources/pieces/sound_at_two_power_up.tres")
+				var new_piece = preload("res://resources/pieces/sound_at_one_power_up.tres")
 				place_piece(new_piece, location)
 			_:
 				pieces_to_clear.append(piece)
