@@ -36,8 +36,10 @@ label_settings = SubResource("LabelSettings_s4lrb")
 offset_left = 396.0
 offset_top = 161.0
 offset_right = 1575.0
-offset_bottom = 747.0
+offset_bottom = 843.0
 text = "Pick pieces from the middle area and place them in your own grid without overlapping another piece.
+
+The circled block in each piece is the block that will go in the space you click on, as well as the center of rotation (rotation buttons above your grid)
 
 Place at least three pieces next to one another to clear them, build up your powerup, and send garbage to your opponent. The more pieces you clear at once the more garbage you send.
 
@@ -47,7 +49,9 @@ You win when your opponent picks a piece they can't place on their board.
 
 Grymmt's powerup places apples on your board, and when you clear them you'll send extra garbage and charge your powerup meter faster.
 
-Orchk's powerup sends special sound blocks that require multiple matches to clear."
+Orchk's powerup sends special sound blocks that require multiple matches to clear.
+
+All opinions are welcome to help improve the basic gameplay!"
 label_settings = SubResource("LabelSettings_mgrm8")
 autowrap_mode = 3
 
