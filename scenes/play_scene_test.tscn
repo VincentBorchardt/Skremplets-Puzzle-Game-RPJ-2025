@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bgdtshogglm73"]
+[gd_scene load_steps=11 format=3 uid="uid://bgdtshogglm73"]
 
 [ext_resource type="Script" uid="uid://c11y2smjvgn31" path="res://scripts/play_scene.gd" id="1_qlfe2"]
 [ext_resource type="PackedScene" uid="uid://b2w6sitg20dna" path="res://scenes/neutral_grid.tscn" id="2_ehd68"]
@@ -9,7 +9,6 @@
 [ext_resource type="Resource" uid="uid://cck3y4synutqo" path="res://resources/characters/orchk.tres" id="5_rq1sk"]
 [ext_resource type="Texture2D" uid="uid://civkyeql5mvul" path="res://assets/title_popup_background_framed.png" id="8_ff7gh"]
 [ext_resource type="Script" uid="uid://cvukyo7xt2voj" path="res://scripts/scene_button.gd" id="9_sm2i2"]
-[ext_resource type="PackedScene" uid="uid://d2ao1qh6laidk" path="res://scenes/title_screen.tscn" id="10_7yd8u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lgvvg"]
 font_size = 72
@@ -61,7 +60,6 @@ offset_right = 710.0
 offset_bottom = 529.0
 text = "Return Home"
 script = ExtResource("9_sm2i2")
-attached_scene = ExtResource("10_7yd8u")
 metadata/_custom_type_script = "uid://cvukyo7xt2voj"
 
 [connection signal="loss_condition" from="Player1Grid" to="." method="_on_grid_loss_condition"]
