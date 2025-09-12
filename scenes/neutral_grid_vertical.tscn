@@ -1,0 +1,601 @@
+[gd_scene load_steps=3 format=3 uid="uid://8ke5qj2vjr1e"]
+
+[ext_resource type="Script" uid="uid://2hhfcg1ksay3" path="res://scripts/neutral_grid.gd" id="1_2lrjh"]
+[ext_resource type="PackedScene" uid="uid://bapgvd2psgvpj" path="res://scenes/grid_space.tscn" id="2_cdg8c"]
+
+[node name="NeutralGridVertical" type="Node2D"]
+script = ExtResource("1_2lrjh")
+metadata/_custom_type_script = "uid://2hhfcg1ksay3"
+
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="RepopulateTimer" type="Timer" parent="."]
+
+[node name="Spaces" type="Node2D" parent="."]
+
+[node name="GridSpace" parent="Spaces" instance=ExtResource("2_cdg8c")]
+space_owner = 2
+
+[node name="GridSpace2" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 0)
+location = Vector2i(1, 0)
+space_owner = 2
+
+[node name="GridSpace3" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 0)
+location = Vector2i(2, 0)
+space_owner = 2
+
+[node name="GridSpace4" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 0)
+location = Vector2i(3, 0)
+space_owner = 2
+
+[node name="GridSpace5" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 0)
+location = Vector2i(4, 0)
+space_owner = 2
+
+[node name="GridSpace6" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 0)
+location = Vector2i(5, 0)
+space_owner = 2
+
+[node name="GridSpace7" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 0)
+location = Vector2i(6, 0)
+space_owner = 2
+
+[node name="GridSpace8" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 50)
+location = Vector2i(0, 1)
+space_owner = 2
+
+[node name="GridSpace9" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 50)
+location = Vector2i(1, 1)
+space_owner = 2
+
+[node name="GridSpace10" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 50)
+location = Vector2i(2, 1)
+space_owner = 2
+
+[node name="GridSpace11" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 50)
+location = Vector2i(3, 1)
+space_owner = 2
+
+[node name="GridSpace12" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 50)
+location = Vector2i(4, 1)
+space_owner = 2
+
+[node name="GridSpace13" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 50)
+location = Vector2i(5, 1)
+space_owner = 2
+
+[node name="GridSpace14" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 50)
+location = Vector2i(6, 1)
+space_owner = 2
+
+[node name="GridSpace15" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 100)
+location = Vector2i(0, 2)
+space_owner = 2
+
+[node name="GridSpace16" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 100)
+location = Vector2i(1, 2)
+space_owner = 2
+
+[node name="GridSpace17" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 100)
+location = Vector2i(2, 2)
+space_owner = 2
+
+[node name="GridSpace18" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 100)
+location = Vector2i(3, 2)
+space_owner = 2
+
+[node name="GridSpace19" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 100)
+location = Vector2i(4, 2)
+space_owner = 2
+
+[node name="GridSpace20" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 100)
+location = Vector2i(5, 2)
+space_owner = 2
+
+[node name="GridSpace21" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 100)
+location = Vector2i(6, 2)
+space_owner = 2
+
+[node name="GridSpace22" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 150)
+location = Vector2i(0, 3)
+space_owner = 2
+
+[node name="GridSpace23" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 150)
+location = Vector2i(1, 3)
+space_owner = 2
+
+[node name="GridSpace24" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 150)
+location = Vector2i(2, 3)
+space_owner = 2
+
+[node name="GridSpace25" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 150)
+location = Vector2i(3, 3)
+space_owner = 2
+
+[node name="GridSpace26" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 150)
+location = Vector2i(4, 3)
+space_owner = 2
+
+[node name="GridSpace27" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 150)
+location = Vector2i(5, 3)
+space_owner = 2
+
+[node name="GridSpace28" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 150)
+location = Vector2i(6, 3)
+space_owner = 2
+
+[node name="GridSpace29" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 200)
+location = Vector2i(0, 4)
+space_owner = 2
+
+[node name="GridSpace30" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 200)
+location = Vector2i(1, 4)
+space_owner = 2
+
+[node name="GridSpace31" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 200)
+location = Vector2i(2, 4)
+space_owner = 2
+
+[node name="GridSpace32" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 200)
+location = Vector2i(3, 4)
+space_owner = 2
+
+[node name="GridSpace33" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 200)
+location = Vector2i(4, 4)
+space_owner = 2
+
+[node name="GridSpace34" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 200)
+location = Vector2i(5, 4)
+space_owner = 2
+
+[node name="GridSpace35" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 200)
+location = Vector2i(6, 4)
+space_owner = 2
+
+[node name="GridSpace36" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 250)
+location = Vector2i(0, 5)
+space_owner = 2
+
+[node name="GridSpace37" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 250)
+location = Vector2i(1, 5)
+space_owner = 2
+
+[node name="GridSpace38" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 250)
+location = Vector2i(2, 5)
+space_owner = 2
+
+[node name="GridSpace39" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 250)
+location = Vector2i(3, 5)
+space_owner = 2
+
+[node name="GridSpace40" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 250)
+location = Vector2i(4, 5)
+space_owner = 2
+
+[node name="GridSpace41" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 250)
+location = Vector2i(5, 5)
+space_owner = 2
+
+[node name="GridSpace42" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 250)
+location = Vector2i(6, 5)
+space_owner = 2
+
+[node name="GridSpace43" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 300)
+location = Vector2i(0, 6)
+space_owner = 2
+
+[node name="GridSpace44" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 300)
+location = Vector2i(1, 6)
+space_owner = 2
+
+[node name="GridSpace45" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 300)
+location = Vector2i(2, 6)
+space_owner = 2
+
+[node name="GridSpace46" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 300)
+location = Vector2i(3, 6)
+space_owner = 2
+
+[node name="GridSpace47" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 300)
+location = Vector2i(4, 6)
+space_owner = 2
+
+[node name="GridSpace48" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 300)
+location = Vector2i(5, 6)
+space_owner = 2
+
+[node name="GridSpace49" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 300)
+location = Vector2i(6, 6)
+space_owner = 2
+
+[node name="GridSpace50" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 350)
+location = Vector2i(0, 7)
+space_owner = 2
+
+[node name="GridSpace51" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 350)
+location = Vector2i(1, 7)
+space_owner = 2
+
+[node name="GridSpace52" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 350)
+location = Vector2i(2, 7)
+space_owner = 2
+
+[node name="GridSpace53" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 350)
+location = Vector2i(3, 7)
+space_owner = 2
+
+[node name="GridSpace54" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 350)
+location = Vector2i(4, 7)
+space_owner = 2
+
+[node name="GridSpace55" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 350)
+location = Vector2i(5, 7)
+space_owner = 2
+
+[node name="GridSpace56" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 350)
+location = Vector2i(6, 7)
+space_owner = 2
+
+[node name="GridSpace57" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 400)
+location = Vector2i(0, 8)
+space_owner = 2
+
+[node name="GridSpace58" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 400)
+location = Vector2i(1, 8)
+space_owner = 2
+
+[node name="GridSpace59" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 400)
+location = Vector2i(2, 8)
+space_owner = 2
+
+[node name="GridSpace60" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 400)
+location = Vector2i(3, 8)
+space_owner = 2
+
+[node name="GridSpace61" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 400)
+location = Vector2i(4, 8)
+space_owner = 2
+
+[node name="GridSpace62" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 400)
+location = Vector2i(5, 8)
+space_owner = 2
+
+[node name="GridSpace63" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 400)
+location = Vector2i(6, 8)
+space_owner = 2
+
+[node name="GridSpace64" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 450)
+location = Vector2i(0, 9)
+space_owner = 2
+
+[node name="GridSpace65" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 450)
+location = Vector2i(1, 9)
+space_owner = 2
+
+[node name="GridSpace66" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 450)
+location = Vector2i(2, 9)
+space_owner = 2
+
+[node name="GridSpace67" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 450)
+location = Vector2i(3, 9)
+space_owner = 2
+
+[node name="GridSpace68" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 450)
+location = Vector2i(4, 9)
+space_owner = 2
+
+[node name="GridSpace69" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 450)
+location = Vector2i(5, 9)
+space_owner = 2
+
+[node name="GridSpace70" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 450)
+location = Vector2i(6, 9)
+space_owner = 2
+
+[node name="GridSpace71" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 500)
+location = Vector2i(0, 10)
+space_owner = 2
+
+[node name="GridSpace72" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 500)
+location = Vector2i(1, 10)
+space_owner = 2
+
+[node name="GridSpace73" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 500)
+location = Vector2i(2, 10)
+space_owner = 2
+
+[node name="GridSpace74" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 500)
+location = Vector2i(3, 10)
+space_owner = 2
+
+[node name="GridSpace75" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 500)
+location = Vector2i(4, 10)
+space_owner = 2
+
+[node name="GridSpace76" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 500)
+location = Vector2i(5, 10)
+space_owner = 2
+
+[node name="GridSpace77" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 500)
+location = Vector2i(6, 10)
+space_owner = 2
+
+[node name="GridSpace78" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 550)
+location = Vector2i(0, 11)
+space_owner = 2
+
+[node name="GridSpace79" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 550)
+location = Vector2i(1, 11)
+space_owner = 2
+
+[node name="GridSpace80" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 550)
+location = Vector2i(2, 11)
+space_owner = 2
+
+[node name="GridSpace81" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 550)
+location = Vector2i(3, 11)
+space_owner = 2
+
+[node name="GridSpace82" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 550)
+location = Vector2i(4, 11)
+space_owner = 2
+
+[node name="GridSpace83" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 550)
+location = Vector2i(5, 11)
+space_owner = 2
+
+[node name="GridSpace84" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 550)
+location = Vector2i(6, 11)
+space_owner = 2
+
+[node name="GridSpace85" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 600)
+location = Vector2i(0, 12)
+space_owner = 2
+
+[node name="GridSpace86" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 600)
+location = Vector2i(1, 12)
+space_owner = 2
+
+[node name="GridSpace87" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 600)
+location = Vector2i(2, 12)
+space_owner = 2
+
+[node name="GridSpace88" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 600)
+location = Vector2i(3, 12)
+space_owner = 2
+
+[node name="GridSpace89" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 600)
+location = Vector2i(4, 12)
+space_owner = 2
+
+[node name="GridSpace90" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 600)
+location = Vector2i(5, 12)
+space_owner = 2
+
+[node name="GridSpace91" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 600)
+location = Vector2i(6, 12)
+space_owner = 2
+
+[node name="GridSpace92" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(0, 650)
+location = Vector2i(0, 13)
+space_owner = 2
+
+[node name="GridSpace93" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(50, 650)
+location = Vector2i(1, 13)
+space_owner = 2
+
+[node name="GridSpace94" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(100, 650)
+location = Vector2i(2, 13)
+space_owner = 2
+
+[node name="GridSpace95" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(150, 650)
+location = Vector2i(3, 13)
+space_owner = 2
+
+[node name="GridSpace96" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(200, 650)
+location = Vector2i(4, 13)
+space_owner = 2
+
+[node name="GridSpace97" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(250, 650)
+location = Vector2i(5, 13)
+space_owner = 2
+
+[node name="GridSpace98" parent="Spaces" instance=ExtResource("2_cdg8c")]
+position = Vector2(300, 650)
+location = Vector2i(6, 13)
+space_owner = 2
+
+[connection signal="clicked_on_space" from="Spaces/GridSpace" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace2" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace3" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace4" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace5" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace6" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace7" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace8" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace9" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace10" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace11" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace12" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace13" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace14" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace15" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace16" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace17" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace18" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace19" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace20" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace21" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace22" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace23" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace24" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace25" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace26" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace27" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace28" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace29" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace30" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace31" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace32" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace33" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace34" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace35" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace36" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace37" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace38" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace39" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace40" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace41" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace42" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace43" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace44" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace45" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace46" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace47" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace48" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace49" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace50" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace51" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace52" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace53" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace54" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace55" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace56" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace57" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace58" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace59" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace60" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace61" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace62" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace63" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace64" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace65" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace66" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace67" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace68" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace69" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace70" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace71" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace72" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace73" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace74" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace75" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace76" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace77" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace78" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace79" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace80" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace81" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace82" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace83" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace84" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace85" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace86" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace87" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace88" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace89" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace90" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace91" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace92" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace93" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace94" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace95" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace96" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace97" to="." method="_on_grid_space_clicked_on_space"]
+[connection signal="clicked_on_space" from="Spaces/GridSpace98" to="." method="_on_grid_space_clicked_on_space"]

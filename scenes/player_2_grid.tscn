@@ -27,13 +27,13 @@ offset_bottom = 280.0
 bar_owner = 1
 
 [node name="PreviewBox" parent="." instance=ExtResource("4_14sy7")]
-offset_left = 100.0
-offset_top = -135.0
-offset_right = 100.0
-offset_bottom = -135.0
+offset_left = -170.0
+offset_top = 415.0
+offset_right = -170.0
+offset_bottom = 415.0
 
 [node name="CharacterPortrait" type="Sprite2D" parent="."]
-position = Vector2(-280, -135)
+position = Vector2(70, -135)
 texture = ExtResource("6_kg485")
 
 [connection signal="removing_pieces" from="PlayGrid" to="." method="_on_grid_removing_pieces"]

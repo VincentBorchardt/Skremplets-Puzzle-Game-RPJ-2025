@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bgdtshogglm73"]
+[gd_scene load_steps=12 format=3 uid="uid://bgdtshogglm73"]
 
 [ext_resource type="Script" uid="uid://c11y2smjvgn31" path="res://scripts/play_scene.gd" id="1_qlfe2"]
 [ext_resource type="PackedScene" uid="uid://b2w6sitg20dna" path="res://scenes/neutral_grid.tscn" id="2_ehd68"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://b4reyngalkwyh" path="res://resources/characters/grymmt_dundle.tres" id="3_oco0s"]
 [ext_resource type="PackedScene" uid="uid://c2bsuixqkm7yo" path="res://scenes/player_2_grid.tscn" id="3_qlfe2"]
 [ext_resource type="Resource" uid="uid://cck3y4synutqo" path="res://resources/characters/orchk.tres" id="5_rq1sk"]
+[ext_resource type="PackedScene" uid="uid://8ke5qj2vjr1e" path="res://scenes/neutral_grid_vertical.tscn" id="7_ff7gh"]
 [ext_resource type="Texture2D" uid="uid://civkyeql5mvul" path="res://assets/title_popup_background_framed.png" id="8_ff7gh"]
 [ext_resource type="Script" uid="uid://cvukyo7xt2voj" path="res://scripts/scene_button.gd" id="9_sm2i2"]
 
@@ -19,15 +20,19 @@ outline_color = Color(0, 0, 0, 1)
 script = ExtResource("1_qlfe2")
 
 [node name="Player1Grid" parent="." instance=ExtResource("2_rq1sk")]
-position = Vector2(103, 216)
+position = Vector2(100, 220)
 character = ExtResource("3_oco0s")
 
 [node name="Player2Grid" parent="." instance=ExtResource("3_qlfe2")]
-position = Vector2(1255, 216)
+position = Vector2(1260, 220)
 character = ExtResource("5_rq1sk")
 
 [node name="NeutralGrid" parent="." instance=ExtResource("2_ehd68")]
+visible = false
 position = Vector2(525, 600)
+
+[node name="NeutralGridVertical" parent="." instance=ExtResource("7_ff7gh")]
+position = Vector2(655, 200)
 
 [node name="PieceBoxTest" parent="." instance=ExtResource("2_lixwp")]
 visible = false

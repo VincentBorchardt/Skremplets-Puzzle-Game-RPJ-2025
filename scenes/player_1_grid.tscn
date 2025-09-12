@@ -25,27 +25,27 @@ offset_bottom = 285.0
 bar_size = 27
 
 [node name="PreviewBox" parent="." instance=ExtResource("4_ec8he")]
-offset_left = 123.0
-offset_top = -130.0
-offset_right = 123.0
-offset_bottom = -130.0
+offset_left = 420.0
+offset_top = 415.0
+offset_right = 420.0
+offset_bottom = 415.0
 
 [node name="CharacterPortrait" type="Sprite2D" parent="."]
-position = Vector2(535, -130)
+position = Vector2(200, -135)
 texture = ExtResource("6_s2yma")
 
 [node name="RotateCWButton" type="Button" parent="."]
-offset_left = 237.0
-offset_top = -168.0
-offset_right = 377.0
-offset_bottom = -137.0
+offset_left = 347.0
+offset_top = 560.0
+offset_right = 487.0
+offset_bottom = 591.0
 text = "Rotate Clockwise"
 
 [node name="RotateCCWButton" type="Button" parent="."]
-offset_left = 220.0
-offset_top = -122.0
-offset_right = 420.0
-offset_bottom = -91.0
+offset_left = 321.0
+offset_top = 606.0
+offset_right = 521.0
+offset_bottom = 637.0
 text = "Rotate Counterclockwise"
 
 [connection signal="activate_special_pieces" from="PlayGrid" to="." method="_on_grid_activate_special_pieces"]
