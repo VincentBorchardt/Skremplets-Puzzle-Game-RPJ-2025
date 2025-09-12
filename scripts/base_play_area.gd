@@ -1,6 +1,7 @@
 class_name BasePlayArea extends Node2D
 
 signal send_pieces(piece, num_pieces, sending_player)
+signal loss_condition(losing_player, losing_character)
 
 #TODO put an inventory in here, then rework everything inventory-wise to work with signals
 var current_piece: Piece:
@@ -10,6 +11,7 @@ var current_piece: Piece:
 		if piece != null:
 			if not $PlayGrid.ensure_legal_piece(piece):
 				print(str(grid_owner) + " loses")
+				loss_condition.emit(grid_owner, character)
 
 var garbage_piece = preload("res://resources/pieces/garbage_block.tres").duplicate()
 
@@ -59,6 +61,7 @@ func calculate_garbage(spaces):
 
 func _on_power_up_bar_activate_powerup() -> void:
 	print("activating powerup for " + str(grid_owner))
+	#TODO check if the character is depowered or not here
 	match character:
 		preload("res://resources/characters/grymmt_dundle.tres"):
 			var powerup = preload("res://resources/pieces/apple_power_up.tres").duplicate()

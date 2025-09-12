@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2w6sitg20dna"]
+[gd_scene load_steps=4 format=3 uid="uid://b2w6sitg20dna"]
 
 [ext_resource type="Script" uid="uid://2hhfcg1ksay3" path="res://scripts/neutral_grid.gd" id="1_3uut6"]
 [ext_resource type="PackedScene" uid="uid://bapgvd2psgvpj" path="res://scenes/grid_space.tscn" id="2_3uut6"]
+[ext_resource type="Script" uid="uid://41invod4xyjn" path="res://scripts/repopulate_timer.gd" id="2_d2uhy"]
 
 [node name="NeutralGrid" type="Node2D"]
 script = ExtResource("1_3uut6")
@@ -10,7 +11,11 @@ grid_y = 6
 grid_owner = 2
 metadata/_custom_type_script = "uid://2hhfcg1ksay3"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+
+[node name="RepopulateTimer" type="Timer" parent="."]
+wait_time = 0.5
+script = ExtResource("2_d2uhy")
 
 [node name="Spaces" type="Node2D" parent="."]
 
@@ -372,6 +377,8 @@ position = Vector2(550, 250)
 location = Vector2i(11, 5)
 space_owner = 2
 
+[connection signal="timeout" from="RepopulateTimer" to="RepopulateTimer" method="_on_timeout"]
+[connection signal="timeout_with_root" from="RepopulateTimer" to="." method="_on_repopulate_timer_timeout_with_root"]
 [connection signal="clicked_on_space" from="Spaces/GridSpace" to="." method="_on_grid_space_clicked_on_space"]
 [connection signal="clicked_on_space" from="Spaces/GridSpace2" to="." method="_on_grid_space_clicked_on_space"]
 [connection signal="clicked_on_space" from="Spaces/GridSpace3" to="." method="_on_grid_space_clicked_on_space"]

@@ -32,3 +32,12 @@ func _on_neutral_grid_start_ai_pick(piece_list, player) -> void:
 
 func _on_player_1_grid_start_ai_place() -> void:
 	$Player2Grid.start_ai_place()
+
+
+func _on_scene_button_pressed_with_scene(scene: Variant) -> void:
+	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+
+
+func _on_grid_loss_condition(losing_player: Variant, losing_character: Variant) -> void:
+	$CanvasLayer/LoserLabel.text = losing_character.name + " Loses!"
+	$CanvasLayer.visible = true

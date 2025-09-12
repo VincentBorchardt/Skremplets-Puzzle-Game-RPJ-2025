@@ -29,6 +29,8 @@ func grab_neutral_piece(location, player) -> void:
 		if player == Inventory.Player.PLAYER_1:
 			start_ai_pick.emit(piece_list, Inventory.Player.PLAYER_2)
 		repopulate_neutral_grid(root)
+		#TODO This breaks because there's two roots it's trying to keep track of at once
+		#$RepopulateTimer.start_with_root(root)
 
 # TODO THIS IS EXTREMELY HARDCODED FOR NOW
 func populate_neutral_grid():
@@ -44,3 +46,6 @@ func repopulate_neutral_grid(location):
 	var index = randi() % 3
 	var piece = load(piece_storage[index]).duplicate()
 	place_piece(piece, location)
+
+func _on_repopulate_timer_timeout_with_root(new_root: Variant) -> void:
+	repopulate_neutral_grid(new_root)

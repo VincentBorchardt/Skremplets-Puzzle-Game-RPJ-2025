@@ -33,6 +33,7 @@ func add_new_piece(new_piece, new_location, player):
 	else:
 		place_piece(new_piece, new_location)
 		set_current_piece.emit(null)
+
 		try_to_clear_pieces()
 		if player == Inventory.Player.PLAYER_1:
 			start_ai_place.emit()
@@ -100,20 +101,7 @@ func place_multiple_pieces(piece, num_pieces):
 func try_to_clear_pieces():
 	var pieces_to_clear = piece_list.get_touching_pieces()
 	if not pieces_to_clear.is_empty():
-		print("removing pieces")
-		#print(pieces_to_clear)
-		removing_pieces.emit(pieces_to_clear, grid_owner)
-		var special_pieces_to_check = piece_list.get_special_touching_pieces(pieces_to_clear)
-		var special_pieces_to_clear = []
-		#print(special_pieces_to_clear)
-		if not special_pieces_to_check.is_empty():
-			activate_special_pieces.emit(special_pieces_to_check, grid_owner)
-			special_pieces_to_clear = check_special_pieces(special_pieces_to_check)
-		pieces_to_clear.append_array(special_pieces_to_clear)
-		piece_list.remove_pieces(pieces_to_clear)
-		for node in spaces_list:
-			node.remove_pieces(pieces_to_clear)
-		try_to_clear_pieces()
+		$ClearPiecesTimer.start_with_piece_list(pieces_to_clear)
 
 func check_special_pieces(pieces_to_check):
 	var pieces_to_clear = []
@@ -129,6 +117,20 @@ func check_special_pieces(pieces_to_check):
 			_:
 				pieces_to_clear.append(piece)
 	return pieces_to_clear
+
+func _on_clear_pieces_timer_timeout_with_piece_list(pieces_to_clear) -> void:
+	print("removing pieces")
+	removing_pieces.emit(pieces_to_clear, grid_owner)
+	var special_pieces_to_check = piece_list.get_special_touching_pieces(pieces_to_clear)
+	var special_pieces_to_clear = []
+	if not special_pieces_to_check.is_empty():
+		activate_special_pieces.emit(special_pieces_to_check, grid_owner)
+		special_pieces_to_clear = check_special_pieces(special_pieces_to_check)
+	pieces_to_clear.append_array(special_pieces_to_clear)
+	piece_list.remove_pieces(pieces_to_clear)
+	for node in spaces_list:
+		node.remove_pieces(pieces_to_clear)
+	try_to_clear_pieces()
 
 func point_is_off_grid(point):
 	return point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y

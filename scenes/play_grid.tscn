@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://btqyofq3jfh3h"]
+[gd_scene load_steps=5 format=3 uid="uid://btqyofq3jfh3h"]
 
 [ext_resource type="Script" uid="uid://rdtmqgtehayh" path="res://scripts/grid.gd" id="1_2s7k2"]
 [ext_resource type="PackedScene" uid="uid://bapgvd2psgvpj" path="res://scenes/grid_space.tscn" id="1_t5fjg"]
 [ext_resource type="Texture2D" uid="uid://buaqf06iwirva" path="res://assets/grid/temp_grid_border.png" id="1_w88cy"]
+[ext_resource type="Script" uid="uid://ch200b27lqt44" path="res://scripts/clear_pieces_timer.gd" id="3_v0j7n"]
 
 [node name="PlayGrid" type="Node2D"]
 script = ExtResource("1_2s7k2")
@@ -14,6 +15,12 @@ metadata/_custom_type_script = "uid://rdtmqgtehayh"
 visible = false
 position = Vector2(125, 275)
 texture = ExtResource("1_w88cy")
+
+[node name="ClearPiecesTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+script = ExtResource("3_v0j7n")
+metadata/_custom_type_script = "uid://ch200b27lqt44"
 
 [node name="Spaces" type="Node2D" parent="."]
 
@@ -303,6 +310,8 @@ location = Vector2i(4, 11)
 position = Vector2(250, 550)
 location = Vector2i(5, 11)
 
+[connection signal="timeout" from="ClearPiecesTimer" to="ClearPiecesTimer" method="_on_timeout"]
+[connection signal="timeout_with_piece_list" from="ClearPiecesTimer" to="." method="_on_clear_pieces_timer_timeout_with_piece_list"]
 [connection signal="clicked_on_space" from="Spaces/GridSpace" to="." method="_on_grid_space_clicked_on_space"]
 [connection signal="clicked_on_space" from="Spaces/GridSpace2" to="." method="_on_grid_space_clicked_on_space"]
 [connection signal="clicked_on_space" from="Spaces/GridSpace3" to="." method="_on_grid_space_clicked_on_space"]
