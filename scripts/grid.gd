@@ -19,6 +19,8 @@ var spaces_list = []
 
 func _ready() -> void:
 	spaces_list = $Spaces.get_children()
+	print(grid_owner)
+	print(spaces_list.size())
 	for space in spaces_list:
 		space.space_owner = grid_owner
 	if background_image:

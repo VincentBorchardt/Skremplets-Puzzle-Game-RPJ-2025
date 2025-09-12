@@ -23,7 +23,7 @@ func get_piece_at_location(location):
 	for piece in list:
 		print(location)
 		print(piece)
-		print(list[piece])
+		#print(list[piece])
 		if list[piece].has(location):
 			return piece
 	return null
