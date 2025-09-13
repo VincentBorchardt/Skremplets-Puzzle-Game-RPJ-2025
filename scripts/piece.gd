@@ -3,12 +3,17 @@ class_name Piece extends Resource
 @export var owner: Inventory.Player
 @export var root_point_location: Vector2i
 @export var secondary_points: Array[Vector2i]
+#TODO This should probably be calculated in code rather than hardcoded per piece
+@export var x_length: int
+@export var y_length: int
 @export var image: Texture2D
 @export var type: Inventory.Type
 @export var power_up_type: Inventory.PowerUpType
 @export var translation: Vector2
 # currently in radians (so 90 degrees = TAU/4), 
 @export var rotation: float
+
+
 
 func is_special_touching(piece2):
 	if piece2.type == Inventory.Type.GARBAGE or piece2.type == Inventory.Type.POWERUP:

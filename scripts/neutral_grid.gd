@@ -37,8 +37,9 @@ func populate_neutral_grid():
 	for i in range(5):
 		var index = randi() % 3
 		var piece = load(piece_storage[index]).duplicate()
-		piece.rotate(-TAU/4)
-		var location = Vector2i(1, ((2 * i) + 1))
+		if piece.x_length < piece.y_length:
+			piece.rotate(-TAU/4)
+		var location = Vector2i(2, ((2 * i) + 1))
 		# TODO This doesn't check if the space is legal, it shouldn't in this hack but likely will eventually
 		place_piece(piece, location)
 	#print(piece_list)
