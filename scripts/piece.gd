@@ -13,8 +13,6 @@ class_name Piece extends Resource
 # currently in radians (so 90 degrees = TAU/4), 
 @export var rotation: float
 
-
-
 func is_special_touching(piece2):
 	if piece2.type == Inventory.Type.GARBAGE or piece2.type == Inventory.Type.POWERUP:
 		for point1 in self.secondary_points:
@@ -72,6 +70,9 @@ func pick_up_piece(player):
 
 func should_not_be_matched():
 	return (type == Inventory.Type.WILD or type == Inventory.Type.GARBAGE or type == Inventory.Type.POWERUP)
+
+func min_length():
+	return min(x_length, y_length)
 
 func _to_string() -> String:
 	return "Piece at " + str(root_point_location) + ", " + str(secondary_points)

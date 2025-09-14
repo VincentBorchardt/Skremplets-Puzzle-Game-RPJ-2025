@@ -11,7 +11,8 @@ func _ready() -> void:
 	super()
 	if grid_owner == Inventory.Player.UNOWNED:
 		print("Populating Neutral Grid")
-		populate_neutral_grid()
+		new_populate_neutral_grid()
+		#populate_neutral_grid()
 
 func grab_neutral_piece(location, player) -> void:
 	#print("in _on_grid_space_grab_neutral_piece")
@@ -31,6 +32,23 @@ func grab_neutral_piece(location, player) -> void:
 		repopulate_neutral_grid(root)
 		#TODO This breaks because there's two roots it's trying to keep track of at once
 		#$RepopulateTimer.start_with_root(root)
+
+func new_populate_neutral_grid():
+	var current_y = 0
+	while current_y < grid_y:
+		var index = randi() % piece_storage.size()
+		var piece = load(piece_storage[index]).duplicate()
+		if piece.x_length < piece.y_length:
+			piece.rotate(-TAU/4)
+		var min_length = piece.min_length()
+		if current_y + min_length >= grid_y:
+			break
+		# TODO This is a hard function to write
+		var mod_y = current_y + floor(min_length / 2)
+		var location = Vector2i(2, mod_y)
+		# TODO Something that makes moving the pieces good when repopulating
+		place_piece(piece, location)
+		current_y = current_y + min_length
 
 # TODO THIS IS EXTREMELY HARDCODED FOR NOW
 func populate_neutral_grid():
