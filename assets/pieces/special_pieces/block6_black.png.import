@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvbrj1dyfk1ji"
-path="res://.godot/imported/orchk_one_powerup_temp.png-b523f08287e471ec551ef125e51a095e.ctex"
+uid="uid://cqvtngxkcx5he"
+path="res://.godot/imported/block6_black.png-015816f56bc6e46d7873662aa6c0733c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/orchk_one_powerup_temp.png"
-dest_files=["res://.godot/imported/orchk_one_powerup_temp.png-b523f08287e471ec551ef125e51a095e.ctex"]
+source_file="res://assets/pieces/special_pieces/block6_black.png"
+dest_files=["res://.godot/imported/block6_black.png-015816f56bc6e46d7873662aa6c0733c.ctex"]
 
 [params]
 

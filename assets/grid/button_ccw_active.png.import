@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xqifjg5e0iqi"
-path="res://.godot/imported/green_three_three_bottle.png-bd861d88c1ccf31e7e764aa8df56ebf4.ctex"
+uid="uid://b6c2m5stiyl35"
+path="res://.godot/imported/button_ccw_active.png-a49181ecf637cf8c2d85326afa904d60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/final_pieces/green_three_three_bottle.png"
-dest_files=["res://.godot/imported/green_three_three_bottle.png-bd861d88c1ccf31e7e764aa8df56ebf4.ctex"]
+source_file="res://assets/grid/button_ccw_active.png"
+dest_files=["res://.godot/imported/button_ccw_active.png-a49181ecf637cf8c2d85326afa904d60.ctex"]
 
 [params]
 

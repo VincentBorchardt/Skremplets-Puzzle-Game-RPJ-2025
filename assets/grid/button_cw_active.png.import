@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwhmwh0s78rmp"
-path="res://.godot/imported/apple_powerup_temp.png-a40c5012bb08e110593457222b923d61.ctex"
+uid="uid://bfc6vnvc1gvcb"
+path="res://.godot/imported/button_cw_active.png-25b8dabf72078c8044aa1aadbeb1da18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/apple_powerup_temp.png"
-dest_files=["res://.godot/imported/apple_powerup_temp.png-a40c5012bb08e110593457222b923d61.ctex"]
+source_file="res://assets/grid/button_cw_active.png"
+dest_files=["res://.godot/imported/button_cw_active.png-25b8dabf72078c8044aa1aadbeb1da18.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8lamhl6y5l5f"
-path="res://.godot/imported/yellow_four_square.png-a9207d954943638548732a832c5dbf90.ctex"
+uid="uid://c2yts4it2l6ii"
+path="res://.godot/imported/red_four_line.png-7334f36ede921ea5c39a858dfdb2a990.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/yellow_four_square.png"
-dest_files=["res://.godot/imported/yellow_four_square.png-a9207d954943638548732a832c5dbf90.ctex"]
+source_file="res://assets/pieces/main_pieces/red_four_line.png"
+dest_files=["res://.godot/imported/red_four_line.png-7334f36ede921ea5c39a858dfdb2a990.ctex"]
 
 [params]
 

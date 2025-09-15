@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b20lwr61efjhx"
-path="res://.godot/imported/yellow_small_square.png-c54aacf9e1e7da03c79b0004a91c2ff4.ctex"
+uid="uid://ct2lh83t2t1ft"
+path="res://.godot/imported/button_cw.png-06dc75d48cfe0793f1a630d7bbdc8c01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/final_pieces/yellow_small_square.png"
-dest_files=["res://.godot/imported/yellow_small_square.png-c54aacf9e1e7da03c79b0004a91c2ff4.ctex"]
+source_file="res://assets/grid/button_cw.png"
+dest_files=["res://.godot/imported/button_cw.png-06dc75d48cfe0793f1a630d7bbdc8c01.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdbc7niogiei6"
-path="res://.godot/imported/orchk_two_powerup_temp.png-995335547b5af4880df3864b43e0ee20.ctex"
+uid="uid://blgwcf0scrlxd"
+path="res://.godot/imported/blue_four_t.png-51273247dba5d5deb0abb84feab28015.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/orchk_two_powerup_temp.png"
-dest_files=["res://.godot/imported/orchk_two_powerup_temp.png-995335547b5af4880df3864b43e0ee20.ctex"]
+source_file="res://assets/pieces/main_pieces/blue_four_t.png"
+dest_files=["res://.godot/imported/blue_four_t.png-51273247dba5d5deb0abb84feab28015.ctex"]
 
 [params]
 

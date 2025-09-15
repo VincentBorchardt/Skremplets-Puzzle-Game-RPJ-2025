@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://8ke5qj2vjr1e"]
+[gd_scene load_steps=5 format=3 uid="uid://8ke5qj2vjr1e"]
 
 [ext_resource type="Script" uid="uid://2hhfcg1ksay3" path="res://scripts/neutral_grid.gd" id="1_2lrjh"]
 [ext_resource type="PackedScene" uid="uid://bapgvd2psgvpj" path="res://scenes/grid_space.tscn" id="2_cdg8c"]
 [ext_resource type="Script" uid="uid://41invod4xyjn" path="res://scripts/repopulate_timer.gd" id="2_urwwb"]
+[ext_resource type="Texture2D" uid="uid://dx5naix65tonp" path="res://assets/grid/conveyorbelt.png" id="2_xess8"]
 
 [node name="NeutralGridVertical" type="Node2D"]
 script = ExtResource("1_2lrjh")
@@ -12,6 +13,8 @@ grid_owner = 2
 metadata/_custom_type_script = "uid://2hhfcg1ksay3"
 
 [node name="Background" type="Sprite2D" parent="."]
+position = Vector2(125, 250)
+texture = ExtResource("2_xess8")
 
 [node name="RepopulateTimer" type="Timer" parent="."]
 script = ExtResource("2_urwwb")

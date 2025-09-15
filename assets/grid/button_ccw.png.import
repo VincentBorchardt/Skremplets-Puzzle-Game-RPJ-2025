@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2yts4it2l6ii"
-path="res://.godot/imported/red_four_line.png-2e3b62434f2899f7515ca2ace4deb249.ctex"
+uid="uid://b1eul1b8uivnl"
+path="res://.godot/imported/button_ccw.png-33b2b97d316c23cdc6090d48b17f1f21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/final_pieces/red_four_line.png"
-dest_files=["res://.godot/imported/red_four_line.png-2e3b62434f2899f7515ca2ace4deb249.ctex"]
+source_file="res://assets/grid/button_ccw.png"
+dest_files=["res://.godot/imported/button_ccw.png-33b2b97d316c23cdc6090d48b17f1f21.ctex"]
 
 [params]
 

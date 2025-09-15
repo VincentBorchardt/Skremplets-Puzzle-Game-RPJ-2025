@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Piece" load_steps=3 format=3 uid="uid://bm7ux56f8moa7"]
 
 [ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/piece.gd" id="1_dqxl2"]
-[ext_resource type="Texture2D" uid="uid://bvbrj1dyfk1ji" path="res://assets/pieces/orchk_one_powerup_temp.png" id="1_ixdqy"]
+[ext_resource type="Texture2D" uid="uid://lm5oixhjdif3" path="res://assets/pieces/special_pieces/block8_sound1.png" id="1_ixdqy"]
 
 [resource]
 script = ExtResource("1_dqxl2")

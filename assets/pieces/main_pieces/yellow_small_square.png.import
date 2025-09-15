@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blgwcf0scrlxd"
-path="res://.godot/imported/blue_four_t.png-1a142e47c1db5fe45a7686f2ebe6bedf.ctex"
+uid="uid://b20lwr61efjhx"
+path="res://.godot/imported/yellow_small_square.png-15653f86a0cd70e9b35ed73b51b694aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/final_pieces/blue_four_t.png"
-dest_files=["res://.godot/imported/blue_four_t.png-1a142e47c1db5fe45a7686f2ebe6bedf.ctex"]
+source_file="res://assets/pieces/main_pieces/yellow_small_square.png"
+dest_files=["res://.godot/imported/yellow_small_square.png-15653f86a0cd70e9b35ed73b51b694aa.ctex"]
 
 [params]
 

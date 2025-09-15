@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chm8yymjkht1q"
-path="res://.godot/imported/red_four_line.png-146ae063718ba5c203ddea9e080a43d6.ctex"
+uid="uid://dp3d0pm32y3kj"
+path="res://.godot/imported/block7_apple.png-7658922b0b593a54286cd1994def3f8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pieces/red_four_line.png"
-dest_files=["res://.godot/imported/red_four_line.png-146ae063718ba5c203ddea9e080a43d6.ctex"]
+source_file="res://assets/pieces/special_pieces/block7_apple.png"
+dest_files=["res://.godot/imported/block7_apple.png-7658922b0b593a54286cd1994def3f8e.ctex"]
 
 [params]
 

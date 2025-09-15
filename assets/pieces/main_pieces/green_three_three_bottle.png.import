@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wwiebtlnffft"
-path="res://.godot/imported/preview_box_temp.png-316239dd59b496a5731d1758b7c030bc.ctex"
+uid="uid://xqifjg5e0iqi"
+path="res://.godot/imported/green_three_three_bottle.png-e3d619ce1f93609c41db631af77acf98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/preview_box_temp.png"
-dest_files=["res://.godot/imported/preview_box_temp.png-316239dd59b496a5731d1758b7c030bc.ctex"]
+source_file="res://assets/pieces/main_pieces/green_three_three_bottle.png"
+dest_files=["res://.godot/imported/green_three_three_bottle.png-e3d619ce1f93609c41db631af77acf98.ctex"]
 
 [params]
 
