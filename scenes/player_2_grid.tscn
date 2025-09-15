@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cabi4v55xf72d" path="res://scenes/player_2_power_up_bar.tscn" id="3_nuaq7"]
 [ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/preview_box.tscn" id="4_14sy7"]
 [ext_resource type="Texture2D" uid="uid://cjqsfkdpisjxk" path="res://assets/grid/preview_right.png" id="6_14sy7"]
-[ext_resource type="Texture2D" uid="uid://b24aladufren8" path="res://assets/characters/05 Orchk.png" id="6_kg485"]
+[ext_resource type="Texture2D" uid="uid://kn72h7qnw5a4" path="res://assets/characters/orchk01.png" id="7_14sy7"]
 
 [node name="Player2Grid" type="Node2D"]
 script = ExtResource("1_u0dkv")
@@ -35,8 +35,8 @@ offset_bottom = 390.0
 box_image = ExtResource("6_14sy7")
 
 [node name="CharacterPortrait" type="Sprite2D" parent="."]
-position = Vector2(70, -135)
-texture = ExtResource("6_kg485")
+position = Vector2(20, -130)
+texture = ExtResource("7_14sy7")
 
 [connection signal="removing_pieces" from="PlayGrid" to="." method="_on_grid_removing_pieces"]
 [connection signal="set_current_piece" from="PlayGrid" to="." method="set_current_piece"]
