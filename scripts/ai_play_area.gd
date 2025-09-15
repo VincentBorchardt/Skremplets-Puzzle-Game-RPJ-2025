@@ -16,7 +16,7 @@ func start_ai_place():
 	var piece_list = $PlayGrid.piece_list
 	match character.ai_placement_pattern:
 		Inventory.AIPlacementPattern.RANDOM_MATCHING:
-			if piece_list.is_empty():
+			if piece_list.is_empty() or piece_list.has_only_special():
 				place_fully_random_piece(0)
 			else:
 				place_selective_piece(piece_list)
@@ -37,7 +37,12 @@ func place_fully_random_piece(num_of_failures):
 		#print("Failed placing piece " + str(new_failures) + " times")
 		if new_failures > 500:
 			print("Giving up")
-			return false
+			for i in range(4):
+				current_piece.rotate(TAU/4)
+				var legal_location = $PlayGrid.get_legal_piece(current_piece)
+				if legal_location:
+					$PlayGrid.add_new_piece(current_piece, legal_location, grid_owner)
+					break
 		else:
 			return place_fully_random_piece(new_failures)
 

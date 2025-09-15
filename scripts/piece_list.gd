@@ -19,6 +19,12 @@ func size():
 func is_empty():
 	return list.is_empty()
 
+func has_only_special():
+	for piece in list.keys():
+		if piece.type != Inventory.Type.GARBAGE and piece.type != Inventory.Type.POWERUP:
+			return false
+	return true
+
 func get_piece_at_location(location):
 	for piece in list:
 		print(location)

@@ -43,14 +43,21 @@ func _on_grid_space_clicked_on_space(location: Vector2i, player: Inventory.Playe
 	clicked_on_space.emit(location, player)
 
 func ensure_legal_piece(piece):
+	if get_legal_piece(piece):
+		return true
+	else:
+		return false
+
+func get_legal_piece(piece):
 	var test_piece = piece.duplicate()
 	for i in range(4):
-		test_piece.rotate(i * TAU/4)
+		test_piece.rotate(TAU/4)
 		for x in range(grid_x):
 			for y in range(grid_y):
-				if is_legal_place(test_piece, Vector2i(x, y), grid_owner):
-					return true
-	return false
+				var location = Vector2i(x, y)
+				if is_legal_place(test_piece, location, grid_owner):
+					return location
+	return null
 
 func is_legal_place(new_piece, new_location, player):
 	if player != grid_owner:
