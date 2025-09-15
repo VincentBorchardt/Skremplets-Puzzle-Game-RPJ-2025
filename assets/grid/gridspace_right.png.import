@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfqduuyyl581o"
-path="res://.godot/imported/temp_dumpster_background_3_mirrored.png-dbad87ece871d33d1752295bbbcee3ab.ctex"
+uid="uid://816hxf3iyr4a"
+path="res://.godot/imported/gridspace_right.png-5f230c9bf6d8395cb0a04988a7aaab4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grid/temp_dumpster_background_3_mirrored.png"
-dest_files=["res://.godot/imported/temp_dumpster_background_3_mirrored.png-dbad87ece871d33d1752295bbbcee3ab.ctex"]
+source_file="res://assets/grid/gridspace_right.png"
+dest_files=["res://.godot/imported/gridspace_right.png-5f230c9bf6d8395cb0a04988a7aaab4c.ctex"]
 
 [params]
 

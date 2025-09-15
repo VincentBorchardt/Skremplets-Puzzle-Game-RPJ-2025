@@ -1,7 +1,10 @@
 class_name PreviewBox extends Control
 
+@export var box_image: Texture2D
+
 func _ready() -> void:
-	pass
+	if box_image:
+		$BoxImage.texture = box_image
 
 func current_piece_changed(new_piece):
 	if new_piece == null:

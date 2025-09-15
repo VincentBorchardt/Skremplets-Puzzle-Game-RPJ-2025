@@ -12,7 +12,6 @@ func _ready() -> void:
 	if grid_owner == Inventory.Player.UNOWNED:
 		print("Populating Neutral Grid")
 		new_populate_neutral_grid([])
-		#populate_neutral_grid()
 
 func grab_neutral_piece(location, player) -> void:
 	#print("in _on_grid_space_grab_neutral_piece")
@@ -30,10 +29,6 @@ func grab_neutral_piece(location, player) -> void:
 		if player == Inventory.Player.PLAYER_1:
 			start_ai_pick.emit(piece_list, Inventory.Player.PLAYER_2)
 			$RepopulateTimer.start(0.5)
-		
-		#repopulate_neutral_grid(root)
-		#TODO This breaks because there's two roots it's trying to keep track of at once
-		#$RepopulateTimer.start_with_root(root)
 
 func new_populate_neutral_grid(pieces_to_re_add):
 	var current_y = 0
@@ -60,18 +55,9 @@ func new_populate_neutral_grid(pieces_to_re_add):
 		place_piece(piece, location)
 		current_y = current_y + min_length
 
-# TODO THIS IS EXTREMELY HARDCODED FOR NOW
-func populate_neutral_grid():
-	for i in range(5):
-		var index = randi() % 3
-		var piece = load(piece_storage[index]).duplicate()
-		if piece.x_length < piece.y_length:
-			piece.rotate(-TAU/4)
-		var location = Vector2i(2, ((2 * i) + 1))
-		# TODO This doesn't check if the space is legal, it shouldn't in this hack but likely will eventually
-		place_piece(piece, location)
-	#print(piece_list)
-
+# TODO I want to drop a piece off the grid each time, but that is more complicated
+# I also want to reverse the direction (right now everything moves up), but that's hard,
+# especially without entirely rebuilding how I do grids
 func new_repopulate_neutral_grid():
 	var pieces_to_re_add = []
 	var old_pieces = piece_list.get_pieces().duplicate()
@@ -82,12 +68,6 @@ func new_repopulate_neutral_grid():
 		piece.pick_up_piece(grid_owner)
 		pieces_to_re_add.append(piece)
 	new_populate_neutral_grid(pieces_to_re_add)
-
-func repopulate_neutral_grid(location):
-	var index = randi() % 3
-	var piece = load(piece_storage[index]).duplicate()
-	piece.rotate(-TAU/4)
-	place_piece(piece, location)
 
 
 func _on_repopulate_timer_timeout() -> void:

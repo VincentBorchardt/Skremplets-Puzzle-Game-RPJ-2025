@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs6soxfyp2f73"
-path="res://.godot/imported/temp_dumpster_right.png-43e98cff154e61bf2cef24d6dff22d46.ctex"
+uid="uid://q77ix0pg8n7d"
+path="res://.godot/imported/gridspace_left.png-7b12a5a1decbba8ee83dba4ab71960b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grid/temp_dumpster_right.png"
-dest_files=["res://.godot/imported/temp_dumpster_right.png-43e98cff154e61bf2cef24d6dff22d46.ctex"]
+source_file="res://assets/grid/gridspace_left.png"
+dest_files=["res://.godot/imported/gridspace_left.png-7b12a5a1decbba8ee83dba4ab71960b0.ctex"]
 
 [params]
 

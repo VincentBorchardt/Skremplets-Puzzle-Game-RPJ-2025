@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://3lepfkvo1yvi"]
 
 [ext_resource type="Script" uid="uid://lv6yuoo8i506" path="res://scripts/human_play_area.gd" id="1_7leco"]
-[ext_resource type="Texture2D" uid="uid://cbr4bbxfrd8gl" path="res://assets/grid/temp_dumpster_background_3.png" id="2_7leco"]
 [ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/play_grid.tscn" id="2_ec8he"]
+[ext_resource type="Texture2D" uid="uid://q77ix0pg8n7d" path="res://assets/grid/gridspace_left.png" id="2_s2yma"]
 [ext_resource type="PackedScene" uid="uid://b1xn1nbqsoyaa" path="res://scenes/player_1_power_up_bar.tscn" id="3_7leco"]
 [ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/preview_box.tscn" id="4_ec8he"]
 [ext_resource type="Texture2D" uid="uid://cp78mf2v0s1lu" path="res://assets/characters/04 Grymmt-nospk.png" id="6_s2yma"]
@@ -13,7 +13,7 @@ metadata/_custom_type_script = "uid://lv6yuoo8i506"
 
 [node name="GridBackground" type="Sprite2D" parent="."]
 position = Vector2(250, 300)
-texture = ExtResource("2_7leco")
+texture = ExtResource("2_s2yma")
 
 [node name="PlayGrid" parent="." instance=ExtResource("2_ec8he")]
 
@@ -26,9 +26,9 @@ bar_size = 27
 
 [node name="PreviewBox" parent="." instance=ExtResource("4_ec8he")]
 offset_left = 420.0
-offset_top = 415.0
+offset_top = 390.0
 offset_right = 420.0
-offset_bottom = 415.0
+offset_bottom = 390.0
 
 [node name="CharacterPortrait" type="Sprite2D" parent="."]
 position = Vector2(200, -135)
