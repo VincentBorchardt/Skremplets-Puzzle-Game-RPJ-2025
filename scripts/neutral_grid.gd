@@ -49,6 +49,7 @@ func new_populate_neutral_grid(pieces_to_re_add):
 			piece.rotate(-TAU/4)
 		var min_length = piece.min_length()
 		if current_y + min_length > grid_y:
+			current_y = current_y + min_length
 			break
 		var mod_y = current_y + -piece.min_y()
 		var location = Vector2i(2, mod_y)

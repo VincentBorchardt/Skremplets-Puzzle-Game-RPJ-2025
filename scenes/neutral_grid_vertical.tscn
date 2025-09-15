@@ -17,6 +17,7 @@ position = Vector2(125, 250)
 texture = ExtResource("2_xess8")
 
 [node name="RepopulateTimer" type="Timer" parent="."]
+one_shot = true
 script = ExtResource("2_urwwb")
 
 [node name="Spaces" type="Node2D" parent="."]
