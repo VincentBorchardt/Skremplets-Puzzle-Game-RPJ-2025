@@ -32,7 +32,7 @@ func _on_add_new_piece(new_piece, piece_location):
 func remove_pieces(piece_array):
 	for piece in piece_array:
 		if piece.root_point_location == location:
-			#print(location)
+			print("removing piece at " + str(location))
 			is_root_node = false
 			root_piece = null
 			$PieceImage.texture = null

@@ -1,12 +1,12 @@
 extends Timer
 
-signal timeout_with_root(new_root)
+signal timeout_with_pieces(old_pieces)
 
-var root
+var pieces
 
-func start_with_root(new_root):
-	var root = new_root
+func start_with_pieces(old_pieces):
+	var pieces = old_pieces
 	start(0.5)
  
 func _on_timeout() -> void:
-	timeout_with_root.emit(root)
+	timeout_with_pieces.emit(pieces)

@@ -74,5 +74,12 @@ func should_not_be_matched():
 func min_length():
 	return min(x_length, y_length)
 
+func min_y():
+	var inter_y = 0
+	for point in secondary_points:
+		if point.y < inter_y:
+			inter_y = point.y
+	return inter_y
+
 func _to_string() -> String:
 	return "Piece at " + str(root_point_location) + ", " + str(secondary_points)

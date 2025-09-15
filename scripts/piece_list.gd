@@ -5,7 +5,7 @@ class_name PieceList extends Resource
 var list = {}
 
 func add(piece, points):
-	print("adding " + str(piece) + " to piece_list")
+	#print("adding " + str(piece) + " to piece_list")
 	if not list.has(piece):
 		list[piece] = points
 
