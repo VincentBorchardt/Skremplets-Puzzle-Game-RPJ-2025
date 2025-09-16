@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://btqyofq3jfh3h"]
 
-[ext_resource type="Script" uid="uid://rdtmqgtehayh" path="res://scripts/grid.gd" id="1_2s7k2"]
+[ext_resource type="Script" uid="uid://rdtmqgtehayh" path="res://scripts/play_areas/grid.gd" id="1_2s7k2"]
 [ext_resource type="PackedScene" uid="uid://bapgvd2psgvpj" path="res://scenes/grid_space.tscn" id="1_t5fjg"]
 [ext_resource type="Texture2D" uid="uid://buaqf06iwirva" path="res://assets/grid/temp_grid_border.png" id="1_w88cy"]
-[ext_resource type="Script" uid="uid://ch200b27lqt44" path="res://scripts/clear_pieces_timer.gd" id="3_v0j7n"]
+[ext_resource type="Script" uid="uid://ch200b27lqt44" path="res://scripts/play_areas/clear_pieces_timer.gd" id="3_v0j7n"]
 
 [node name="PlayGrid" type="Node2D"]
 script = ExtResource("1_2s7k2")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://8ke5qj2vjr1e"]
 
-[ext_resource type="Script" uid="uid://2hhfcg1ksay3" path="res://scripts/neutral_grid.gd" id="1_2lrjh"]
+[ext_resource type="Script" uid="uid://2hhfcg1ksay3" path="res://scripts/play_areas/neutral_grid.gd" id="1_2lrjh"]
 [ext_resource type="PackedScene" uid="uid://bapgvd2psgvpj" path="res://scenes/grid_space.tscn" id="2_cdg8c"]
-[ext_resource type="Script" uid="uid://41invod4xyjn" path="res://scripts/repopulate_timer.gd" id="2_urwwb"]
+[ext_resource type="Script" uid="uid://41invod4xyjn" path="res://scripts/play_areas/repopulate_timer.gd" id="2_urwwb"]
 [ext_resource type="Texture2D" uid="uid://dx5naix65tonp" path="res://assets/grid/conveyorbelt.png" id="2_xess8"]
 
 [node name="NeutralGridVertical" type="Node2D"]

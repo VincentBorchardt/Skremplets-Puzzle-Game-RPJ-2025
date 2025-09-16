@@ -119,7 +119,7 @@ func check_special_pieces(pieces_to_check):
 				piece_list.remove_pieces([piece])
 				for node in spaces_list:
 					node.remove_pieces([piece])
-				var new_piece = preload("res://resources/pieces/sound_at_one_power_up.tres").duplicate()
+				var new_piece = preload("res://resources/pieces/powerup/sound_at_one_power_up.tres").duplicate()
 				place_piece(new_piece, location)
 			_:
 				pieces_to_clear.append(piece)

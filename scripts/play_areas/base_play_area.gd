@@ -13,7 +13,7 @@ var current_piece: Piece:
 				print(str(grid_owner) + " loses")
 				loss_condition.emit(grid_owner, character)
 
-var garbage_piece = preload("res://resources/pieces/garbage_block.tres").duplicate()
+var garbage_piece = preload("res://resources/pieces/garbage/garbage_block.tres").duplicate()
 
 @export var character: Character
 @export var grid_owner: Inventory.Player
@@ -64,10 +64,10 @@ func _on_power_up_bar_activate_powerup() -> void:
 	#TODO check if the character is depowered or not here
 	match character:
 		preload("res://resources/characters/grymmt_dundle.tres"):
-			var powerup = preload("res://resources/pieces/apple_power_up.tres").duplicate()
+			var powerup = preload("res://resources/pieces/powerup/apple_power_up.tres").duplicate()
 			$PlayGrid.place_multiple_pieces(powerup, 2)
 		preload("res://resources/characters/orchk.tres"):
-			var powerup = preload("res://resources/pieces/sound_at_two_power_up.tres")
+			var powerup = preload("res://resources/pieces/powerup/sound_at_two_power_up.tres")
 			send_pieces.emit(powerup, 2, grid_owner)
 		_:
 			print("currently not implemented")

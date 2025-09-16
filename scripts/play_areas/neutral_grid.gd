@@ -5,7 +5,7 @@ signal start_ai_pick(piece_list, player)
 
 # TODO This is a temporary hack to make neutral grids work in a basic form
 # This should probably be in a global, or maybe tied to the specific level if/when they get implemented
-var piece_storage = ["res://resources/pieces/blue_four_t.tres", "res://resources/pieces/red_four_line.tres", "res://resources/pieces/yellow_four_square.tres"]
+var piece_storage = ["res://resources/pieces/blue/blue_four_t.tres", "res://resources/pieces/red/red_four_line.tres", "res://resources/pieces/yellow/yellow_four_square.tres"]
 
 func _ready() -> void:
 	super()

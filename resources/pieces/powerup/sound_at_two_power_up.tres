@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Piece" load_steps=3 format=3 uid="uid://cwxmpyd60hdr0"]
 
-[ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/piece.gd" id="1_eulid"]
+[ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/resources/piece.gd" id="1_eulid"]
 [ext_resource type="Texture2D" uid="uid://buxpmvftgxtde" path="res://assets/pieces/special_pieces/block8_sound2.png" id="1_vxrys"]
 
 [resource]
