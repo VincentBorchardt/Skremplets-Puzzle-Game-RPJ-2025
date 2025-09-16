@@ -13,9 +13,20 @@ var current_piece: Piece:
 				print(str(grid_owner) + " loses")
 				loss_condition.emit(grid_owner, character)
 
+@export var character: Character:
+	set(new_character):
+		character = new_character
+		match grid_owner:
+			Inventory.Player.PLAYER_1:
+				$CharacterPortrait.texture = new_character.player_1_portrait
+				$CharacterPortrait.position = new_character.player_1_position
+			Inventory.Player.PLAYER_2:
+				$CharacterPortrait.texture = new_character.player_2_portrait
+				$CharacterPortrait.position = new_character.player_2_position
+
 var garbage_piece = preload("res://resources/pieces/garbage/garbage_block.tres").duplicate()
 
-@export var character: Character
+
 @export var grid_owner: Inventory.Player
 
 func set_current_piece(piece):

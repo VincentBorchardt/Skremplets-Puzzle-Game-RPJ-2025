@@ -1,34 +1,34 @@
-[gd_scene load_steps=10 format=3 uid="uid://bgdtshogglm73"]
+[gd_scene load_steps=10 format=3 uid="uid://qykbik8pybjh"]
 
-[ext_resource type="Script" uid="uid://c11y2smjvgn31" path="res://scripts/play_scene.gd" id="1_qlfe2"]
-[ext_resource type="PackedScene" uid="uid://ccanpro3dipby" path="res://scenes/piece_box.tscn" id="2_lixwp"]
-[ext_resource type="PackedScene" uid="uid://3lepfkvo1yvi" path="res://scenes/player_1_grid.tscn" id="2_rq1sk"]
-[ext_resource type="Resource" uid="uid://b4reyngalkwyh" path="res://resources/characters/grymmt_dundle.tres" id="3_oco0s"]
-[ext_resource type="PackedScene" uid="uid://c2bsuixqkm7yo" path="res://scenes/player_2_grid.tscn" id="3_qlfe2"]
-[ext_resource type="Resource" uid="uid://cck3y4synutqo" path="res://resources/characters/orchk.tres" id="5_rq1sk"]
-[ext_resource type="PackedScene" uid="uid://8ke5qj2vjr1e" path="res://scenes/neutral_grid_vertical.tscn" id="7_ff7gh"]
-[ext_resource type="Texture2D" uid="uid://civkyeql5mvul" path="res://assets/title_popup_background_framed.png" id="8_ff7gh"]
+[ext_resource type="Script" uid="uid://c11y2smjvgn31" path="res://scripts/play_scene.gd" id="1_xx7qt"]
+[ext_resource type="PackedScene" uid="uid://3lepfkvo1yvi" path="res://scenes/player_1_grid.tscn" id="2_0pe51"]
+[ext_resource type="Resource" uid="uid://b4reyngalkwyh" path="res://resources/characters/grymmt_dundle.tres" id="3_yypet"]
+[ext_resource type="PackedScene" uid="uid://c2bsuixqkm7yo" path="res://scenes/player_2_grid.tscn" id="4_wcwx1"]
+[ext_resource type="Resource" uid="uid://cck3y4synutqo" path="res://resources/characters/orchk.tres" id="5_4ykww"]
+[ext_resource type="PackedScene" uid="uid://8ke5qj2vjr1e" path="res://scenes/neutral_grid_vertical.tscn" id="6_817nk"]
+[ext_resource type="PackedScene" uid="uid://ccanpro3dipby" path="res://scenes/piece_box.tscn" id="7_q0trn"]
+[ext_resource type="Texture2D" uid="uid://civkyeql5mvul" path="res://assets/title_popup_background_framed.png" id="8_a5cux"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lgvvg"]
 font_size = 72
 font_color = Color(0.0177324, 0.0177324, 0.0177324, 1)
 outline_color = Color(0, 0, 0, 1)
 
-[node name="PlaySceneTest" type="Node2D"]
-script = ExtResource("1_qlfe2")
+[node name="PlayScene" type="Node2D"]
+script = ExtResource("1_xx7qt")
 
-[node name="Player1Grid" parent="." instance=ExtResource("2_rq1sk")]
+[node name="Player1Grid" parent="." instance=ExtResource("2_0pe51")]
 position = Vector2(100, 220)
-character = ExtResource("3_oco0s")
+character = ExtResource("3_yypet")
 
-[node name="Player2Grid" parent="." instance=ExtResource("3_qlfe2")]
+[node name="Player2Grid" parent="." instance=ExtResource("4_wcwx1")]
 position = Vector2(1260, 220)
-character = ExtResource("5_rq1sk")
+character = ExtResource("5_4ykww")
 
-[node name="NeutralGrid" parent="." instance=ExtResource("7_ff7gh")]
+[node name="NeutralGrid" parent="." instance=ExtResource("6_817nk")]
 position = Vector2(680, 200)
 
-[node name="PieceBoxTest" parent="." instance=ExtResource("2_lixwp")]
+[node name="PieceBoxTest" parent="." instance=ExtResource("7_q0trn")]
 visible = false
 offset_left = 994.0
 offset_top = 23.0
@@ -42,7 +42,7 @@ transform = Transform2D(1, 0, 0, 1, 100, 56)
 
 [node name="Background" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(700, 394)
-texture = ExtResource("8_ff7gh")
+texture = ExtResource("8_a5cux")
 
 [node name="LoserLabel" type="Label" parent="CanvasLayer"]
 offset_left = 388.0
