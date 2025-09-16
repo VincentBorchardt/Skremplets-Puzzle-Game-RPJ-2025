@@ -3,15 +3,11 @@ class_name NeutralGrid extends Grid
 signal get_neutral_piece(piece, player)
 signal start_ai_pick(piece_list, player)
 
-# TODO This is a temporary hack to make neutral grids work in a basic form
-# This should probably be in a global, or maybe tied to the specific level if/when they get implemented
-var piece_storage = ["res://resources/pieces/blue/blue_four_t.tres", "res://resources/pieces/red/red_four_line.tres", "res://resources/pieces/yellow/yellow_four_square.tres"]
+var piece_storage: Array[Piece]
 
 func _ready() -> void:
 	super()
-	if grid_owner == Inventory.Player.UNOWNED:
-		print("Populating Neutral Grid")
-		new_populate_neutral_grid([])
+
 
 func grab_neutral_piece(location, player) -> void:
 	#print("in _on_grid_space_grab_neutral_piece")
@@ -30,7 +26,7 @@ func grab_neutral_piece(location, player) -> void:
 			start_ai_pick.emit(piece_list, Inventory.Player.PLAYER_2)
 			$RepopulateTimer.start(0.5)
 
-func new_populate_neutral_grid(pieces_to_re_add):
+func populate_neutral_grid(pieces_to_re_add):
 	var current_y = 0
 	# TODO lots of duplicated code here I don't like
 	for old_piece in pieces_to_re_add:
@@ -44,7 +40,7 @@ func new_populate_neutral_grid(pieces_to_re_add):
 		current_y = current_y + min_length
 	while current_y < grid_y:
 		var index = randi() % piece_storage.size()
-		var piece = load(piece_storage[index]).duplicate()
+		var piece = piece_storage[index].duplicate()
 		if piece.x_length < piece.y_length:
 			piece.rotate(-TAU/4)
 		var min_length = piece.min_length()
@@ -59,7 +55,7 @@ func new_populate_neutral_grid(pieces_to_re_add):
 # TODO I want to drop a piece off the grid each time, but that is more complicated
 # I also want to reverse the direction (right now everything moves up), but that's hard,
 # especially without entirely rebuilding how I do grids
-func new_repopulate_neutral_grid():
+func repopulate_neutral_grid():
 	var pieces_to_re_add = []
 	var old_pieces = piece_list.get_pieces().duplicate()
 	piece_list.remove_pieces(old_pieces)
@@ -68,8 +64,8 @@ func new_repopulate_neutral_grid():
 	for piece in old_pieces:
 		piece.pick_up_piece(grid_owner)
 		pieces_to_re_add.append(piece)
-	new_populate_neutral_grid(pieces_to_re_add)
+	populate_neutral_grid(pieces_to_re_add)
 
 
 func _on_repopulate_timer_timeout() -> void:
-	new_repopulate_neutral_grid()
+	repopulate_neutral_grid()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2ao1qh6laidk"]
+[gd_scene load_steps=7 format=3 uid="uid://d2ao1qh6laidk"]
 
 [ext_resource type="Script" uid="uid://bosrbphhitant" path="res://scripts/title_screen.gd" id="1_fgkus"]
-[ext_resource type="Script" uid="uid://cvukyo7xt2voj" path="res://scripts/scene_button.gd" id="2_sa3yf"]
+[ext_resource type="Script" uid="uid://bl2ejcuqp3n7l" path="res://scripts/new_play_level_button.gd" id="2_s4lrb"]
+[ext_resource type="Resource" uid="uid://urjk1e4a6rak" path="res://resources/level_infos/test_scene_1.tres" id="3_mgrm8"]
 [ext_resource type="PackedScene" uid="uid://bgdtshogglm73" path="res://scenes/play_scene_test.tscn" id="3_s4lrb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_s4lrb"]
@@ -16,13 +17,14 @@ script = ExtResource("1_fgkus")
 [node name="SceneButton" type="Button" parent="."]
 offset_left = 25.0
 offset_top = 325.0
-offset_right = 262.0
-offset_bottom = 356.0
+offset_right = 376.0
+offset_bottom = 367.0
 theme_override_font_sizes/font_size = 24
 text = "Test Match: Grymmt vs Orchk"
-script = ExtResource("2_sa3yf")
+script = ExtResource("2_s4lrb")
+level_info = ExtResource("3_mgrm8")
 attached_scene = ExtResource("3_s4lrb")
-metadata/_custom_type_script = "uid://cvukyo7xt2voj"
+metadata/_custom_type_script = "uid://bl2ejcuqp3n7l"
 
 [node name="TitleLabel" type="Label" parent="."]
 offset_left = 389.0
@@ -55,4 +57,5 @@ All opinions are welcome to help improve the basic gameplay!"
 label_settings = SubResource("LabelSettings_mgrm8")
 autowrap_mode = 3
 
+[connection signal="pressed" from="SceneButton" to="SceneButton" method="_on_pressed"]
 [connection signal="pressed_with_scene" from="SceneButton" to="." method="_on_scene_button_pressed_with_scene"]

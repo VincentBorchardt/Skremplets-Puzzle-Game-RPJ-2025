@@ -3,9 +3,15 @@ extends Node2D
 # TODO very, very placeholder at this point;
 # eventually this should handle stuff like victory conditions and moving from scene to scene
 
+var current_level_info
+
 func _ready() -> void:
 	if Inventory.next_level_info:
-		pass
+		current_level_info = Inventory.next_level_info
+		$Player1Grid.character = current_level_info.player_1_character
+		$Player2Grid.character = current_level_info.player_2_character
+		$NeutralGrid.piece_storage = current_level_info.piece_storage
+		$NeutralGrid.populate_neutral_grid([])
 
 # TODO These should probably act like the grid spaces in grid to make them less hard-coded
 func _on_send_pieces(piece, num_pieces, sending_player) -> void:
