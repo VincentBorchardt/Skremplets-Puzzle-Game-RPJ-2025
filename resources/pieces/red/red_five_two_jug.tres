@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Piece" load_steps=3 format=3 uid="uid://cluudm4c14snw"]
+
+[ext_resource type="Texture2D" uid="uid://b6qepgtahhy72" path="res://assets/pieces/main_pieces/red_five_two_jug.png" id="1_moer2"]
+[ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/resources/piece.gd" id="1_tthbx"]
+
+[resource]
+script = ExtResource("1_tthbx")
+owner = 0
+root_point_location = Vector2i(0, 0)
+secondary_points = Array[Vector2i]([Vector2i(1, -2), Vector2i(0, -1), Vector2i(1, -1), Vector2i(0, 0), Vector2i(1, 0), Vector2i(0, 1), Vector2i(1, 1), Vector2i(0, 2), Vector2i(1, 2)])
+x_length = 2
+y_length = 5
+image = ExtResource("1_moer2")
+type = 0
+power_up_type = 0
+translation = Vector2(25, 0)
+rotation = 0.0
+metadata/_custom_type_script = "uid://6oywq2cixv6v"

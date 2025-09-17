@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2bsuixqkm7yo"]
+[gd_scene load_steps=9 format=3 uid="uid://c2bsuixqkm7yo"]
 
 [ext_resource type="Script" uid="uid://bjfdmqjn5l31m" path="res://scripts/play_areas/ai_play_area.gd" id="1_u0dkv"]
 [ext_resource type="Texture2D" uid="uid://816hxf3iyr4a" path="res://assets/grid/gridspace_right.png" id="2_kg485"]
 [ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/play_grid.tscn" id="2_u0dkv"]
 [ext_resource type="PackedScene" uid="uid://cabi4v55xf72d" path="res://scenes/player_2_power_up_bar.tscn" id="3_nuaq7"]
 [ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/preview_box.tscn" id="4_14sy7"]
+[ext_resource type="Texture2D" uid="uid://dhrrtcm8bp70d" path="res://assets/grid/fill_right.png" id="5_4rn6u"]
 [ext_resource type="Texture2D" uid="uid://cjqsfkdpisjxk" path="res://assets/grid/preview_right.png" id="6_14sy7"]
 [ext_resource type="Texture2D" uid="uid://kn72h7qnw5a4" path="res://assets/characters/orchk01.png" id="7_14sy7"]
 
@@ -25,6 +26,7 @@ offset_left = -135.0
 offset_top = -20.0
 offset_right = -75.0
 offset_bottom = 280.0
+texture_progress = ExtResource("5_4rn6u")
 bar_owner = 1
 
 [node name="PreviewBox" parent="." instance=ExtResource("4_14sy7")]

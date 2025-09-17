@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://3lepfkvo1yvi"]
+[gd_scene load_steps=12 format=3 uid="uid://3lepfkvo1yvi"]
 
 [ext_resource type="Script" uid="uid://lv6yuoo8i506" path="res://scripts/play_areas/human_play_area.gd" id="1_7leco"]
 [ext_resource type="PackedScene" uid="uid://btqyofq3jfh3h" path="res://scenes/play_grid.tscn" id="2_ec8he"]
 [ext_resource type="Texture2D" uid="uid://q77ix0pg8n7d" path="res://assets/grid/gridspace_left.png" id="2_s2yma"]
 [ext_resource type="PackedScene" uid="uid://b1xn1nbqsoyaa" path="res://scenes/player_1_power_up_bar.tscn" id="3_7leco"]
 [ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/preview_box.tscn" id="4_ec8he"]
+[ext_resource type="Texture2D" uid="uid://dsm0vfpbvic7n" path="res://assets/grid/fill.png" id="5_cisue"]
 [ext_resource type="Texture2D" uid="uid://da6p3w5g13krw" path="res://assets/characters/grymmt01.png" id="6_urnof"]
 [ext_resource type="Texture2D" uid="uid://ct2lh83t2t1ft" path="res://assets/grid/button_cw.png" id="7_urnof"]
 [ext_resource type="Texture2D" uid="uid://bfc6vnvc1gvcb" path="res://assets/grid/button_cw_active.png" id="8_cisue"]
@@ -26,6 +27,7 @@ offset_left = 340.0
 offset_top = -15.0
 offset_right = 400.0
 offset_bottom = 285.0
+texture_progress = ExtResource("5_cisue")
 bar_size = 27
 
 [node name="PreviewBox" parent="." instance=ExtResource("4_ec8he")]
