@@ -20,6 +20,9 @@ func _on_cutscene_ui_get_new_message():
 		await self.ready
 	var message = message_queue.get_new_message()
 	if message != null:
+		if message.speaker.is_player:
+			message.speaker = Inventory.player_character
+			message.message = message.message.replace("$PLAYER", Inventory.player_character.name)
 		cutscene_ui.display_new_message(message)
 	else:
 		if next_scene != null:

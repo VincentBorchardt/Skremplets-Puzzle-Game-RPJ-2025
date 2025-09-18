@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://ygouoc315uwp"]
 
 [ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_s8cfr"]
-[ext_resource type="Resource" uid="uid://b4reyngalkwyh" path="res://resources/characters/grymmt_dundle.tres" id="2_k5fpl"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_k5fpl"]
 
 [resource]
 script = ExtResource("1_s8cfr")

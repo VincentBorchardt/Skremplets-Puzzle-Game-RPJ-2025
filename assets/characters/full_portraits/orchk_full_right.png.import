@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgvvinrojtbq8"
-path="res://.godot/imported/05 Orchk.png-e45f2eb7ba0dcb7e8a870712a810b1e5.ctex"
+path="res://.godot/imported/orchk_full_right.png-d935bd253da8fdfc8ce39239d1cfdb9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/full_portraits/05 Orchk.png"
-dest_files=["res://.godot/imported/05 Orchk.png-e45f2eb7ba0dcb7e8a870712a810b1e5.ctex"]
+source_file="res://assets/characters/full_portraits/orchk_full_right.png"
+dest_files=["res://.godot/imported/orchk_full_right.png-d935bd253da8fdfc8ce39239d1cfdb9a.ctex"]
 
 [params]
 

@@ -1,6 +1,7 @@
 class_name Character extends Resource
 
 @export var name: String
+@export var is_player: bool = false
 @export var depowered = false
 @export var ai_picking_pattern: Inventory.AIPickingPattern
 @export var ai_placement_pattern: Inventory.AIPlacementPattern

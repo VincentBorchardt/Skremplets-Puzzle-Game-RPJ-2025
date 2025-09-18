@@ -4,6 +4,7 @@ extends Node
 # Probably should get renamed at some point
 
 var next_level_info: LevelInfoContainer
+var player_character = preload("res://resources/characters/grymmt_dundle.tres")
 
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 enum Type {RED, BLUE, YELLOW, GREEN, PURPLE, GARBAGE, POWERUP, WILD, NONE}
