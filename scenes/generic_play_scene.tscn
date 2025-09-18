@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://qykbik8pybjh"]
+[gd_scene load_steps=11 format=3 uid="uid://qykbik8pybjh"]
 
 [ext_resource type="Script" uid="uid://c11y2smjvgn31" path="res://scripts/play_scene.gd" id="1_xx7qt"]
-[ext_resource type="PackedScene" uid="uid://3lepfkvo1yvi" path="res://scenes/player_1_grid.tscn" id="2_0pe51"]
+[ext_resource type="PackedScene" uid="uid://3lepfkvo1yvi" path="res://scenes/play_area/player_1_grid.tscn" id="2_0pe51"]
+[ext_resource type="Texture2D" uid="uid://dln8ec0c5sflt" path="res://assets/grid/bg_gameplay.png" id="2_xx7qt"]
 [ext_resource type="Resource" uid="uid://b4reyngalkwyh" path="res://resources/characters/grymmt_dundle.tres" id="3_yypet"]
-[ext_resource type="PackedScene" uid="uid://c2bsuixqkm7yo" path="res://scenes/player_2_grid.tscn" id="4_wcwx1"]
+[ext_resource type="PackedScene" uid="uid://c2bsuixqkm7yo" path="res://scenes/play_area/player_2_grid.tscn" id="4_wcwx1"]
 [ext_resource type="Resource" uid="uid://cck3y4synutqo" path="res://resources/characters/orchk.tres" id="5_4ykww"]
-[ext_resource type="PackedScene" uid="uid://8ke5qj2vjr1e" path="res://scenes/neutral_grid_vertical.tscn" id="6_817nk"]
+[ext_resource type="PackedScene" uid="uid://8ke5qj2vjr1e" path="res://scenes/play_area/neutral_grid_vertical.tscn" id="6_817nk"]
 [ext_resource type="PackedScene" uid="uid://ccanpro3dipby" path="res://scenes/piece_box.tscn" id="7_q0trn"]
 [ext_resource type="Texture2D" uid="uid://civkyeql5mvul" path="res://assets/title_popup_background_framed.png" id="8_a5cux"]
 
@@ -17,12 +18,15 @@ outline_color = Color(0, 0, 0, 1)
 [node name="PlayScene" type="Node2D"]
 script = ExtResource("1_xx7qt")
 
+[node name="PlayAreaBackground" type="Sprite2D" parent="."]
+texture = ExtResource("2_xx7qt")
+
 [node name="Player1Grid" parent="." instance=ExtResource("2_0pe51")]
-position = Vector2(100, 220)
+position = Vector2(100, 225)
 character = ExtResource("3_yypet")
 
 [node name="Player2Grid" parent="." instance=ExtResource("4_wcwx1")]
-position = Vector2(1260, 220)
+position = Vector2(1260, 225)
 character = ExtResource("5_4ykww")
 
 [node name="NeutralGrid" parent="." instance=ExtResource("6_817nk")]

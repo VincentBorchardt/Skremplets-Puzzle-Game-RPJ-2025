@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c28rppjotxqlo"
-path="res://.godot/imported/boyhowdy01.png-4ccb70a24f6b332903b7d7f13a9b83dd.ctex"
+path="res://.godot/imported/boyhowdy01.png-1504f84587b972113223981f594cb928.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/boyhowdy01.png"
-dest_files=["res://.godot/imported/boyhowdy01.png-4ccb70a24f6b332903b7d7f13a9b83dd.ctex"]
+source_file="res://assets/characters/play_area/boyhowdy01.png"
+dest_files=["res://.godot/imported/boyhowdy01.png-1504f84587b972113223981f594cb928.ctex"]
 
 [params]
 

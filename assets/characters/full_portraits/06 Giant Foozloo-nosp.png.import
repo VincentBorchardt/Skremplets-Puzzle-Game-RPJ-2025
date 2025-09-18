@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://27fdcihwdb4b"
-path="res://.godot/imported/grymmt01_mirrored.png-f3a401ae26fc485a9e55f25fa8cf9ac0.ctex"
+uid="uid://dcttyvhpooqsg"
+path="res://.godot/imported/06 Giant Foozloo-nosp.png-66049530e545693ea41bb8aea98936c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/grymmt01_mirrored.png"
-dest_files=["res://.godot/imported/grymmt01_mirrored.png-f3a401ae26fc485a9e55f25fa8cf9ac0.ctex"]
+source_file="res://assets/characters/full_portraits/06 Giant Foozloo-nosp.png"
+dest_files=["res://.godot/imported/06 Giant Foozloo-nosp.png-66049530e545693ea41bb8aea98936c3.ctex"]
 
 [params]
 

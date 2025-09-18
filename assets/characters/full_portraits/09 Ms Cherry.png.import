@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kn72h7qnw5a4"
-path="res://.godot/imported/orchk01.png-cd54d3afdafdb09cfd64b598211dac82.ctex"
+uid="uid://dnsmgbvhgkhhd"
+path="res://.godot/imported/09 Ms Cherry.png-2cedf2101b281672da1c703209e76355.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/orchk01.png"
-dest_files=["res://.godot/imported/orchk01.png-cd54d3afdafdb09cfd64b598211dac82.ctex"]
+source_file="res://assets/characters/full_portraits/09 Ms Cherry.png"
+dest_files=["res://.godot/imported/09 Ms Cherry.png-2cedf2101b281672da1c703209e76355.ctex"]
 
 [params]
 

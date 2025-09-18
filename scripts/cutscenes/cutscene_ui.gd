@@ -1,4 +1,4 @@
-extends Control
+class_name CutsceneUI extends Control
 
 signal get_new_message()
 

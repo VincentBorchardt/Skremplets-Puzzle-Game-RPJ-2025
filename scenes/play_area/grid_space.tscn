@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://bapgvd2psgvpj"]
 
-[ext_resource type="Script" uid="uid://f2ajmd5fuvtk" path="res://scripts/play_areas/grid_space.gd" id="1_htyn4"]
-[ext_resource type="Texture2D" uid="uid://bfbiqxym3pyx1" path="res://assets/grid/temp_grid_space.png" id="2_2pu0k"]
-[ext_resource type="Texture2D" uid="uid://dif3f3v6718bm" path="res://assets/blank_image.png" id="3_2pu0k"]
+[ext_resource type="Script" uid="uid://f2ajmd5fuvtk" path="res://scripts/play_areas/grid_space.gd" id="1_epwoh"]
+[ext_resource type="Texture2D" uid="uid://bfbiqxym3pyx1" path="res://assets/grid/temp_grid_space.png" id="2_xas3g"]
+[ext_resource type="Texture2D" uid="uid://dif3f3v6718bm" path="res://assets/blank_image.png" id="3_pxeel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e42ob"]
 size = Vector2(50, 50)
 
 [node name="GridSpace" type="Area2D"]
-script = ExtResource("1_htyn4")
+script = ExtResource("1_epwoh")
 metadata/_custom_type_script = "uid://f2ajmd5fuvtk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -17,11 +17,11 @@ shape = SubResource("RectangleShape2D_e42ob")
 
 [node name="SpaceImage" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("2_2pu0k")
+texture = ExtResource("2_xas3g")
 
 [node name="PieceImage" type="Sprite2D" parent="."]
 visible = false
 visibility_layer = 2
-texture = ExtResource("3_2pu0k")
+texture = ExtResource("3_pxeel")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
