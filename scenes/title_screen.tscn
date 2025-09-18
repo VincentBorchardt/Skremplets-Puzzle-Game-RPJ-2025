@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2ao1qh6laidk"]
+[gd_scene load_steps=10 format=3 uid="uid://d2ao1qh6laidk"]
 
 [ext_resource type="Script" uid="uid://bosrbphhitant" path="res://scripts/title_screen.gd" id="1_fgkus"]
 [ext_resource type="Script" uid="uid://bl2ejcuqp3n7l" path="res://scripts/new_play_level_button.gd" id="2_s4lrb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bgdtshogglm73" path="res://scenes/play_scene_test.tscn" id="3_s4lrb"]
 [ext_resource type="Resource" uid="uid://bcn78eat0j8f5" path="res://resources/level_infos/test_scene_2.tres" id="5_e54dn"]
 [ext_resource type="PackedScene" uid="uid://qykbik8pybjh" path="res://scenes/generic_play_scene.tscn" id="6_3yumr"]
+[ext_resource type="PackedScene" uid="uid://035l8y7rph61" path="res://scenes/title_screen_popup.tscn" id="7_3yumr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_s4lrb"]
 font_size = 48
@@ -45,7 +46,7 @@ offset_left = 389.0
 offset_top = 37.0
 offset_right = 958.0
 offset_bottom = 104.0
-text = "Skremplets Puzzle Game"
+text = "Skremplets Trash Battle!"
 label_settings = SubResource("LabelSettings_s4lrb")
 
 [node name="InstructionsLabel" type="Label" parent="."]
@@ -53,25 +54,36 @@ offset_left = 396.0
 offset_top = 161.0
 offset_right = 1575.0
 offset_bottom = 843.0
-text = "Pick pieces from the middle area and place them in your own grid without overlapping another piece.
-
-The circled block in each piece is the block that will go in the space you click on, as well as the center of rotation (rotation buttons above your grid)
-
-Place at least three pieces next to one another to clear them, build up your powerup, and send garbage to your opponent. The more pieces you clear at once the more garbage you send.
-
-Remove garbage and special pieces by matching normal pieces next to them.
-
-You win when your opponent picks a piece they can't place on their board.
-
-Grymmt's powerup places apples on your board, and when you clear them you'll send extra garbage and charge your powerup meter faster.
-
-Orchk's powerup sends special sound blocks that require multiple matches to clear.
-
-All opinions are welcome to help improve the basic gameplay!"
 label_settings = SubResource("LabelSettings_mgrm8")
 autowrap_mode = 3
+
+[node name="TitleScreenBottomBox" type="HBoxContainer" parent="."]
+offset_left = 600.0
+offset_top = 800.0
+offset_right = 1550.0
+offset_bottom = 850.0
+
+[node name="CreditsButton" type="Button" parent="TitleScreenBottomBox"]
+layout_mode = 2
+text = "Credits"
+
+[node name="LicensesButton" type="Button" parent="TitleScreenBottomBox"]
+layout_mode = 2
+text = "Licenses"
+
+[node name="InstructionsButton" type="Button" parent="TitleScreenBottomBox"]
+layout_mode = 2
+text = "Instructions"
+
+[node name="TitleScreenPopup" parent="." instance=ExtResource("7_3yumr")]
+visible = false
+offset = Vector2(100, 56)
+transform = Transform2D(1, 0, 0, 1, 100, 56)
 
 [connection signal="pressed" from="Test1Button" to="Test1Button" method="_on_pressed"]
 [connection signal="pressed_with_scene" from="Test1Button" to="." method="_on_scene_button_pressed_with_scene"]
 [connection signal="pressed" from="Test2Button" to="Test2Button" method="_on_pressed"]
 [connection signal="pressed_with_scene" from="Test2Button" to="." method="_on_scene_button_pressed_with_scene"]
+[connection signal="pressed" from="TitleScreenBottomBox/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="TitleScreenBottomBox/LicensesButton" to="." method="_on_licenses_button_pressed"]
+[connection signal="pressed" from="TitleScreenBottomBox/InstructionsButton" to="." method="_on_instructions_button_pressed"]
