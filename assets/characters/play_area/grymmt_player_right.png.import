@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://71schgoj0egj"
-path="res://.godot/imported/orchk01_mirrored.png-9a15e204943e0886135f3276793dc005.ctex"
+uid="uid://27fdcihwdb4b"
+path="res://.godot/imported/grymmt_player_right.png-6ecbacaa033a6b6cd709ab12bda01fc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/play_area/orchk01_mirrored.png"
-dest_files=["res://.godot/imported/orchk01_mirrored.png-9a15e204943e0886135f3276793dc005.ctex"]
+source_file="res://assets/characters/play_area/grymmt_player_right.png"
+dest_files=["res://.godot/imported/grymmt_player_right.png-6ecbacaa033a6b6cd709ab12bda01fc9.ctex"]
 
 [params]
 

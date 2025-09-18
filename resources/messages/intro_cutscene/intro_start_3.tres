@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Message" load_steps=5 format=3 uid="uid://b7i0yh1bbfyyt"]
+
+[ext_resource type="PackedScene" uid="uid://bqhkeyt8iqyvm" path="res://scenes/cutscenes/intro/intro_cutscene_no.tscn" id="1_olvcu"]
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_qrlbc"]
+[ext_resource type="Resource" uid="uid://bg0pasjplfp8i" path="res://resources/characters/reporter.tres" id="3_k0vlc"]
+[ext_resource type="PackedScene" uid="uid://bl5gajryv614v" path="res://scenes/cutscenes/intro/intro_cutscene_yes.tscn" id="4_t4q0q"]
+
+[resource]
+script = ExtResource("1_qrlbc")
+speaker = ExtResource("3_k0vlc")
+message = "Hey creature! Are Skremplets back?"
+image_location = 1
+choices = true
+yes_scene = ExtResource("4_t4q0q")
+no_scene = ExtResource("1_olvcu")
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c28rppjotxqlo"
-path="res://.godot/imported/boyhowdy01.png-1504f84587b972113223981f594cb928.ctex"
+uid="uid://kn72h7qnw5a4"
+path="res://.godot/imported/orchk_player_right.png-83cac54c50094d926cc0de116457b5d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/play_area/boyhowdy01.png"
-dest_files=["res://.godot/imported/boyhowdy01.png-1504f84587b972113223981f594cb928.ctex"]
+source_file="res://assets/characters/play_area/orchk_player_right.png"
+dest_files=["res://.godot/imported/orchk_player_right.png-83cac54c50094d926cc0de116457b5d9.ctex"]
 
 [params]
 

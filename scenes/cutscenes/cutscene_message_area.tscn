@@ -71,3 +71,4 @@ metadata/_custom_type_script = "uid://cvukyo7xt2voj"
 [connection signal="pressed" from="PreviousMessagesButton" to="." method="_on_previous_messages_button_pressed"]
 [connection signal="pressed" from="AdvanceTextButton" to="." method="_on_advance_text_button_pressed"]
 [connection signal="pressed_with_scene" from="YesButton" to="." method="_on_button_pressed_with_scene"]
+[connection signal="pressed_with_scene" from="NoButton" to="." method="_on_button_pressed_with_scene"]

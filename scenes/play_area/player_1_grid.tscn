@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b1xn1nbqsoyaa" path="res://scenes/play_area/player_1_power_up_bar.tscn" id="3_7leco"]
 [ext_resource type="PackedScene" uid="uid://ctskks742behs" path="res://scenes/play_area/preview_box.tscn" id="4_ec8he"]
 [ext_resource type="Texture2D" uid="uid://dsm0vfpbvic7n" path="res://assets/grid/fill.png" id="5_cisue"]
-[ext_resource type="Texture2D" uid="uid://da6p3w5g13krw" path="res://assets/characters/play_area/grymmt01.png" id="6_urnof"]
+[ext_resource type="Texture2D" uid="uid://da6p3w5g13krw" path="res://assets/characters/play_area/grymmt_player_left.png" id="6_urnof"]
 [ext_resource type="Texture2D" uid="uid://ct2lh83t2t1ft" path="res://assets/grid/button_cw.png" id="7_urnof"]
 [ext_resource type="Texture2D" uid="uid://bfc6vnvc1gvcb" path="res://assets/grid/button_cw_active.png" id="8_cisue"]
 [ext_resource type="Texture2D" uid="uid://b1eul1b8uivnl" path="res://assets/grid/button_ccw.png" id="9_i2ih2"]

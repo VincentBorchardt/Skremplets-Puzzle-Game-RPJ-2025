@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cck3y4synutqo"]
 
-[ext_resource type="Texture2D" uid="uid://71schgoj0egj" path="res://assets/characters/play_area/orchk01_mirrored.png" id="1_27j2k"]
-[ext_resource type="Texture2D" uid="uid://kn72h7qnw5a4" path="res://assets/characters/play_area/orchk01.png" id="2_g2au0"]
+[ext_resource type="Texture2D" uid="uid://71schgoj0egj" path="res://assets/characters/play_area/orchk_player_left.png" id="1_27j2k"]
+[ext_resource type="Texture2D" uid="uid://kn72h7qnw5a4" path="res://assets/characters/play_area/orchk_player_right.png" id="2_g2au0"]
 [ext_resource type="Script" uid="uid://b58oxslgqt4ox" path="res://scripts/resources/character.gd" id="3_w026d"]
 
 [resource]

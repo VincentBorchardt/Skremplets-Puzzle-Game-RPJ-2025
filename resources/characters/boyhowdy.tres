@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Character" load_steps=6 format=3 uid="uid://mwlcno66tq4k"]
+
+[ext_resource type="Texture2D" uid="uid://ce3eny67myo36" path="res://assets/characters/full_portraits/boyhowdy_full_left.png" id="1_6mabk"]
+[ext_resource type="Script" uid="uid://b58oxslgqt4ox" path="res://scripts/resources/character.gd" id="1_a32a8"]
+[ext_resource type="Texture2D" uid="uid://d2ucd7e1p2acw" path="res://assets/characters/full_portraits/boyhowdy_full_right.png" id="2_vs4qf"]
+[ext_resource type="Texture2D" uid="uid://djhgnex88mx3c" path="res://assets/characters/play_area/boyhowdy_player_left.png" id="3_dfuqn"]
+[ext_resource type="Texture2D" uid="uid://c28rppjotxqlo" path="res://assets/characters/play_area/boyhowdy_player_right.png" id="4_p7g6d"]
+
+[resource]
+script = ExtResource("1_a32a8")
+name = "Boyhowdy"
+depowered = false
+ai_picking_pattern = 2
+ai_placement_pattern = 0
+player_1_portrait = ExtResource("3_dfuqn")
+player_1_position = Vector2(230, -130)
+player_2_portrait = ExtResource("4_p7g6d")
+player_2_position = Vector2(20, -130)
+full_picture_left = ExtResource("1_6mabk")
+full_picture_right = ExtResource("2_vs4qf")
+metadata/_custom_type_script = "uid://b58oxslgqt4ox"

@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://b4reyngalkwyh"]
+[gd_resource type="Resource" script_class="Character" load_steps=6 format=3 uid="uid://b4reyngalkwyh"]
 
-[ext_resource type="Texture2D" uid="uid://da6p3w5g13krw" path="res://assets/characters/play_area/grymmt01.png" id="1_laobw"]
-[ext_resource type="Texture2D" uid="uid://27fdcihwdb4b" path="res://assets/characters/play_area/grymmt01_mirrored.png" id="2_tonnd"]
+[ext_resource type="Texture2D" uid="uid://dev0b4rt7yk85" path="res://assets/characters/full_portraits/grymmt_full_left.png" id="1_712vs"]
+[ext_resource type="Texture2D" uid="uid://c7ymkp7bsnyd0" path="res://assets/characters/full_portraits/grymmt_full_right.png" id="2_d6127"]
 [ext_resource type="Script" uid="uid://b58oxslgqt4ox" path="res://scripts/resources/character.gd" id="3_712vs"]
+[ext_resource type="Texture2D" uid="uid://da6p3w5g13krw" path="res://assets/characters/play_area/grymmt_player_left.png" id="3_o48pf"]
+[ext_resource type="Texture2D" uid="uid://27fdcihwdb4b" path="res://assets/characters/play_area/grymmt_player_right.png" id="4_p7wuq"]
 
 [resource]
 script = ExtResource("3_712vs")
@@ -10,8 +12,10 @@ name = "Grymmt Dundle"
 depowered = false
 ai_picking_pattern = 1
 ai_placement_pattern = 0
-player_1_portrait = ExtResource("1_laobw")
+player_1_portrait = ExtResource("3_o48pf")
 player_1_position = Vector2(230, -130)
-player_2_portrait = ExtResource("2_tonnd")
+player_2_portrait = ExtResource("4_p7wuq")
 player_2_position = Vector2(20, -130)
+full_picture_left = ExtResource("1_712vs")
+full_picture_right = ExtResource("2_d6127")
 metadata/_custom_type_script = "uid://b58oxslgqt4ox"

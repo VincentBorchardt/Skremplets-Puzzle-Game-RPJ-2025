@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://ygouoc315uwp"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_s8cfr"]
+[ext_resource type="Resource" uid="uid://b4reyngalkwyh" path="res://resources/characters/grymmt_dundle.tres" id="2_k5fpl"]
+
+[resource]
+script = ExtResource("1_s8cfr")
+speaker = ExtResource("2_k5fpl")
+message = "That's how long it's been. That guy didn't even know I was a Skremplet. What am I supposed to do in this world?"
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

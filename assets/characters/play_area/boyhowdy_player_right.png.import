@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2ucd7e1p2acw"
-path="res://.godot/imported/01 Boyhowdy.png-556cbb5dba0d858f4db77f26c2086492.ctex"
+uid="uid://c28rppjotxqlo"
+path="res://.godot/imported/boyhowdy_player_right.png-394015320121bdcb2cbc44d18a728a90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/full_portraits/01 Boyhowdy.png"
-dest_files=["res://.godot/imported/01 Boyhowdy.png-556cbb5dba0d858f4db77f26c2086492.ctex"]
+source_file="res://assets/characters/play_area/boyhowdy_player_right.png"
+dest_files=["res://.godot/imported/boyhowdy_player_right.png-394015320121bdcb2cbc44d18a728a90.ctex"]
 
 [params]
 

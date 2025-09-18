@@ -1,15 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqhkeyt8iqyvm"]
+[gd_scene load_steps=6 format=3 uid="uid://bqhkeyt8iqyvm"]
 
 [ext_resource type="Script" uid="uid://t8w2v1em8t33" path="res://scripts/cutscenes/cutscene.gd" id="1_0if3b"]
 [ext_resource type="Script" uid="uid://dnhu6g07egmm" path="res://scripts/cutscenes/message_queue.gd" id="2_46v8p"]
 [ext_resource type="PackedScene" uid="uid://hgb21nwch34j" path="res://scenes/cutscenes/cutscene_ui.tscn" id="3_6gtv5"]
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="3_giine"]
+[ext_resource type="Resource" uid="uid://ct6q7ub12saf2" path="res://resources/messages/intro_cutscene/intro_no.tres" id="4_tfnav"]
 
-[node name="IntroCutsceneStart" type="Node2D"]
+[node name="IntroCutsceneNo" type="Node2D"]
 script = ExtResource("1_0if3b")
 metadata/_custom_type_script = "uid://t8w2v1em8t33"
 
 [node name="MessageQueue" type="Node" parent="."]
 script = ExtResource("2_46v8p")
+messages = Array[ExtResource("3_giine")]([ExtResource("4_tfnav")])
 metadata/_custom_type_script = "uid://dnhu6g07egmm"
 
 [node name="CutsceneUI" parent="." instance=ExtResource("3_6gtv5")]

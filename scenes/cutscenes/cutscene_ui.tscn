@@ -21,6 +21,8 @@ position = Vector2(400, 275)
 position = Vector2(1200, 275)
 
 [node name="CutsceneMessageArea" parent="." instance=ExtResource("1_b8py4")]
+offset_top = 550.0
+offset_bottom = 550.0
 
 [node name="PreviousMessagesPopup" type="CanvasLayer" parent="."]
 visible = false

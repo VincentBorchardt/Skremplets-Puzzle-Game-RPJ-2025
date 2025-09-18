@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bl5gajryv614v"]
+[gd_scene load_steps=13 format=3 uid="uid://bl5gajryv614v"]
 
 [ext_resource type="Script" uid="uid://t8w2v1em8t33" path="res://scripts/cutscenes/cutscene.gd" id="1_pe5wh"]
 [ext_resource type="Script" uid="uid://dnhu6g07egmm" path="res://scripts/cutscenes/message_queue.gd" id="2_rqevx"]
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="3_76haw"]
 [ext_resource type="PackedScene" uid="uid://hgb21nwch34j" path="res://scenes/cutscenes/cutscene_ui.tscn" id="3_h3naf"]
+[ext_resource type="Resource" uid="uid://pcwg3qdgkx7o" path="res://resources/messages/intro_cutscene/intro_yes_1.tres" id="4_h43fx"]
+[ext_resource type="Resource" uid="uid://vcfy0u0bw412" path="res://resources/messages/intro_cutscene/intro_yes_2.tres" id="5_cbtak"]
+[ext_resource type="Resource" uid="uid://ygouoc315uwp" path="res://resources/messages/intro_cutscene/intro_yes_3.tres" id="6_eg03u"]
+[ext_resource type="Resource" uid="uid://chu4n0xvaft74" path="res://resources/messages/intro_cutscene/intro_yes_4.tres" id="7_86416"]
+[ext_resource type="Resource" uid="uid://5uehr4d8lmrb" path="res://resources/messages/intro_cutscene/intro_yes_5.tres" id="8_iaom7"]
+[ext_resource type="Resource" uid="uid://bnbqbq3qcllyi" path="res://resources/messages/intro_cutscene/intro_yes_6.tres" id="9_2itif"]
+[ext_resource type="Resource" uid="uid://bwuql73erqi6w" path="res://resources/messages/intro_cutscene/intro_yes_7.tres" id="10_5iyph"]
+[ext_resource type="Resource" uid="uid://bryxiphonxovc" path="res://resources/messages/intro_cutscene/intro_yes_8.tres" id="11_7ya7i"]
 
 [node name="IntroCutsceneStart" type="Node2D"]
 script = ExtResource("1_pe5wh")
@@ -10,6 +19,7 @@ metadata/_custom_type_script = "uid://t8w2v1em8t33"
 
 [node name="MessageQueue" type="Node" parent="."]
 script = ExtResource("2_rqevx")
+messages = Array[ExtResource("3_76haw")]([ExtResource("4_h43fx"), ExtResource("5_cbtak"), ExtResource("6_eg03u"), ExtResource("7_86416"), ExtResource("8_iaom7"), ExtResource("9_2itif"), ExtResource("10_5iyph"), ExtResource("11_7ya7i")])
 metadata/_custom_type_script = "uid://dnhu6g07egmm"
 
 [node name="CutsceneUI" parent="." instance=ExtResource("3_h3naf")]

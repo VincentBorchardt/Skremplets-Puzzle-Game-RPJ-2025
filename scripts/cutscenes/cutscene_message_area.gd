@@ -15,12 +15,12 @@ func _ready():
 	# the signal itself is fine
 	get_new_message.emit()
 
-
+# TODO Introduce the "Player" character special case (have it pull from Inventory)
 func display_new_message(message):
 	if current_message != null:
 		previous_messages.append(current_message)
 	current_message = message
-	speaker_label.text = message.speaker.person_name
+	speaker_label.text = message.speaker.name
 	cutscene_message.text = message.message
 	if message.choices:
 		$AdvanceTextButton.visible = false

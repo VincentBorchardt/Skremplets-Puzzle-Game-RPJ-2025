@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kn72h7qnw5a4"
-path="res://.godot/imported/orchk01.png-49b6b1e9571bd218e23c39d645a2a310.ctex"
+uid="uid://71schgoj0egj"
+path="res://.godot/imported/orchk_player_left.png-e538175223c09886163a453627674295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/play_area/orchk01.png"
-dest_files=["res://.godot/imported/orchk01.png-49b6b1e9571bd218e23c39d645a2a310.ctex"]
+source_file="res://assets/characters/play_area/orchk_player_left.png"
+dest_files=["res://.godot/imported/orchk_player_left.png-e538175223c09886163a453627674295.ctex"]
 
 [params]
 

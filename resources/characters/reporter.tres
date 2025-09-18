@@ -1,13 +1,16 @@
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://bg0pasjplfp8i"]
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://bg0pasjplfp8i"]
 
 [ext_resource type="Script" uid="uid://b58oxslgqt4ox" path="res://scripts/resources/character.gd" id="1_i5mdi"]
+[ext_resource type="Texture2D" uid="uid://blbhxc8sdp57k" path="res://assets/characters/full_portraits/07 ZugTug.png" id="1_py782"]
 
 [resource]
 script = ExtResource("1_i5mdi")
-name = ""
+name = "Reporter"
 depowered = false
 ai_picking_pattern = 0
 ai_placement_pattern = 0
 player_1_position = Vector2(0, 0)
 player_2_position = Vector2(0, 0)
+full_picture_left = ExtResource("1_py782")
+full_picture_right = ExtResource("1_py782")
 metadata/_custom_type_script = "uid://b58oxslgqt4ox"
