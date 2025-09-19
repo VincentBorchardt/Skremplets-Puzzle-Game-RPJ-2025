@@ -19,6 +19,7 @@ outline_color = Color(0, 0, 0, 1)
 script = ExtResource("1_xx7qt")
 
 [node name="PlayAreaBackground" type="Sprite2D" parent="."]
+position = Vector2(800, 450)
 texture = ExtResource("2_xx7qt")
 
 [node name="Player1Grid" parent="." instance=ExtResource("2_0pe51")]

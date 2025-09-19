@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Piece" load_steps=3 format=3 uid="uid://tiy60a34o83w"]
+
+[ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/resources/piece.gd" id="1_sa1pp"]
+[ext_resource type="Texture2D" uid="uid://b8bars6rq0dhj" path="res://assets/pieces/special_pieces/block10_nightmare.png" id="1_ygm0c"]
+
+[resource]
+script = ExtResource("1_sa1pp")
+owner = 0
+root_point_location = Vector2i(0, 0)
+secondary_points = Array[Vector2i]([Vector2i(0, 0)])
+x_length = 1
+y_length = 1
+image = ExtResource("1_ygm0c")
+type = 6
+power_up_type = 4
+translation = Vector2(0, 0)
+rotation = 0.0
+metadata/_custom_type_script = "uid://6oywq2cixv6v"

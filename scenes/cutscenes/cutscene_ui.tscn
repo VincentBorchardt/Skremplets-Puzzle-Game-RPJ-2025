@@ -14,6 +14,9 @@ grow_vertical = 2
 script = ExtResource("1_pe67g")
 metadata/_custom_type_script = "uid://e37shbmycoff"
 
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+position = Vector2(800, 450)
+
 [node name="LeftImage" type="Sprite2D" parent="."]
 position = Vector2(400, 275)
 

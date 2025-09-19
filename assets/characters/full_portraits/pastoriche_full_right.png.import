@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4lfaw4d7sxtp"
-path="res://.godot/imported/08 Pastoriche.png-2e9c4db63ceefa16ff5bc6623341a19e.ctex"
+uid="uid://i6xbe71iru4i"
+path="res://.godot/imported/pastoriche_full_right.png-addaa79714aabb38646cd85c99d4ec63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/full_portraits/08 Pastoriche.png"
-dest_files=["res://.godot/imported/08 Pastoriche.png-2e9c4db63ceefa16ff5bc6623341a19e.ctex"]
+source_file="res://assets/characters/full_portraits/pastoriche_full_right.png"
+dest_files=["res://.godot/imported/pastoriche_full_right.png-addaa79714aabb38646cd85c99d4ec63.ctex"]
 
 [params]
 

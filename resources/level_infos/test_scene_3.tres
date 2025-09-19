@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="LevelInfoContainer" load_steps=13 format=3 uid="uid://c8hcw4hhr06d1"]
+
+[ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/resources/piece.gd" id="1_pyiyf"]
+[ext_resource type="Resource" uid="uid://cp4dautmudtjn" path="res://resources/pieces/blue/blue_four_t.tres" id="2_aoko6"]
+[ext_resource type="Resource" uid="uid://cl266u0gnim6a" path="res://resources/pieces/blue/blue_three_three_bag.tres" id="3_owt3p"]
+[ext_resource type="Resource" uid="uid://bng1bv7hbstn3" path="res://resources/pieces/green/green_four_t.tres" id="4_5frtk"]
+[ext_resource type="Resource" uid="uid://dqc8jtf7hxkfs" path="res://resources/pieces/green/green_three_three_bottle.tres" id="5_33ivk"]
+[ext_resource type="Resource" uid="uid://cluudm4c14snw" path="res://resources/pieces/red/red_five_two_jug.tres" id="6_ycu52"]
+[ext_resource type="Resource" uid="uid://sul45feloifc" path="res://resources/pieces/red/red_four_line.tres" id="7_3xxlc"]
+[ext_resource type="Resource" uid="uid://c6hl4hayblppu" path="res://resources/pieces/yellow/yellow_four_square.tres" id="8_mw0mv"]
+[ext_resource type="Resource" uid="uid://dybs5nfxe6pqi" path="res://resources/pieces/yellow/yellow_two_three_can.tres" id="9_83mmo"]
+[ext_resource type="Resource" uid="uid://cck3y4synutqo" path="res://resources/characters/orchk.tres" id="10_poq8f"]
+[ext_resource type="Resource" uid="uid://bcqx41d3vo7au" path="res://resources/characters/pastoriche.tres" id="10_pyiyf"]
+[ext_resource type="Script" uid="uid://bdugcqlbg74xx" path="res://scripts/resources/level_info_container.gd" id="12_c04ey"]
+
+[resource]
+script = ExtResource("12_c04ey")
+piece_storage = Array[ExtResource("1_pyiyf")]([ExtResource("2_aoko6"), ExtResource("3_owt3p"), ExtResource("4_5frtk"), ExtResource("5_33ivk"), ExtResource("6_ycu52"), ExtResource("7_3xxlc"), ExtResource("8_mw0mv"), ExtResource("9_83mmo")])
+player_1_character = ExtResource("10_pyiyf")
+player_2_character = ExtResource("10_poq8f")
+metadata/_custom_type_script = "uid://bdugcqlbg74xx"

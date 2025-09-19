@@ -13,7 +13,7 @@ signal get_new_message()
 
 func  _ready():
 	if background_image != null:
-		pass
+		$BackgroundImage.texture = background_image
 
 func _on_cutscene_message_area_get_new_message():
 	get_new_message.emit()

@@ -139,5 +139,26 @@ func _on_clear_pieces_timer_timeout_with_piece_list(pieces_to_clear) -> void:
 		node.remove_pieces(pieces_to_clear)
 	try_to_clear_pieces()
 
+func spread_nightmare():
+	print("starting spread_nightmare")
+	var nightmare_pieces = []
+	for piece in piece_list.get_pieces():
+		if piece.power_up_type == Inventory.PowerUpType.PASTORICHE:
+			nightmare_pieces.append(piece.duplicate())
+	print("nightmare pieces has " + str(nightmare_pieces))
+	if not nightmare_pieces.is_empty():
+		print("found nightmare pieces")
+		for piece in nightmare_pieces:
+			var adjacent_points = piece.get_adjacent_points()
+			piece.pick_up_piece(grid_owner)
+			var legal_points = []
+			for point in adjacent_points:
+				if is_legal_place(piece, point, grid_owner):
+					legal_points.append(point)
+			if not legal_points.is_empty():
+				var index = randi() % legal_points.size()
+				
+				place_piece(piece, legal_points[index])
+
 func point_is_off_grid(point):
 	return point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y

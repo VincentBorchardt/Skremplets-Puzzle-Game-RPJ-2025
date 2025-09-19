@@ -12,6 +12,7 @@ var current_piece: Piece:
 			if not $PlayGrid.ensure_legal_piece(piece):
 				print(str(grid_owner) + " loses")
 				loss_condition.emit(grid_owner, character)
+			$PlayGrid.spread_nightmare()
 
 @export var character: Character:
 	set(new_character):
@@ -73,13 +74,18 @@ func calculate_garbage(spaces):
 func _on_power_up_bar_activate_powerup() -> void:
 	print("activating powerup for " + str(grid_owner))
 	#TODO check if the character is depowered or not here
+	#TODO match on powerup type in the character
+	var powerup
 	match character:
 		preload("res://resources/characters/grymmt_dundle.tres"):
-			var powerup = preload("res://resources/pieces/powerup/apple_power_up.tres").duplicate()
+			powerup = preload("res://resources/pieces/powerup/apple_power_up.tres").duplicate()
 			$PlayGrid.place_multiple_pieces(powerup, 2)
 		preload("res://resources/characters/orchk.tres"):
-			var powerup = preload("res://resources/pieces/powerup/sound_at_two_power_up.tres")
+			powerup = preload("res://resources/pieces/powerup/sound_at_two_power_up.tres")
 			send_pieces.emit(powerup, 2, grid_owner)
+		preload("res://resources/characters/pastoriche.tres"):
+			powerup = preload("res://resources/pieces/powerup/nightmare_power_up.tres")
+			send_pieces.emit(powerup, 1, grid_owner)
 		_:
 			print("currently not implemented")
 
