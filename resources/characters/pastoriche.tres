@@ -9,7 +9,12 @@
 [resource]
 script = ExtResource("1_u2e7y")
 name = "Pastoriche"
+description = "the source of all your nightmares"
+opening_statement = "Better not sleep on the job!"
+win_quote = "Sweet dreams!"
+lose_quote = "Oh no, I didn't wake... zzzz"
 is_player = false
+is_opponent = false
 depowered = false
 ai_picking_pattern = 0
 ai_placement_pattern = 0

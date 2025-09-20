@@ -9,6 +9,12 @@
 [resource]
 script = ExtResource("3_712vs")
 name = "Grymmt Dundle"
+description = "the lean, clean, apple throwing machine"
+opening_statement = "I'm going to clean you up!"
+win_quote = "See that sparkle!"
+lose_quote = "Are my apples rotten?"
+is_player = false
+is_opponent = false
 depowered = false
 ai_picking_pattern = 1
 ai_placement_pattern = 0

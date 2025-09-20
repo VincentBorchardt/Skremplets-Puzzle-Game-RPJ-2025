@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://b6be4qxgjo78l"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_1xfjb"]
+[ext_resource type="Resource" uid="uid://mwlcno66tq4k" path="res://resources/characters/boyhowdy.tres" id="2_3fj7r"]
+
+[resource]
+script = ExtResource("1_1xfjb")
+speaker = ExtResource("2_3fj7r")
+message = "First up, it's $PLAYER_DESCRIPTION, $PLAYER_NAME!"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

@@ -9,7 +9,12 @@
 [resource]
 script = ExtResource("3_w026d")
 name = "Orchk"
+description = "the Skremplet voted most likely to be a rock star"
+opening_statement = "You will remember my song!"
+win_quote = "That will keep your ears ringing for a long time!"
+lose_quote = "I think I broke a string..."
 is_player = false
+is_opponent = false
 depowered = false
 ai_picking_pattern = 0
 ai_placement_pattern = 0

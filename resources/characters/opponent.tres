@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://b8sife5dn8iia"]
+
+[ext_resource type="Script" uid="uid://b58oxslgqt4ox" path="res://scripts/resources/character.gd" id="1_w47lr"]
+
+[resource]
+script = ExtResource("1_w47lr")
+name = ""
+description = ""
+opening_statement = ""
+win_quote = ""
+lose_quote = ""
+is_player = false
+is_opponent = true
+depowered = false
+ai_picking_pattern = 0
+ai_placement_pattern = 0
+player_1_position = Vector2(0, 0)
+player_2_position = Vector2(0, 0)
+metadata/_custom_type_script = "uid://b58oxslgqt4ox"

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_yrgxf")
 speaker = ExtResource("2_ffes0")
-message = "Hello! I'm $PLAYER and I'm a Skremplet!"
+message = "Hello! I'm $PLAYER_NAME and I'm a Skremplet!"
 image_location = 0
 choices = false
 metadata/_custom_type_script = "uid://bq7h7sx2xfral"

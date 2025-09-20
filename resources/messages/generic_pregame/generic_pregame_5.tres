@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://18htcthft6pm"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_7wtd6"]
+[ext_resource type="Resource" uid="uid://b8sife5dn8iia" path="res://resources/characters/opponent.tres" id="2_g84g2"]
+
+[resource]
+script = ExtResource("1_7wtd6")
+speaker = ExtResource("2_g84g2")
+message = "$OPPONENT_OPENING"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"
