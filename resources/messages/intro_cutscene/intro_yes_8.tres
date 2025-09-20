@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_iomir")
 speaker = ExtResource("2_op6ck")
-message = ""
+message = "Well, I have just the place for you."
 image_location = 1
 choices = false
 metadata/_custom_type_script = "uid://bq7h7sx2xfral"

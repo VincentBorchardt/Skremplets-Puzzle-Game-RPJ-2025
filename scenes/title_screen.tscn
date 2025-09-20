@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2ao1qh6laidk"]
+[gd_scene load_steps=13 format=3 uid="uid://d2ao1qh6laidk"]
 
 [ext_resource type="Script" uid="uid://bosrbphhitant" path="res://scripts/title_screen.gd" id="1_fgkus"]
 [ext_resource type="Script" uid="uid://bl2ejcuqp3n7l" path="res://scripts/new_play_level_button.gd" id="2_s4lrb"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://qykbik8pybjh" path="res://scenes/generic_play_scene.tscn" id="6_3yumr"]
 [ext_resource type="PackedScene" uid="uid://035l8y7rph61" path="res://scenes/title_screen_popup.tscn" id="7_3yumr"]
 [ext_resource type="Resource" uid="uid://c8hcw4hhr06d1" path="res://resources/level_infos/test_scene_3.tres" id="7_cs5ya"]
+[ext_resource type="Script" uid="uid://cvukyo7xt2voj" path="res://scripts/scene_button.gd" id="8_mykxm"]
+[ext_resource type="PackedScene" uid="uid://dn7runpjxhdpr" path="res://scenes/cutscenes/intro/intro_cutscene_start.tscn" id="9_tklts"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_s4lrb"]
 font_size = 48
@@ -54,6 +56,17 @@ level_info = ExtResource("7_cs5ya")
 attached_scene = ExtResource("6_3yumr")
 metadata/_custom_type_script = "uid://bl2ejcuqp3n7l"
 
+[node name="TestCutsceneButton" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 507.0
+offset_right = 265.0
+offset_bottom = 549.0
+theme_override_font_sizes/font_size = 24
+text = "Test Intro Cutscene"
+script = ExtResource("8_mykxm")
+attached_scene = ExtResource("9_tklts")
+metadata/_custom_type_script = "uid://cvukyo7xt2voj"
+
 [node name="TitleLabel" type="Label" parent="."]
 offset_left = 389.0
 offset_top = 37.0
@@ -99,6 +112,7 @@ transform = Transform2D(1, 0, 0, 1, 100, 56)
 [connection signal="pressed_with_scene" from="Test2Button" to="." method="_on_scene_button_pressed_with_scene"]
 [connection signal="pressed" from="Test3Button" to="Test3Button" method="_on_pressed"]
 [connection signal="pressed_with_scene" from="Test3Button" to="." method="_on_scene_button_pressed_with_scene"]
+[connection signal="pressed_with_scene" from="TestCutsceneButton" to="." method="_on_scene_button_pressed_with_scene"]
 [connection signal="pressed" from="TitleScreenBottomBox/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="TitleScreenBottomBox/LicensesButton" to="." method="_on_licenses_button_pressed"]
 [connection signal="pressed" from="TitleScreenBottomBox/InstructionsButton" to="." method="_on_instructions_button_pressed"]

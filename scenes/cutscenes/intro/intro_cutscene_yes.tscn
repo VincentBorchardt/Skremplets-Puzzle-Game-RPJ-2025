@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bl5gajryv614v"]
+[gd_scene load_steps=14 format=3 uid="uid://bl5gajryv614v"]
 
 [ext_resource type="Script" uid="uid://t8w2v1em8t33" path="res://scripts/cutscenes/cutscene.gd" id="1_pe5wh"]
+[ext_resource type="PackedScene" uid="uid://cc3pu3y4yujb6" path="res://scenes/cutscenes/intro/intro_cutscene_warehouse.tscn" id="2_h43fx"]
 [ext_resource type="Script" uid="uid://dnhu6g07egmm" path="res://scripts/cutscenes/message_queue.gd" id="2_rqevx"]
 [ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="3_76haw"]
 [ext_resource type="PackedScene" uid="uid://hgb21nwch34j" path="res://scenes/cutscenes/cutscene_ui.tscn" id="3_h3naf"]
@@ -15,6 +16,7 @@
 
 [node name="IntroCutsceneStart" type="Node2D"]
 script = ExtResource("1_pe5wh")
+next_scene = ExtResource("2_h43fx")
 metadata/_custom_type_script = "uid://t8w2v1em8t33"
 
 [node name="MessageQueue" type="Node" parent="."]
