@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp78mf2v0s1lu"
-path="res://.godot/imported/04 Grymmt-nospk.png-ede3b33e68557afbfc7db2d95e7199e5.ctex"
+uid="uid://b24aladufren8"
+path="res://.godot/imported/orchk_select.png-26085161e9041e46d7fad76b317f81f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/04 Grymmt-nospk.png"
-dest_files=["res://.godot/imported/04 Grymmt-nospk.png-ede3b33e68557afbfc7db2d95e7199e5.ctex"]
+source_file="res://assets/characters/select_portraits/orchk_select.png"
+dest_files=["res://.godot/imported/orchk_select.png-26085161e9041e46d7fad76b317f81f8.ctex"]
 
 [params]
 

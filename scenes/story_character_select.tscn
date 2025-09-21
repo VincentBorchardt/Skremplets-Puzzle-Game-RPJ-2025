@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://bprjbfy7p7bcf"]
+
+[ext_resource type="Script" uid="uid://clav0uh6j5s7h" path="res://scripts/story_character_select.gd" id="1_y15h5"]
+[ext_resource type="ButtonGroup" uid="uid://cdc6snt5fka2x" path="res://resources/button_groups/story_character_group.tres" id="2_s31yx"]
+[ext_resource type="Script" uid="uid://cvukyo7xt2voj" path="res://scripts/scene_button.gd" id="2_y8mij"]
+[ext_resource type="Texture2D" uid="uid://cp78mf2v0s1lu" path="res://assets/characters/select_portraits/grymmt_select.png" id="3_hvlnx"]
+[ext_resource type="PackedScene" uid="uid://dn7runpjxhdpr" path="res://scenes/cutscenes/intro/intro_cutscene_start.tscn" id="3_y8mij"]
+[ext_resource type="Texture2D" uid="uid://b24aladufren8" path="res://assets/characters/select_portraits/orchk_select.png" id="4_40j5r"]
+[ext_resource type="Texture2D" uid="uid://crstt7vbiqiq5" path="res://assets/characters/select_portraits/pastoriche_select.png" id="5_vysq6"]
+
+[node name="StoryCharacterSelect" type="Node2D"]
+script = ExtResource("1_y15h5")
+
+[node name="CharacterButtons" type="Node" parent="."]
+
+[node name="GrymmtButton" type="TextureButton" parent="CharacterButtons"]
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 175.0
+offset_bottom = 175.0
+toggle_mode = true
+button_group = ExtResource("2_s31yx")
+texture_normal = ExtResource("3_hvlnx")
+
+[node name="OrchkButton" type="TextureButton" parent="CharacterButtons"]
+offset_left = 200.0
+offset_top = 25.0
+offset_right = 350.0
+offset_bottom = 175.0
+toggle_mode = true
+button_group = ExtResource("2_s31yx")
+texture_normal = ExtResource("4_40j5r")
+
+[node name="PastoricheButton" type="TextureButton" parent="CharacterButtons"]
+offset_left = 375.0
+offset_top = 25.0
+offset_right = 415.0
+offset_bottom = 65.0
+toggle_mode = true
+button_group = ExtResource("2_s31yx")
+texture_normal = ExtResource("5_vysq6")
+
+[node name="StartStoryButton" type="Button" parent="."]
+offset_left = 28.0
+offset_top = 849.0
+offset_right = 119.0
+offset_bottom = 880.0
+text = "Start Story"
+script = ExtResource("2_y8mij")
+attached_scene = ExtResource("3_y8mij")
+metadata/_custom_type_script = "uid://cvukyo7xt2voj"
+
+[node name="ReturnToTitleButton" type="Button" parent="."]
+offset_left = 634.0
+offset_top = 849.0
+offset_right = 810.0
+offset_bottom = 880.0
+text = "Return to Title Screen
+"
+
+[connection signal="pressed_with_scene" from="StartStoryButton" to="." method="_on_start_story_button_pressed_with_scene"]
+[connection signal="pressed" from="ReturnToTitleButton" to="." method="_on_return_to_title_button_pressed"]

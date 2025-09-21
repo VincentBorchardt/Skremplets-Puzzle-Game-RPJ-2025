@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b24aladufren8"
-path="res://.godot/imported/05 Orchk.png-e7d47db95bb18310ef90b7dd543efe39.ctex"
+uid="uid://crstt7vbiqiq5"
+path="res://.godot/imported/pastoriche_select.png-cd88571a452f3dc537957ee51aca88b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/05 Orchk.png"
-dest_files=["res://.godot/imported/05 Orchk.png-e7d47db95bb18310ef90b7dd543efe39.ctex"]
+source_file="res://assets/characters/select_portraits/pastoriche_select.png"
+dest_files=["res://.godot/imported/pastoriche_select.png-cd88571a452f3dc537957ee51aca88b4.ctex"]
 
 [params]
 
