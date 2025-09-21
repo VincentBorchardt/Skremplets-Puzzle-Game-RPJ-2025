@@ -37,16 +37,16 @@ position = Vector2(700, 394)
 texture = ExtResource("3_8n7pk")
 
 [node name="PreviousMessagesLabel" type="RichTextLabel" parent="PreviousMessagesPopup"]
-offset_left = 25.0
-offset_top = 25.0
-offset_right = 1375.0
-offset_bottom = 675.0
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 1365.0
+offset_bottom = 665.0
 
 [node name="ClosePopupButton" type="Button" parent="PreviousMessagesPopup"]
 offset_left = 500.0
-offset_top = 732.0
+offset_top = 720.0
 offset_right = 900.0
-offset_bottom = 763.0
+offset_bottom = 755.0
 text = "Close"
 
 [connection signal="get_new_message" from="CutsceneMessageArea" to="." method="_on_cutscene_message_area_get_new_message"]

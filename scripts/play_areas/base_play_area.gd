@@ -25,7 +25,7 @@ var current_piece: Piece:
 				$CharacterPortrait.texture = new_character.player_2_portrait
 				$CharacterPortrait.position = new_character.player_2_position
 
-var garbage_piece = preload("res://resources/pieces/garbage/garbage_block.tres").duplicate()
+var garbage_piece = Pieces.garbage_block.duplicate()
 
 
 @export var grid_owner: Inventory.Player
@@ -78,13 +78,13 @@ func _on_power_up_bar_activate_powerup() -> void:
 	var powerup
 	match character:
 		preload("res://resources/characters/grymmt_dundle.tres"):
-			powerup = preload("res://resources/pieces/powerup/apple_power_up.tres").duplicate()
+			powerup = Pieces.apple_power_up.duplicate()
 			$PlayGrid.place_multiple_pieces(powerup, 2)
 		preload("res://resources/characters/orchk.tres"):
-			powerup = preload("res://resources/pieces/powerup/sound_at_two_power_up.tres")
+			powerup = Pieces.sound_at_two_powerup.duplicate()
 			send_pieces.emit(powerup, 2, grid_owner)
 		preload("res://resources/characters/pastoriche.tres"):
-			powerup = preload("res://resources/pieces/powerup/nightmare_power_up.tres")
+			powerup = Pieces.nightmare_power_up.duplicate()
 			send_pieces.emit(powerup, 1, grid_owner)
 		_:
 			print("currently not implemented")
@@ -93,7 +93,7 @@ func _on_grid_activate_special_pieces(pieces, player) -> void:
 	# TODO this will do things when you clear powerups
 	for piece in pieces:
 		match piece.power_up_type:
-			Inventory.PowerUpType.GRYMMT:
+			Pieces.PowerUpType.GRYMMT:
 				send_pieces.emit(garbage_piece.duplicate(), 2, grid_owner)
 				$PowerUpBar.add_to_bar(3)
 			_:

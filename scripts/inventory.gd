@@ -21,12 +21,31 @@ We have a hungry group of Skremplets facing off today, and let’s meet our firs
 Let’s meet our next competitors!"]
 
 var current_level_intro
+var tournament_rounds = 2
+
+# TODO move Type and PowerUpType to PiecesContainer; they make sense there
+enum Player {PLAYER_1, PLAYER_2, UNOWNED}
+enum AIPickingPattern {RANDOM, MOST, BIGGEST}
+enum AIPlacementPattern {RANDOM_MATCHING, ANTI_GARBAGE}
 
 func _ready() -> void:
 	current_level_intro = level_intros[current_level_number]
 
-enum Player {PLAYER_1, PLAYER_2, UNOWNED}
-enum Type {RED, BLUE, YELLOW, GREEN, PURPLE, GARBAGE, POWERUP, WILD, NONE}
-enum PowerUpType {NONE, GRYMMT, ORCHK_TWO, ORCHK_ONE, PASTORICHE}
-enum AIPickingPattern {RANDOM, MOST, BIGGEST}
-enum AIPlacementPattern {RANDOM_MATCHING, ANTI_GARBAGE}
+func set_up_story_level():
+	# Advance the level counter in the end-of-level before calling this
+	if current_level_number < tournament_rounds:
+		possible_opponents.remove(player_character)
+		var opp_index = randi() % possible_opponents.size()
+		opponent_character = possible_opponents[opp_index]
+		possible_opponents.remove(opponent_character)
+		var pieces = Pieces.level_pieces_array[current_level_number]
+		next_level_info = LevelInfoContainer.create_new_level_info(
+			player_character, opponent_character, pieces, true
+		)
+	else:
+		# TODO Set up the match with Boyhowdy
+		opponent_character = preload("res://resources/characters/boyhowdy.tres")
+		# TODO Currently empty
+		var pieces = Pieces.level_pieces_array[current_level_number]
+		
+	

@@ -15,7 +15,6 @@ func _ready():
 	# the signal itself is fine
 	get_new_message.emit()
 
-# TODO Introduce the "Player" character special case (have it pull from Inventory)
 func display_new_message(message):
 	if current_message != null:
 		previous_messages.append(current_message)

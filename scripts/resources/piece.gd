@@ -7,14 +7,14 @@ class_name Piece extends Resource
 @export var x_length: int
 @export var y_length: int
 @export var image: Texture2D
-@export var type: Inventory.Type
-@export var power_up_type: Inventory.PowerUpType
+@export var type: Pieces.Type
+@export var power_up_type: Pieces.PowerUpType
 @export var translation: Vector2
 # currently in radians (so 90 degrees = TAU/4), 
 @export var rotation: float
 
 func is_special_touching(piece2):
-	if piece2.type == Inventory.Type.GARBAGE or piece2.type == Inventory.Type.POWERUP:
+	if piece2.type == Pieces.Type.GARBAGE or piece2.type == Pieces.Type.POWERUP:
 		for point1 in self.secondary_points:
 			for point2 in piece2.secondary_points:
 				var x_dist = abs(point1.x - point2.x)
@@ -24,7 +24,7 @@ func is_special_touching(piece2):
 	return false
 
 func is_touching(piece2):
-	if self == piece2 or ((self.type != piece2.type) and piece2.type != Inventory.Type.WILD):
+	if self == piece2 or ((self.type != piece2.type) and piece2.type != Pieces.Type.WILD):
 		return false
 	else:
 		for point1 in self.secondary_points:
@@ -69,7 +69,7 @@ func pick_up_piece(player):
 	rotate(-(rotation))
 
 func should_not_be_matched():
-	return (type == Inventory.Type.WILD or type == Inventory.Type.GARBAGE or type == Inventory.Type.POWERUP)
+	return (type == Pieces.Type.WILD or type == Pieces.Type.GARBAGE or type == Pieces.Type.POWERUP)
 
 func min_length():
 	return min(x_length, y_length)

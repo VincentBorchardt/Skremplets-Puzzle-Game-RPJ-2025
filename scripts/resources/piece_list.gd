@@ -21,7 +21,7 @@ func is_empty():
 
 func has_only_special():
 	for piece in list.keys():
-		if piece.type != Inventory.Type.GARBAGE and piece.type != Inventory.Type.POWERUP:
+		if piece.type != Pieces.Type.GARBAGE and piece.type != Pieces.Type.POWERUP:
 			return false
 	return true
 
@@ -50,7 +50,7 @@ func has_overlaps(new_piece, new_location):
 func get_special_touching_pieces(clearing_pieces):
 	var special_to_be_cleared = []
 	for piece1 in list:
-		if piece1.type == Inventory.Type.GARBAGE or piece1.type == Inventory.Type.POWERUP:
+		if piece1.type == Pieces.Type.GARBAGE or piece1.type == Pieces.Type.POWERUP:
 			for piece2 in clearing_pieces:
 				if piece2.is_special_touching(piece1):
 					special_to_be_cleared.append(piece1)

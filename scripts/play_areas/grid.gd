@@ -114,7 +114,7 @@ func check_special_pieces(pieces_to_check):
 	var pieces_to_clear = []
 	for piece in pieces_to_check:
 		match piece.power_up_type:
-			Inventory.PowerUpType.ORCHK_TWO:
+			Pieces.PowerUpType.ORCHK_TWO:
 				var location = piece.root_point_location
 				piece_list.remove_pieces([piece])
 				for node in spaces_list:
@@ -142,7 +142,7 @@ func _on_clear_pieces_timer_timeout_with_piece_list(pieces_to_clear) -> void:
 func spread_nightmare():
 	var nightmare_pieces = []
 	for piece in piece_list.get_pieces():
-		if piece.power_up_type == Inventory.PowerUpType.PASTORICHE:
+		if piece.power_up_type == Pieces.PowerUpType.PASTORICHE:
 			nightmare_pieces.append(piece.duplicate())
 	if not nightmare_pieces.is_empty():
 		nightmare_pieces.shuffle()

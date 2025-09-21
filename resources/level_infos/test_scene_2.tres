@@ -18,4 +18,5 @@ script = ExtResource("2_iuvnj")
 piece_storage = Array[ExtResource("1_ifvr7")]([ExtResource("2_wqh0b"), ExtResource("3_mllih"), ExtResource("4_mgp0e"), ExtResource("5_cijvp"), ExtResource("6_o0p7h"), ExtResource("7_0n25p"), ExtResource("8_xxyvf"), ExtResource("9_mllih")])
 player_1_character = ExtResource("9_bsxux")
 player_2_character = ExtResource("10_el0po")
+is_story = false
 metadata/_custom_type_script = "uid://bdugcqlbg74xx"

@@ -18,7 +18,6 @@ func  _ready():
 func _on_cutscene_message_area_get_new_message():
 	get_new_message.emit()
 
-# TODO Introduce the "Player" character special case (have it pull from Inventory)
 # TODO find a way to have a "default" character image (without an extra dialog)
 func display_new_message(message):
 	#var picture
@@ -35,7 +34,7 @@ func display_new_message(message):
 func _on_cutscene_message_area_show_previous_messages(messages):
 	var message_string = "Previous Messages: \n \n"
 	for entry in messages:
-		message_string += entry.speaker.person_name + ": " + entry.message + "\n \n"
+		message_string += entry.speaker.name + ": " + entry.message + "\n \n"
 	previous_messages_label.text = message_string
 	previous_messages_popup.visible = true
 

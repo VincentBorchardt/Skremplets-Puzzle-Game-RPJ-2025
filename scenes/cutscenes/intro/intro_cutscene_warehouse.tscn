@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cc3pu3y4yujb6"]
 
 [ext_resource type="Script" uid="uid://t8w2v1em8t33" path="res://scripts/cutscenes/cutscene.gd" id="1_kiwyq"]
-[ext_resource type="PackedScene" uid="uid://dnnsvntyopdo0" path="res://scenes/cutscenes/intro/generic_pregame.tscn" id="2_7x20x"]
+[ext_resource type="PackedScene" uid="uid://dnnsvntyopdo0" path="res://scenes/cutscenes/generic_pregame.tscn" id="2_7x20x"]
 [ext_resource type="Script" uid="uid://dnhu6g07egmm" path="res://scripts/cutscenes/message_queue.gd" id="2_8fgom"]
 [ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="3_2fnej"]
 [ext_resource type="PackedScene" uid="uid://hgb21nwch34j" path="res://scenes/cutscenes/cutscene_ui.tscn" id="3_k5wu6"]
