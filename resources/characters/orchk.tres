@@ -9,7 +9,9 @@
 [resource]
 script = ExtResource("3_w026d")
 name = "Orchk"
-description = "the Skremplet voted most likely to be a rock star"
+select_description = "This Skremplet sings so loudly that no one who hears its song can rid it from their head for a long time."
+power_up_description = "Orchk sends special sound garbage blocks to its opponent that take two adjacent matches to clear instead of just one."
+pregame_description = "the Skremplet voted most likely to be a rock star"
 opening_statement = "You will remember my song!"
 win_quote = "That will keep your ears ringing for a long time!"
 lose_quote = "I think I broke a string..."

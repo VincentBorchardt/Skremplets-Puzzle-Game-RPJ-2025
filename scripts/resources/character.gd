@@ -2,7 +2,13 @@ class_name Character extends Resource
 
 @export_group("")
 @export var name: String
-@export_multiline var description: String
+
+@export_group("Character Select Strings")
+@export_multiline var select_description: String
+@export_multiline var power_up_description: String
+
+@export_group("Cutscene Strings")
+@export_multiline var pregame_description: String
 @export_multiline var opening_statement: String
 @export_multiline var win_quote: String
 @export_multiline var lose_quote: String

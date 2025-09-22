@@ -9,7 +9,9 @@
 [resource]
 script = ExtResource("1_u2e7y")
 name = "Pastoriche"
-description = "the source of all your nightmares"
+select_description = "This Skremplet spends all day sleeping, travelling through nightmares."
+power_up_description = "Pastoriche sends a nightmare garbage block to its opponents, which duplicates itself every turn."
+pregame_description = "the source of all your nightmares"
 opening_statement = "Better not sleep on the job!"
 win_quote = "Sweet dreams!"
 lose_quote = "Oh no, I didn't wake... zzzz"

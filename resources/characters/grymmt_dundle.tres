@@ -9,7 +9,9 @@
 [resource]
 script = ExtResource("3_712vs")
 name = "Grymmt Dundle"
-description = "the lean, clean, apple throwing machine"
+select_description = "This Skremplet enjoys apples so much he always carries a bag full of them, all pristinely clean."
+power_up_description = "Grymmt Dundle throws apples onto his own playing field, which both send extra garbage to the opponent and charges the powerup bar more quickly when cleared."
+pregame_description = "the lean, clean, apple throwing machine"
 opening_statement = "I'm going to clean you up!"
 win_quote = "See that sparkle!"
 lose_quote = "Are my apples rotten?"

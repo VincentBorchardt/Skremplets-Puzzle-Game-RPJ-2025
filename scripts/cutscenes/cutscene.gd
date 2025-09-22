@@ -35,9 +35,9 @@ func _on_cutscene_ui_get_new_message():
 
 func message_replacements():
 	message.message = message.message.replace("$PLAYER_NAME", Inventory.player_character.name)
-	message.message = message.message.replace("$PLAYER_DESCRIPTION", Inventory.player_character.description)
+	message.message = message.message.replace("$PLAYER_DESCRIPTION", Inventory.player_character.pregame_description)
 	message.message = message.message.replace("$PLAYER_OPENING", Inventory.player_character.opening_statement)
 	message.message = message.message.replace("$OPPONENT_NAME", Inventory.opponent_character.name)
-	message.message = message.message.replace("$OPPONENT_DESCRIPTION", Inventory.opponent_character.description)
+	message.message = message.message.replace("$OPPONENT_DESCRIPTION", Inventory.opponent_character.pregame_description)
 	message.message = message.message.replace("$OPPONENT_OPENING", Inventory.opponent_character.opening_statement)
 	message.message = message.message.replace("$INTRO", Inventory.current_level_intro)
