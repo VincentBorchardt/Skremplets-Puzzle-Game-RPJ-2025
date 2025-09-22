@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj3nw6eeq5q4e"]
+[gd_scene load_steps=7 format=3 uid="uid://dj3nw6eeq5q4e"]
 
 [ext_resource type="Texture2D" uid="uid://civkyeql5mvul" path="res://assets/title_popup_background_framed.png" id="1_jsn0a"]
+[ext_resource type="Script" uid="uid://bj0mlllcra15" path="res://scripts/play_areas/winner_popup.gd" id="1_t4kbh"]
 [ext_resource type="Texture2D" uid="uid://dev0b4rt7yk85" path="res://assets/characters/full_portraits/grymmt_full_left.png" id="2_qynvr"]
 [ext_resource type="Texture2D" uid="uid://dgvvinrojtbq8" path="res://assets/characters/full_portraits/orchk_full_right.png" id="3_5ttei"]
+[ext_resource type="Texture2D" uid="uid://cfrnnapfgwj0e" path="res://assets/cutscenes/dialogue_button.png" id="4_5ttei"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lgvvg"]
 font_size = 72
@@ -12,6 +14,7 @@ outline_color = Color(0, 0, 0, 1)
 [node name="WinnerPopup" type="CanvasLayer"]
 offset = Vector2(100, 56)
 transform = Transform2D(1, 0, 0, 1, 100, 56)
+script = ExtResource("1_t4kbh")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(700, 394)
@@ -50,26 +53,60 @@ offset_bottom = 730.0
 theme_override_font_sizes/font_size = 24
 text = "This is the quote from Player 2's character!"
 
-[node name="ContinueButton" type="Button" parent="."]
-offset_left = 602.0
-offset_top = 372.0
-offset_right = 783.0
-offset_bottom = 414.0
+[node name="ContinueButton" type="TextureButton" parent="."]
+offset_left = 600.0
+offset_top = 370.0
+offset_right = 850.0
+offset_bottom = 420.0
+scale = Vector2(0.8, 1)
+texture_normal = ExtResource("4_5ttei")
+
+[node name="Label" type="Label" parent="ContinueButton"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 50.0
+scale = Vector2(1.25, 1)
 theme_override_font_sizes/font_size = 24
 text = "Continue Story"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="RetryButton" type="Button" parent="."]
-offset_left = 620.0
-offset_top = 449.0
-offset_right = 765.0
-offset_bottom = 491.0
+[node name="RetryButton" type="TextureButton" parent="."]
+offset_left = 600.0
+offset_top = 450.0
+offset_right = 850.0
+offset_bottom = 500.0
+scale = Vector2(0.8, 1)
+texture_normal = ExtResource("4_5ttei")
+
+[node name="Label" type="Label" parent="RetryButton"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 50.0
+scale = Vector2(1.25, 1)
 theme_override_font_sizes/font_size = 24
 text = "Retry Battle"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="TitleScreenButton" type="Button" parent="."]
-offset_left = 614.0
-offset_top = 524.0
-offset_right = 777.0
-offset_bottom = 566.0
+[node name="TitleScreenButton" type="TextureButton" parent="."]
+offset_left = 600.0
+offset_top = 530.0
+offset_right = 850.0
+offset_bottom = 580.0
+scale = Vector2(0.8, 1)
+texture_normal = ExtResource("4_5ttei")
+
+[node name="Label" type="Label" parent="TitleScreenButton"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 50.0
+scale = Vector2(1.25, 1)
 theme_override_font_sizes/font_size = 24
 text = "Return Home"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="TitleScreenButton" to="." method="_on_title_screen_button_pressed"]

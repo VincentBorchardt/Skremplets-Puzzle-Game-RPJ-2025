@@ -108,6 +108,7 @@ position = Vector2(1369, 439)
 texture = ExtResource("12_tug4e")
 
 [node name="StartStoryButton" type="Button" parent="."]
+visible = false
 offset_left = 28.0
 offset_top = 849.0
 offset_right = 119.0

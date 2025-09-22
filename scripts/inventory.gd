@@ -49,3 +49,14 @@ func set_up_story_level():
 		var pieces = Pieces.level_pieces_array[current_level_number]
 		
 	
+
+func start_new_story_level():
+	current_level_number = current_level_number + 1
+	set_up_story_level()
+	# TODO This check is done twice and probably shouldn't be
+	# Probably involves calling this in the character select and starting at -1 or something
+	if current_level_number < tournament_rounds:
+		get_tree().change_scene_to_file("res://scenes/cutscenes/generic_pregame.tscn")
+	else:
+		# TODO Start the final sequence
+		pass

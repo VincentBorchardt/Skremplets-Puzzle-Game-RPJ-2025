@@ -23,3 +23,4 @@ func _on_pressed_with_character(given_character: Variant) -> void:
 	power_up_label.visible = true
 	character_portrait.texture = given_character.full_picture_right
 	character_portrait.visible = true
+	$StartStoryButton.visible = true

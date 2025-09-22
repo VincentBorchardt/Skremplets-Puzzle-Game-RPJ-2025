@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d2ao1qh6laidk"]
+[gd_scene load_steps=14 format=3 uid="uid://d2ao1qh6laidk"]
 
 [ext_resource type="Script" uid="uid://bosrbphhitant" path="res://scripts/title_screen.gd" id="1_fgkus"]
 [ext_resource type="Script" uid="uid://bl2ejcuqp3n7l" path="res://scripts/new_play_level_button.gd" id="2_s4lrb"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://c8hcw4hhr06d1" path="res://resources/level_infos/test_scene_3.tres" id="7_cs5ya"]
 [ext_resource type="Script" uid="uid://cvukyo7xt2voj" path="res://scripts/scene_button.gd" id="8_mykxm"]
 [ext_resource type="PackedScene" uid="uid://dn7runpjxhdpr" path="res://scenes/cutscenes/intro/intro_cutscene_start.tscn" id="9_tklts"]
+[ext_resource type="PackedScene" uid="uid://bprjbfy7p7bcf" path="res://scenes/story_character_select.tscn" id="12_ib7db"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_s4lrb"]
 font_size = 48
@@ -29,6 +30,17 @@ offset_right = 958.0
 offset_bottom = 104.0
 text = "Skremplets Trash Battle!"
 label_settings = SubResource("LabelSettings_s4lrb")
+
+[node name="StoryModeButton" type="Button" parent="."]
+offset_left = 91.0
+offset_top = 209.0
+offset_right = 298.0
+offset_bottom = 267.0
+theme_override_font_sizes/font_size = 36
+text = "Story Mode"
+script = ExtResource("8_mykxm")
+attached_scene = ExtResource("12_ib7db")
+metadata/_custom_type_script = "uid://cvukyo7xt2voj"
 
 [node name="TitleScreenBottomBox" type="HBoxContainer" parent="."]
 offset_left = 600.0
@@ -95,17 +107,7 @@ script = ExtResource("8_mykxm")
 attached_scene = ExtResource("9_tklts")
 metadata/_custom_type_script = "uid://cvukyo7xt2voj"
 
-[node name="StoryModeButton" type="Button" parent="."]
-offset_left = 91.0
-offset_top = 209.0
-offset_right = 298.0
-offset_bottom = 267.0
-theme_override_font_sizes/font_size = 36
-text = "Story Mode"
-script = ExtResource("8_mykxm")
-attached_scene = ExtResource("9_tklts")
-metadata/_custom_type_script = "uid://cvukyo7xt2voj"
-
+[connection signal="pressed_with_scene" from="StoryModeButton" to="." method="_on_scene_button_pressed_with_scene"]
 [connection signal="pressed" from="TitleScreenBottomBox/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="TitleScreenBottomBox/LicensesButton" to="." method="_on_licenses_button_pressed"]
 [connection signal="pressed" from="TitleScreenBottomBox/InstructionsButton" to="." method="_on_instructions_button_pressed"]

@@ -1,8 +1,5 @@
 extends Node2D
 
-# TODO very, very placeholder at this point;
-# eventually this should handle stuff like victory conditions and moving from scene to scene
-
 var current_level_info
 
 func _ready() -> void:
@@ -45,8 +42,5 @@ func _on_player_1_grid_start_ai_place() -> void:
 
 
 func _on_grid_loss_condition(losing_player: Variant, losing_character: Variant) -> void:
-	pass
-
-
-func _on_title_screen_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+	$WinnerPopup.set_up_winner_popup(current_level_info, losing_player)
+	$WinnerPopup.visible = true
