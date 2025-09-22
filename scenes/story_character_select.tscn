@@ -1,16 +1,22 @@
-[gd_scene load_steps=12 format=3 uid="uid://bprjbfy7p7bcf"]
+[gd_scene load_steps=18 format=3 uid="uid://bprjbfy7p7bcf"]
 
 [ext_resource type="Script" uid="uid://clav0uh6j5s7h" path="res://scripts/story_character_select.gd" id="1_y15h5"]
 [ext_resource type="ButtonGroup" uid="uid://cdc6snt5fka2x" path="res://resources/button_groups/story_character_group.tres" id="2_s31yx"]
 [ext_resource type="Texture2D" uid="uid://csjpcti861ph" path="res://assets/titlescreen.png" id="2_w4xkb"]
 [ext_resource type="Script" uid="uid://cvukyo7xt2voj" path="res://scripts/scene_button.gd" id="2_y8mij"]
 [ext_resource type="Texture2D" uid="uid://cp78mf2v0s1lu" path="res://assets/characters/select_portraits/grymmt_select.png" id="3_hvlnx"]
+[ext_resource type="Texture2D" uid="uid://civkyeql5mvul" path="res://assets/title_popup_background_framed.png" id="3_r27pc"]
 [ext_resource type="PackedScene" uid="uid://dn7runpjxhdpr" path="res://scenes/cutscenes/intro/intro_cutscene_start.tscn" id="3_y8mij"]
 [ext_resource type="Texture2D" uid="uid://b24aladufren8" path="res://assets/characters/select_portraits/orchk_select.png" id="4_40j5r"]
 [ext_resource type="Texture2D" uid="uid://dahvxkxokqmqa" path="res://assets/characters/select_portraits/grymmt_select_highlight.png" id="4_vysq6"]
 [ext_resource type="Texture2D" uid="uid://crstt7vbiqiq5" path="res://assets/characters/select_portraits/pastoriche_select.png" id="5_vysq6"]
+[ext_resource type="Script" uid="uid://duvow72xymqqj" path="res://scripts/character_texture_button.gd" id="6_net1i"]
 [ext_resource type="Texture2D" uid="uid://lbyy8cacokls" path="res://assets/characters/select_portraits/orchk_select_highlight.png" id="6_w4xkb"]
+[ext_resource type="Resource" uid="uid://b4reyngalkwyh" path="res://resources/characters/grymmt_dundle.tres" id="7_tug4e"]
 [ext_resource type="Texture2D" uid="uid://dtl3x02nsqg6d" path="res://assets/characters/select_portraits/pastoriche_select_highlight.png" id="8_ber71"]
+[ext_resource type="Resource" uid="uid://cck3y4synutqo" path="res://resources/characters/orchk.tres" id="10_vball"]
+[ext_resource type="Texture2D" uid="uid://c7ymkp7bsnyd0" path="res://assets/characters/full_portraits/grymmt_full_right.png" id="12_tug4e"]
+[ext_resource type="Resource" uid="uid://bcqx41d3vo7au" path="res://resources/characters/pastoriche.tres" id="13_r27pc"]
 
 [node name="StoryCharacterSelect" type="Node2D"]
 script = ExtResource("1_y15h5")
@@ -18,6 +24,42 @@ script = ExtResource("1_y15h5")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(800, 450)
 texture = ExtResource("2_w4xkb")
+
+[node name="TextBackground" type="Sprite2D" parent="."]
+position = Vector2(570, 513)
+scale = Vector2(0.799, 0.8)
+texture = ExtResource("3_r27pc")
+
+[node name="CharacterSelectLabels" type="Node" parent="TextBackground"]
+
+[node name="NameLabel" type="Label" parent="TextBackground/CharacterSelectLabels"]
+offset_left = 45.0
+offset_top = 225.0
+offset_right = 1095.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 48
+text = "Choose Your Skremplet!"
+vertical_alignment = 1
+
+[node name="DescriptionLabel" type="Label" parent="TextBackground/CharacterSelectLabels"]
+visible = false
+offset_left = 45.0
+offset_top = 310.0
+offset_right = 1095.0
+offset_bottom = 540.0
+theme_override_font_sizes/font_size = 36
+text = "This is a description of the character full of flavor and stuff"
+autowrap_mode = 2
+
+[node name="PowerUpLabel" type="Label" parent="TextBackground/CharacterSelectLabels"]
+visible = false
+offset_left = 45.0
+offset_top = 545.0
+offset_right = 1095.0
+offset_bottom = 775.0
+theme_override_font_sizes/font_size = 36
+text = "PowerUp: This is an in-game description of the powerup the character has"
+autowrap_mode = 2
 
 [node name="CharacterButtons" type="Node" parent="."]
 
@@ -30,6 +72,9 @@ toggle_mode = true
 button_group = ExtResource("2_s31yx")
 texture_normal = ExtResource("3_hvlnx")
 texture_pressed = ExtResource("4_vysq6")
+script = ExtResource("6_net1i")
+character = ExtResource("7_tug4e")
+metadata/_custom_type_script = "uid://duvow72xymqqj"
 
 [node name="OrchkButton" type="TextureButton" parent="CharacterButtons"]
 offset_left = 200.0
@@ -40,42 +85,27 @@ toggle_mode = true
 button_group = ExtResource("2_s31yx")
 texture_normal = ExtResource("4_40j5r")
 texture_pressed = ExtResource("6_w4xkb")
+script = ExtResource("6_net1i")
+character = ExtResource("10_vball")
+metadata/_custom_type_script = "uid://duvow72xymqqj"
 
 [node name="PastoricheButton" type="TextureButton" parent="CharacterButtons"]
 offset_left = 375.0
 offset_top = 25.0
-offset_right = 415.0
-offset_bottom = 65.0
+offset_right = 525.0
+offset_bottom = 175.0
 toggle_mode = true
 button_group = ExtResource("2_s31yx")
 texture_normal = ExtResource("5_vysq6")
 texture_pressed = ExtResource("8_ber71")
+script = ExtResource("6_net1i")
+character = ExtResource("13_r27pc")
+metadata/_custom_type_script = "uid://duvow72xymqqj"
 
-[node name="CharacterSelectLabels" type="Node" parent="."]
-
-[node name="NameLabel" type="Label" parent="CharacterSelectLabels"]
-offset_left = 43.0
-offset_top = 237.0
-offset_right = 512.0
-offset_bottom = 304.0
-theme_override_font_sizes/font_size = 48
-text = "Name"
-
-[node name="DescriptionLabel" type="Label" parent="CharacterSelectLabels"]
-offset_left = 50.0
-offset_top = 324.0
-offset_right = 502.0
-offset_bottom = 347.0
-theme_override_font_sizes/font_size = 36
-text = "This is a description of the character full of flavor and stuff"
-
-[node name="PowerUpLabel" type="Label" parent="CharacterSelectLabels"]
-offset_left = 50.0
-offset_top = 484.0
-offset_right = 1334.0
-offset_bottom = 534.0
-theme_override_font_sizes/font_size = 36
-text = "PowerUp: This is an in-game description of the powerup the character has"
+[node name="CharacterPortrait" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1369, 439)
+texture = ExtResource("12_tug4e")
 
 [node name="StartStoryButton" type="Button" parent="."]
 offset_left = 28.0
@@ -97,5 +127,11 @@ theme_override_font_sizes/font_size = 24
 text = "Return to Title Screen
 "
 
+[connection signal="pressed" from="CharacterButtons/GrymmtButton" to="CharacterButtons/GrymmtButton" method="_on_pressed"]
+[connection signal="pressed_with_character" from="CharacterButtons/GrymmtButton" to="." method="_on_pressed_with_character"]
+[connection signal="pressed" from="CharacterButtons/OrchkButton" to="CharacterButtons/OrchkButton" method="_on_pressed"]
+[connection signal="pressed_with_character" from="CharacterButtons/OrchkButton" to="." method="_on_pressed_with_character"]
+[connection signal="pressed" from="CharacterButtons/PastoricheButton" to="CharacterButtons/PastoricheButton" method="_on_pressed"]
+[connection signal="pressed_with_character" from="CharacterButtons/PastoricheButton" to="." method="_on_pressed_with_character"]
 [connection signal="pressed_with_scene" from="StartStoryButton" to="." method="_on_start_story_button_pressed_with_scene"]
 [connection signal="pressed" from="ReturnToTitleButton" to="." method="_on_return_to_title_button_pressed"]

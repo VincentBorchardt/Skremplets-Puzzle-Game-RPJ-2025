@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dnnsvntyopdo0"]
+[gd_scene load_steps=12 format=3 uid="uid://dnnsvntyopdo0"]
 
 [ext_resource type="Script" uid="uid://t8w2v1em8t33" path="res://scripts/cutscenes/cutscene.gd" id="1_gca5s"]
+[ext_resource type="PackedScene" uid="uid://qykbik8pybjh" path="res://scenes/generic_play_scene.tscn" id="2_7ctxm"]
 [ext_resource type="Script" uid="uid://dnhu6g07egmm" path="res://scripts/cutscenes/message_queue.gd" id="2_smx5f"]
 [ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="3_7ctxm"]
 [ext_resource type="Resource" uid="uid://4j5k8jv53ox4" path="res://resources/messages/generic_pregame/generic_pregame_1.tres" id="4_cuogs"]
@@ -13,6 +14,7 @@
 
 [node name="GenericPregame" type="Node2D"]
 script = ExtResource("1_gca5s")
+next_scene = ExtResource("2_7ctxm")
 metadata/_custom_type_script = "uid://t8w2v1em8t33"
 
 [node name="MessageQueue" type="Node" parent="."]

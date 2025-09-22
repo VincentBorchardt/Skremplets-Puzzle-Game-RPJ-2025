@@ -1,6 +1,7 @@
 class_name LevelInfoContainer extends Resource
 
-@export var piece_storage: Array[Piece]
+# TODO for some reason this breaks when the array is typed
+@export var piece_storage: Array#[Piece]
 @export var player_1_character: Character
 @export var player_2_character: Character
 @export var is_story: bool

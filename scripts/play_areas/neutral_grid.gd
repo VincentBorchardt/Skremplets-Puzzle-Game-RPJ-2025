@@ -3,7 +3,8 @@ class_name NeutralGrid extends Grid
 signal get_neutral_piece(piece, player)
 signal start_ai_pick(piece_list, player)
 
-var piece_storage: Array[Piece]
+#TODO This breaks if the array is typed
+var piece_storage: Array#[Piece]
 
 func _ready() -> void:
 	super()

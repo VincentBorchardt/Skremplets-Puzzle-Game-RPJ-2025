@@ -45,8 +45,7 @@ func _on_player_1_grid_start_ai_place() -> void:
 
 
 func _on_grid_loss_condition(losing_player: Variant, losing_character: Variant) -> void:
-	$CanvasLayer/LoserLabel.text = losing_character.name + " Loses!"
-	$CanvasLayer.visible = true
+	pass
 
 
 func _on_title_screen_button_pressed() -> void:

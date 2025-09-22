@@ -34,10 +34,10 @@ func _ready() -> void:
 func set_up_story_level():
 	# Advance the level counter in the end-of-level before calling this
 	if current_level_number < tournament_rounds:
-		possible_opponents.remove(player_character)
+		possible_opponents.erase(player_character)
 		var opp_index = randi() % possible_opponents.size()
 		opponent_character = possible_opponents[opp_index]
-		possible_opponents.remove(opponent_character)
+		possible_opponents.erase(opponent_character)
 		var pieces = Pieces.level_pieces_array[current_level_number]
 		next_level_info = LevelInfoContainer.create_new_level_info(
 			player_character, opponent_character, pieces, true
