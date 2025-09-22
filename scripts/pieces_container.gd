@@ -16,7 +16,7 @@ class_name PiecesContainer extends Node
 @onready var sound_at_two_powerup = load("res://resources/pieces/powerup/sound_at_two_power_up.tres")
 
 @onready var level_one_pieces = [blue_four_t.duplicate(), red_four_line.duplicate(), yellow_four_square.duplicate()]
-@onready var level_two_pieces = [blue_four_t.duplicate(), blue_three_three_bag.duplicate, green_four_t.duplicate(),
+@onready var level_two_pieces = [blue_four_t.duplicate(), blue_three_three_bag.duplicate(), green_four_t.duplicate(),
 green_three_three_bottle.duplicate(), red_four_line.duplicate(), red_five_two_jug.duplicate(), 
 yellow_four_square.duplicate(), yellow_two_three_can.duplicate()]
 @onready var level_three_pieces = []

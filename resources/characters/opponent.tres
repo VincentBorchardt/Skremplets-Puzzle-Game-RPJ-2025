@@ -5,7 +5,9 @@
 [resource]
 script = ExtResource("1_w47lr")
 name = ""
-description = ""
+select_description = ""
+power_up_description = ""
+pregame_description = ""
 opening_statement = ""
 win_quote = ""
 lose_quote = ""

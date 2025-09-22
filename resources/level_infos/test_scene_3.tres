@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="LevelInfoContainer" load_steps=13 format=3 uid="uid://c8hcw4hhr06d1"]
+[gd_resource type="Resource" script_class="LevelInfoContainer" load_steps=12 format=3 uid="uid://c8hcw4hhr06d1"]
 
-[ext_resource type="Script" uid="uid://6oywq2cixv6v" path="res://scripts/resources/piece.gd" id="1_pyiyf"]
 [ext_resource type="Resource" uid="uid://cp4dautmudtjn" path="res://resources/pieces/blue/blue_four_t.tres" id="2_aoko6"]
 [ext_resource type="Resource" uid="uid://cl266u0gnim6a" path="res://resources/pieces/blue/blue_three_three_bag.tres" id="3_owt3p"]
 [ext_resource type="Resource" uid="uid://bng1bv7hbstn3" path="res://resources/pieces/green/green_four_t.tres" id="4_5frtk"]
@@ -15,7 +14,7 @@
 
 [resource]
 script = ExtResource("12_c04ey")
-piece_storage = Array[ExtResource("1_pyiyf")]([ExtResource("2_aoko6"), ExtResource("3_owt3p"), ExtResource("4_5frtk"), ExtResource("5_33ivk"), ExtResource("6_ycu52"), ExtResource("7_3xxlc"), ExtResource("8_mw0mv"), ExtResource("9_83mmo")])
+piece_storage = [ExtResource("2_aoko6"), ExtResource("3_owt3p"), ExtResource("4_5frtk"), ExtResource("5_33ivk"), ExtResource("6_ycu52"), ExtResource("7_3xxlc"), ExtResource("8_mw0mv"), ExtResource("9_83mmo")]
 player_1_character = ExtResource("10_pyiyf")
 player_2_character = ExtResource("10_poq8f")
 is_story = false
