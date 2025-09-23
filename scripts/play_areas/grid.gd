@@ -43,7 +43,7 @@ func _on_grid_space_clicked_on_space(location: Vector2i, player: Inventory.Playe
 	clicked_on_space.emit(location, player)
 
 func ensure_legal_piece(piece):
-	if get_legal_piece(piece):
+	if get_legal_piece(piece) != null:
 		return true
 	else:
 		return false

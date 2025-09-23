@@ -51,7 +51,7 @@ func set_up_story_level():
 		# TODO Set up the match with Boyhowdy
 		opponent_character = preload("res://resources/characters/boyhowdy.tres")
 		player_character.depowered = true
-		next_level_info.create_new_level_info(
+		next_level_info = LevelInfoContainer.create_new_level_info(
 			player_character, opponent_character, pieces, true, [Pieces.sweater_power_up.duplicate()])
 	
 

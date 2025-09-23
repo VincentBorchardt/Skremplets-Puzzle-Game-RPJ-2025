@@ -25,9 +25,16 @@ func _on_continue_button_pressed() -> void:
 	Inventory.start_new_story_level()
 
 func _on_retry_button_pressed() -> void:
+	# TODO does reloading the scene work, or do things break horribly?
 	Inventory.player_character.has_sweater = false
 	Inventory.opponent_character.has_sweater = false
-	get_tree().change_scene_to_file("res://scenes/cutscenes/generic_pregame.tscn")
+	if Inventory.current_level_number == Inventory.tournament_rounds:
+		get_tree().change_scene_to_file("res://scenes/cutscenes/round_3_start_cutscene.tscn")
+	elif Inventory.current_level_number > Inventory.tournament_rounds:
+		# restart DSD battle
+		pass
+	else:
+		get_tree().change_scene_to_file("res://scenes/cutscenes/generic_pregame.tscn")
 
 func _on_title_screen_button_pressed() -> void:
 	# TODO I don't think these falses are necessary, but they won't hurt

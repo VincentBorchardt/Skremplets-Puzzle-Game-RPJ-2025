@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d2ao1qh6laidk"]
+[gd_scene load_steps=15 format=3 uid="uid://d2ao1qh6laidk"]
 
 [ext_resource type="Script" uid="uid://bosrbphhitant" path="res://scripts/title_screen.gd" id="1_fgkus"]
 [ext_resource type="Script" uid="uid://bl2ejcuqp3n7l" path="res://scripts/new_play_level_button.gd" id="2_s4lrb"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://cvukyo7xt2voj" path="res://scripts/scene_button.gd" id="8_mykxm"]
 [ext_resource type="PackedScene" uid="uid://dn7runpjxhdpr" path="res://scenes/cutscenes/intro/intro_cutscene_start.tscn" id="9_tklts"]
 [ext_resource type="PackedScene" uid="uid://bprjbfy7p7bcf" path="res://scenes/story_character_select.tscn" id="12_ib7db"]
+[ext_resource type="Resource" uid="uid://dn8cksxuyfne" path="res://resources/level_infos/test_scene_4.tres" id="13_frs5l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_s4lrb"]
 font_size = 48
@@ -66,7 +67,6 @@ offset = Vector2(100, 56)
 transform = Transform2D(1, 0, 0, 1, 100, 56)
 
 [node name="TestButtons" type="VBoxContainer" parent="."]
-visible = false
 offset_left = 1200.0
 offset_top = 100.0
 offset_right = 1578.0
@@ -107,6 +107,14 @@ script = ExtResource("8_mykxm")
 attached_scene = ExtResource("9_tklts")
 metadata/_custom_type_script = "uid://cvukyo7xt2voj"
 
+[node name="Test4Button" type="Button" parent="TestButtons"]
+layout_mode = 2
+text = "Test Match: Pastoriche vs Boyhowdy"
+script = ExtResource("2_s4lrb")
+level_info = ExtResource("13_frs5l")
+attached_scene = ExtResource("6_3yumr")
+metadata/_custom_type_script = "uid://bl2ejcuqp3n7l"
+
 [connection signal="pressed_with_scene" from="StoryModeButton" to="." method="_on_scene_button_pressed_with_scene"]
 [connection signal="pressed" from="TitleScreenBottomBox/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="TitleScreenBottomBox/LicensesButton" to="." method="_on_licenses_button_pressed"]
@@ -118,3 +126,4 @@ metadata/_custom_type_script = "uid://cvukyo7xt2voj"
 [connection signal="pressed" from="TestButtons/Test3Button" to="TestButtons/Test3Button" method="_on_pressed"]
 [connection signal="pressed_with_scene" from="TestButtons/Test3Button" to="." method="_on_scene_button_pressed_with_scene"]
 [connection signal="pressed_with_scene" from="TestButtons/TestCutsceneButton" to="." method="_on_scene_button_pressed_with_scene"]
+[connection signal="pressed_with_scene" from="TestButtons/Test4Button" to="." method="_on_scene_button_pressed_with_scene"]

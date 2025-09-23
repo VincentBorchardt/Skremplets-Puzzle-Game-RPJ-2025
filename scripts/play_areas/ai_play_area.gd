@@ -38,11 +38,11 @@ func pick_biggest_piece(neutral_piece_list):
 		if piece_dimensions > picked_dimensions:
 			picked_dimensions = piece_dimensions
 			picked_piece = piece
-		if picked_piece:
-			return picked_piece
-		else:
-			print("pick_biggest_piece failed to get a piece")
-			return pick_random_piece(neutral_piece_list)
+	if picked_piece:
+		return picked_piece
+	else:
+		print("pick_biggest_piece failed to get a piece")
+		return pick_random_piece(neutral_piece_list)
 
 func start_ai_place():
 	var piece_list = $PlayGrid.piece_list
@@ -67,7 +67,7 @@ func place_fully_random_piece(num_of_failures):
 	else:
 		var new_failures = num_of_failures + 1
 		#print("Failed placing piece " + str(new_failures) + " times")
-		if new_failures > 500:
+		if new_failures > 5000:
 			print("Giving up")
 			for i in range(4):
 				current_piece.rotate(TAU/4)
@@ -104,7 +104,7 @@ func try_to_place_connecting_piece(piece, num_of_failures) -> bool:
 					return true
 	var new_failures = num_of_failures + 1
 	#print("Failed placing piece " + str(new_failures) + " times")
-	if new_failures > 500:
+	if new_failures > 5000:
 		print("Giving up")
 		return false
 	else:
