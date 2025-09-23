@@ -58,6 +58,12 @@ func set_up_story_level():
 func start_new_story_level():
 	# TODO add a parameter that checks if it's a restart, so this can be universal
 	current_level_number = current_level_number + 1
+	if current_level_number > tournament_rounds:
+		if player_character.has_sweater:
+			pass
+		else:
+			# The secret ending where you face DSD, assuming I get it done
+			pass
 	set_up_story_level()
 	# TODO This check is done twice and probably shouldn't be
 	# Probably involves calling this in the character select and starting at -1 or something
@@ -65,4 +71,4 @@ func start_new_story_level():
 		get_tree().change_scene_to_file("res://scenes/cutscenes/generic_pregame.tscn")
 	else:
 		# TODO Start the final sequence
-		pass
+		get_tree().change_scene_to_file("res://scenes/cutscenes/round_3_start_cutscene.tscn")

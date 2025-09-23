@@ -96,7 +96,6 @@ func _on_power_up_bar_activate_powerup() -> void:
 				print("currently not implemented")
 
 func _on_grid_activate_special_pieces(pieces, player) -> void:
-	# TODO this will do things when you clear powerups
 	for piece in pieces:
 		match piece.power_up_type:
 			Pieces.PowerUpType.GRYMMT:
@@ -104,6 +103,10 @@ func _on_grid_activate_special_pieces(pieces, player) -> void:
 				$PowerUpBar.add_to_bar(3)
 			Pieces.PowerUpType.SWEATER:
 				character.has_sweater = true
+				if grid_owner == Inventory.Player.PLAYER_1:
+					Inventory.player_character.has_sweater = true
+				elif grid_owner == Inventory.Player.PLAYER_2:
+					Inventory.opponent_character.has_sweater = true
 				# TODO Change the grid picture, assuming I get the asset for it
 			_:
 				pass

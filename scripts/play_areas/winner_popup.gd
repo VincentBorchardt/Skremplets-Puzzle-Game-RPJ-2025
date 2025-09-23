@@ -25,7 +25,12 @@ func _on_continue_button_pressed() -> void:
 	Inventory.start_new_story_level()
 
 func _on_retry_button_pressed() -> void:
+	Inventory.player_character.has_sweater = false
+	Inventory.opponent_character.has_sweater = false
 	get_tree().change_scene_to_file("res://scenes/cutscenes/generic_pregame.tscn")
 
 func _on_title_screen_button_pressed() -> void:
+	# TODO I don't think these falses are necessary, but they won't hurt
+	Inventory.player_character.has_sweater = false
+	Inventory.opponent_character.has_sweater = false
 	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
