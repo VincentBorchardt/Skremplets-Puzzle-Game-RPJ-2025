@@ -158,5 +158,17 @@ func spread_nightmare():
 				place_piece(piece, legal_points[index])
 				return
 
+func gather_and_remove_garbage():
+	var num_garbage = 0
+	var garbage_list = []
+	for piece in piece_list:
+		if piece.type == Pieces.Type.GARBAGE:
+			num_garbage = num_garbage + 1
+			garbage_list.append(piece)
+	piece_list.remove_pieces(garbage_list)
+	for node in spaces_list:
+		node.remove_pieces(garbage_list)
+	return num_garbage
+
 func point_is_off_grid(point):
 	return point.x < 0 or point.y < 0 or point.x >= grid_x or point.y >= grid_y

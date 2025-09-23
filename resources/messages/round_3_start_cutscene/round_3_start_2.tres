@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://bnwcr7djiunbj"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_v6d8y"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_ye5wd"]
+
+[resource]
+script = ExtResource("1_v6d8y")
+speaker = ExtResource("2_ye5wd")
+message = "Wait a minute! My opponents are taking their losses in Trash Battle a lot harder than usual."
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_o2xss")
 speaker = ExtResource("2_g8rk0")
-message = "Then the Equipment Archive Collective is the perfect place for you and all your friends! There’s plenty of fuel, and all the Skremplets I’ve found so far have been sharpening their skills."
+message = "Then the Equipment Haven Collective is the perfect place for you and all your friends! There’s plenty of fuel, and all the Skremplets I’ve found so far have been sharpening their skills."
 image_location = 1
 choices = false
 metadata/_custom_type_script = "uid://bq7h7sx2xfral"

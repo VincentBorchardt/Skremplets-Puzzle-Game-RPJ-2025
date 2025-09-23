@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://jnih6cgm2kpd"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_ovumq"]
+[ext_resource type="Resource" uid="uid://mwlcno66tq4k" path="res://resources/characters/boyhowdy.tres" id="2_aw6y3"]
+
+[resource]
+script = ExtResource("1_ovumq")
+speaker = ExtResource("2_aw6y3")
+message = "Of course! With every tournament round there must be winners and losers, and one side obviously ends up in a better spot."
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

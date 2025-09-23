@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://4m7sskgoxqwg"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_27d1c"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_hy8ho"]
+
+[resource]
+script = ExtResource("1_27d1c")
+speaker = ExtResource("2_hy8ho")
+message = "Of course! The dumpsters are the problem! They’re amplifying our goblic endowments to a dangerous degree!"
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

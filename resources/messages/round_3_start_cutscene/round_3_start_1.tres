@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://dvvmq7k1g8f24"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_v0c3b"]
+[ext_resource type="Resource" uid="uid://mwlcno66tq4k" path="res://resources/characters/boyhowdy.tres" id="2_8odii"]
+
+[resource]
+script = ExtResource("1_v0c3b")
+speaker = ExtResource("2_8odii")
+message = "And now for our next round…"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

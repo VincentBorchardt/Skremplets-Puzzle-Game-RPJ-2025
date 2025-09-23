@@ -17,6 +17,7 @@ class_name Character extends Resource
 @export var is_player: bool = false
 @export var is_opponent: bool = false
 @export var depowered = false
+@export var has_sweater = false
 @export var ai_picking_pattern: Inventory.AIPickingPattern
 @export var ai_placement_pattern: Inventory.AIPlacementPattern
 #TODO handle powerups here somehow, either a powerup type or a function that gets called

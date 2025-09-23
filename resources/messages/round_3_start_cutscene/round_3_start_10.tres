@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://5vyraw0xq62g"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_tqkwu"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_yn40k"]
+
+[resource]
+script = ExtResource("1_tqkwu")
+speaker = ExtResource("2_yn40k")
+message = "Oh no! I’m not going to use the powers of the dumpster anymore, even against that puffin. What am I going to do? Wait, what’s that piece of clothing doing in the initial batch of trash?"
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://f810el25g6dl"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_poas3"]
+[ext_resource type="Resource" uid="uid://mwlcno66tq4k" path="res://resources/characters/boyhowdy.tres" id="2_f5mhm"]
+
+[resource]
+script = ExtResource("1_poas3")
+speaker = ExtResource("2_f5mhm")
+message = "Nope, this tournament isn’t ending this way. Because it’s time for the final round, where $PLAYER_NAME will go against their final opponent: me, the magnificent Boyhowdy!"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

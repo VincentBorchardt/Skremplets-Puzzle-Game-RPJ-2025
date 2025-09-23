@@ -8,7 +8,7 @@ func _ready() -> void:
 		$Player1Grid.character = current_level_info.player_1_character
 		$Player2Grid.character = current_level_info.player_2_character
 		$NeutralGrid.piece_storage = current_level_info.piece_storage
-		$NeutralGrid.populate_neutral_grid([])
+		$NeutralGrid.populate_neutral_grid(current_level_info.starting_pieces)
 
 # TODO These should probably act like the grid spaces in grid to make them less hard-coded
 func _on_send_pieces(piece, num_pieces, sending_player) -> void:

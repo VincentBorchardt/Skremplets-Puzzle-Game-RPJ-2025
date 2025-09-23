@@ -18,4 +18,5 @@ piece_storage = [ExtResource("2_wqh0b"), ExtResource("3_mllih"), ExtResource("4_
 player_1_character = ExtResource("9_bsxux")
 player_2_character = ExtResource("10_el0po")
 is_story = false
+starting_pieces = []
 metadata/_custom_type_script = "uid://bdugcqlbg74xx"

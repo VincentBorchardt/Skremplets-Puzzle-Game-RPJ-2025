@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://urcm32l5qyx3"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_u1n66"]
+[ext_resource type="Resource" uid="uid://mwlcno66tq4k" path="res://resources/characters/boyhowdy.tres" id="2_pjlak"]
+
+[resource]
+script = ExtResource("1_u1n66")
+speaker = ExtResource("2_pjlak")
+message = "Nonsense! The Equipment Haven Collective is the best place to Trash Battle with our special dumpsters."
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

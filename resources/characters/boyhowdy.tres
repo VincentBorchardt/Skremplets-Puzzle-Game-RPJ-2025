@@ -9,7 +9,16 @@
 [resource]
 script = ExtResource("1_a32a8")
 name = "Boyhowdy"
+select_description = "The host of the tournament also made the evil dumpsters that amplified the Skremplet's inherent Goblic Endowments."
+power_up_description = "Boyhowdy sends an extra load of garbage whenever his powerup activates"
+pregame_description = "the tournament host with the most"
+opening_statement = "You think you can beat the master of Trash Battles?"
+win_quote = "This will teach you to try and stop the mighty Boyhowdy!"
+lose_quote = "What? How? I had the dumpster on my side!"
+is_player = false
+is_opponent = false
 depowered = false
+has_sweater = false
 ai_picking_pattern = 2
 ai_placement_pattern = 0
 player_1_portrait = ExtResource("3_dfuqn")
