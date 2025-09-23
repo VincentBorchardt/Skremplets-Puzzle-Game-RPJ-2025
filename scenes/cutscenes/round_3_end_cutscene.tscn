@@ -1,0 +1,32 @@
+[gd_scene load_steps=17 format=3 uid="uid://d31e5eoy3nwfn"]
+
+[ext_resource type="Script" uid="uid://t8w2v1em8t33" path="res://scripts/cutscenes/cutscene.gd" id="1_o3a17"]
+[ext_resource type="Script" uid="uid://dnhu6g07egmm" path="res://scripts/cutscenes/message_queue.gd" id="2_dp6ss"]
+[ext_resource type="PackedScene" uid="uid://hgb21nwch34j" path="res://scenes/cutscenes/cutscene_ui.tscn" id="3_ip3aq"]
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="3_o11cx"]
+[ext_resource type="Resource" uid="uid://00fryvw1w0ah" path="res://resources/messages/round_3_end_cutscene/round_3_end_1.tres" id="4_e2jhx"]
+[ext_resource type="Resource" uid="uid://dlk2ydrmk27fb" path="res://resources/messages/round_3_end_cutscene/round_3_end_2.tres" id="5_v36sr"]
+[ext_resource type="Resource" uid="uid://bvdgmiomm44fu" path="res://resources/messages/round_3_end_cutscene/round_3_end_3.tres" id="6_lmd28"]
+[ext_resource type="Resource" uid="uid://0j578yykc4y5" path="res://resources/messages/round_3_end_cutscene/round_3_end_4.tres" id="7_hwlry"]
+[ext_resource type="Resource" uid="uid://bmgvtdywi5chq" path="res://resources/messages/round_3_end_cutscene/round_3_end_5.tres" id="8_ms3fe"]
+[ext_resource type="Resource" uid="uid://cjd6pul36hgy7" path="res://resources/messages/round_3_end_cutscene/round_3_end_6.tres" id="9_kqh7l"]
+[ext_resource type="Resource" uid="uid://dkvb4i6v7snwy" path="res://resources/messages/round_3_end_cutscene/round_3_end_7.tres" id="10_5t5bk"]
+[ext_resource type="Resource" uid="uid://c3ol5t5j8o2tl" path="res://resources/messages/round_3_end_cutscene/round_3_end_8.tres" id="11_wxh0i"]
+[ext_resource type="Resource" uid="uid://df3sxl4j5ghxb" path="res://resources/messages/round_3_end_cutscene/round_3_end_9.tres" id="12_qm30q"]
+[ext_resource type="Resource" uid="uid://v2uonyehkfrk" path="res://resources/messages/round_3_end_cutscene/round_3_end_10.tres" id="13_hikkt"]
+[ext_resource type="Resource" uid="uid://573e334hbl2v" path="res://resources/messages/round_3_end_cutscene/round_3_end_11.tres" id="14_sia28"]
+[ext_resource type="Texture2D" uid="uid://b31qwec8f4pfd" path="res://assets/cutscenes/warehouse.png" id="16_e2jhx"]
+
+[node name="Round3EndCutscene" type="Node2D"]
+script = ExtResource("1_o3a17")
+metadata/_custom_type_script = "uid://t8w2v1em8t33"
+
+[node name="MessageQueue" type="Node" parent="."]
+script = ExtResource("2_dp6ss")
+messages = Array[ExtResource("3_o11cx")]([ExtResource("4_e2jhx"), ExtResource("5_v36sr"), ExtResource("6_lmd28"), ExtResource("7_hwlry"), ExtResource("8_ms3fe"), ExtResource("9_kqh7l"), ExtResource("10_5t5bk"), ExtResource("11_wxh0i"), ExtResource("12_qm30q"), ExtResource("13_hikkt"), ExtResource("14_sia28")])
+metadata/_custom_type_script = "uid://dnhu6g07egmm"
+
+[node name="CutsceneUI" parent="." instance=ExtResource("3_ip3aq")]
+background_image = ExtResource("16_e2jhx")
+
+[connection signal="get_new_message" from="CutsceneUI" to="." method="_on_cutscene_ui_get_new_message"]

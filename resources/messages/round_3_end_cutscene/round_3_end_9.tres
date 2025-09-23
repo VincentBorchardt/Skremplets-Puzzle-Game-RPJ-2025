@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://df3sxl4j5ghxb"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_afpab"]
+[ext_resource type="Resource" uid="uid://7fe4r6llc0tt" path="res://resources/characters/skremplets.tres" id="2_yap76"]
+
+[resource]
+script = ExtResource("1_afpab")
+speaker = ExtResource("2_yap76")
+message = "Hooray!"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

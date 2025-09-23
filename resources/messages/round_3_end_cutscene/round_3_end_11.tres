@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://573e334hbl2v"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_p2t38"]
+[ext_resource type="Resource" uid="uid://bg0pasjplfp8i" path="res://resources/characters/reporter.tres" id="2_ny15l"]
+
+[resource]
+script = ExtResource("1_p2t38")
+speaker = ExtResource("2_ny15l")
+message = "Boyhowdy is now unlocked in Freeplay!"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

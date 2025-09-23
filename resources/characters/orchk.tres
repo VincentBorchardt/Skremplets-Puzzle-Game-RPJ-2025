@@ -18,6 +18,7 @@ lose_quote = "I think I broke a string..."
 is_player = false
 is_opponent = false
 depowered = false
+has_sweater = false
 ai_picking_pattern = 0
 ai_placement_pattern = 0
 player_1_portrait = ExtResource("1_27j2k")

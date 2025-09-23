@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://c3ol5t5j8o2tl"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_yhs7m"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_xq2cn"]
+
+[resource]
+script = ExtResource("1_yhs7m")
+speaker = ExtResource("2_xq2cn")
+message = "We won’t be seeing that annoying bird for a long time. This warehouse is a nice place to Trash Battle though–now we can do it safely to our heart’s content!"
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

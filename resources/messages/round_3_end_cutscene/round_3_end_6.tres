@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://cjd6pul36hgy7"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_ql31v"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_3m1vi"]
+
+[resource]
+script = ExtResource("1_ql31v")
+speaker = ExtResource("2_3m1vi")
+message = "The rules of saving the planet are much more important than the rules of our game."
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

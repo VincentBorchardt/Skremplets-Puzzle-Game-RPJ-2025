@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://bvdgmiomm44fu"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_6jvpy"]
+[ext_resource type="Resource" uid="uid://mwlcno66tq4k" path="res://resources/characters/boyhowdy.tres" id="2_62e4m"]
+
+[resource]
+script = ExtResource("1_6jvpy")
+speaker = ExtResource("2_62e4m")
+message = "But what happened to your dumpster? And why were you able to take all the garbage and just dump it in my dumpster?"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

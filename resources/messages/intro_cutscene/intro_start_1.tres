@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_cttb4")
 speaker = ExtResource("2_2qhqc")
-message = "I’m with (news name) news and we're getting reports of Skremplet sightings all over the city after a decades-long absence. Let’s ask some people on the street about the reports."
+message = "I’m with Creature News Network and we're getting reports of Skremplet sightings all over the city after a decades-long absence. Let’s ask some people on the street about the reports."
 image_location = 1
 choices = false
 metadata/_custom_type_script = "uid://bq7h7sx2xfral"

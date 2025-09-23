@@ -66,6 +66,7 @@ offset = Vector2(100, 56)
 transform = Transform2D(1, 0, 0, 1, 100, 56)
 
 [node name="TestButtons" type="VBoxContainer" parent="."]
+visible = false
 offset_left = 1200.0
 offset_top = 100.0
 offset_right = 1578.0
@@ -111,6 +112,7 @@ layout_mode = 2
 text = "Test Match: Pastoriche vs Boyhowdy"
 script = ExtResource("2_s4lrb")
 level_info = ExtResource("13_frs5l")
+level_num = 2
 attached_scene = ExtResource("6_3yumr")
 metadata/_custom_type_script = "uid://bl2ejcuqp3n7l"
 

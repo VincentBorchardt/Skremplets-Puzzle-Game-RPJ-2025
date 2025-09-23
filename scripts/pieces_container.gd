@@ -24,9 +24,8 @@ green_three_three_bottle.duplicate(), red_four_line.duplicate(), red_five_two_ju
 yellow_four_square.duplicate(), yellow_two_three_can.duplicate()]
 @onready var level_three_pieces = [blue_four_t.duplicate(), blue_three_three_bag.duplicate(), green_four_t.duplicate(),
 green_three_three_bottle.duplicate(), red_four_line.duplicate(), red_five_two_jug.duplicate(), 
-yellow_four_square.duplicate(), yellow_two_three_can.duplicate(), purple_skinny_barrel.duplicate(),
-purple_wide_barrel.duplicate()]
-@onready var level_pieces_array = [level_one_pieces, level_two_pieces, level_three_pieces]
+yellow_four_square.duplicate(), yellow_two_three_can.duplicate(),]
+@onready var level_pieces_array = [level_one_pieces, level_two_pieces, level_three_pieces, level_three_pieces]
 
 var confirmed_test_piece
 

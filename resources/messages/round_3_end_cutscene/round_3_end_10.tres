@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://v2uonyehkfrk"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_wd6x1"]
+[ext_resource type="Resource" uid="uid://bg0pasjplfp8i" path="res://resources/characters/reporter.tres" id="2_mu4kr"]
+
+[resource]
+script = ExtResource("1_wd6x1")
+speaker = ExtResource("2_mu4kr")
+message = "Congrats on driving out Boyhowdy! But can you do it without using the sweater?"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

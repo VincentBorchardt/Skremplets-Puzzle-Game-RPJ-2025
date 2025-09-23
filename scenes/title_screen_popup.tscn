@@ -75,7 +75,7 @@ offset_bottom = 675.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Pick pieces from the middle area and place them in your own grid without overlapping another piece.
 
-The circled block in each piece is the block that will go in the space you click on, as well as the center of rotation (rotation buttons above your grid)
+The dotted block in each piece is the block that will go in the space you click on, as well as the center of rotation (rotation buttons above your grid)
 
 Place at least three pieces next to one another to clear them, build up your powerup, and send garbage to your opponent. The more pieces you clear at once the more garbage you send.
 
@@ -83,11 +83,7 @@ Remove garbage and special pieces by matching normal pieces next to them.
 
 You win when your opponent picks a piece they can't place on their board.
 
-Grymmt's powerup places apples on your board, and when you clear them you'll send extra garbage and charge your powerup meter faster.
-
-Orchk's powerup sends special sound blocks that require multiple matches to clear.
-
-All opinions are welcome to help improve the basic gameplay!"
+"
 
 [node name="OptionsBox" type="VBoxContainer" parent="."]
 offset_left = 500.0

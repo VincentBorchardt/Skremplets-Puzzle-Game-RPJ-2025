@@ -60,10 +60,13 @@ func start_new_story_level():
 	current_level_number = current_level_number + 1
 	if current_level_number > tournament_rounds:
 		if player_character.has_sweater:
-			pass
+			get_tree().change_scene_to_file("res://scenes/cutscenes/round_3_end_cutscene.tscn")
+			return
 		else:
-			# The secret ending where you face DSD, assuming I get it done
-			pass
+			# TODO The secret ending where you face DSD, assuming I get it done
+			# Set up a level with DSD, 
+			get_tree().change_scene_to_file("res://scenes/cutscenes/round_3_end_cutscene.tscn")
+			return
 	set_up_story_level()
 	# TODO This check is done twice and probably shouldn't be
 	# Probably involves calling this in the character select and starting at -1 or something

@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://b8sife5dn8iia"]
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://7fe4r6llc0tt"]
 
-[ext_resource type="Script" uid="uid://b58oxslgqt4ox" path="res://scripts/resources/character.gd" id="1_w47lr"]
+[ext_resource type="Script" uid="uid://b58oxslgqt4ox" path="res://scripts/resources/character.gd" id="1_y1xg5"]
 
 [resource]
-script = ExtResource("1_w47lr")
-name = ""
+script = ExtResource("1_y1xg5")
+name = "Skremplets"
 select_description = ""
 power_up_description = ""
 pregame_description = ""
@@ -12,7 +12,7 @@ opening_statement = ""
 win_quote = ""
 lose_quote = ""
 is_player = false
-is_opponent = true
+is_opponent = false
 depowered = false
 has_sweater = false
 ai_picking_pattern = 0

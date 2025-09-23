@@ -57,8 +57,7 @@ func start_ai_place():
 
 func place_fully_random_piece(num_of_failures):
 	var failure_count = 0
-	while failure_count < 5000:
-	# TODO turn this into a while loop instead of recursion?
+	while failure_count < 500:
 		var rand_space = randi() % ($PlayGrid.grid_x * $PlayGrid.grid_y)
 		var rand_coord = Vector2i(rand_space % $PlayGrid.grid_x, floori(rand_space / $PlayGrid.grid_y))
 		var rand_rotation = randi() % 4

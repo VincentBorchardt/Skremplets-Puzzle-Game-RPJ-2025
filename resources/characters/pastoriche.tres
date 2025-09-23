@@ -18,6 +18,7 @@ lose_quote = "Oh no, I didn't wake... zzzz"
 is_player = false
 is_opponent = false
 depowered = false
+has_sweater = false
 ai_picking_pattern = 0
 ai_placement_pattern = 0
 player_1_portrait = ExtResource("3_4mq32")
