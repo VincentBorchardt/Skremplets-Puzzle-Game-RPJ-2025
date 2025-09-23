@@ -28,5 +28,7 @@ yellow_four_square.duplicate(), yellow_two_three_can.duplicate(), purple_skinny_
 purple_wide_barrel.duplicate()]
 @onready var level_pieces_array = [level_one_pieces, level_two_pieces, level_three_pieces]
 
+var confirmed_test_piece
+
 enum Type {RED, BLUE, YELLOW, GREEN, PURPLE, GARBAGE, POWERUP, WILD, NONE}
 enum PowerUpType {NONE, GRYMMT, ORCHK_TWO, ORCHK_ONE, PASTORICHE, SWEATER}

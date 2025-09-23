@@ -1,12 +1,10 @@
-[gd_resource type="Resource" script_class="LevelInfoContainer" load_steps=15 format=3 uid="uid://dn8cksxuyfne"]
+[gd_resource type="Resource" script_class="LevelInfoContainer" load_steps=13 format=3 uid="uid://dn8cksxuyfne"]
 
 [ext_resource type="Script" uid="uid://bdugcqlbg74xx" path="res://scripts/resources/level_info_container.gd" id="1_uhe6n"]
 [ext_resource type="Resource" uid="uid://cp4dautmudtjn" path="res://resources/pieces/blue/blue_four_t.tres" id="1_xcqt0"]
 [ext_resource type="Resource" uid="uid://cl266u0gnim6a" path="res://resources/pieces/blue/blue_three_three_bag.tres" id="2_38sc2"]
 [ext_resource type="Resource" uid="uid://bng1bv7hbstn3" path="res://resources/pieces/green/green_four_t.tres" id="3_ycnjh"]
 [ext_resource type="Resource" uid="uid://dqc8jtf7hxkfs" path="res://resources/pieces/green/green_three_three_bottle.tres" id="4_ofc4i"]
-[ext_resource type="Resource" uid="uid://brcm15xqiorww" path="res://resources/pieces/purple/purple_skinny_barrel.tres" id="5_76qvv"]
-[ext_resource type="Resource" uid="uid://bjmf42q3i38qp" path="res://resources/pieces/purple/purple_wide_barrel.tres" id="6_b6j7k"]
 [ext_resource type="Resource" uid="uid://cluudm4c14snw" path="res://resources/pieces/red/red_five_two_jug.tres" id="7_3e1so"]
 [ext_resource type="Resource" uid="uid://sul45feloifc" path="res://resources/pieces/red/red_four_line.tres" id="8_4wxsx"]
 [ext_resource type="Resource" uid="uid://c6hl4hayblppu" path="res://resources/pieces/yellow/yellow_four_square.tres" id="9_65mer"]
@@ -17,7 +15,7 @@
 
 [resource]
 script = ExtResource("1_uhe6n")
-piece_storage = [ExtResource("1_xcqt0"), ExtResource("2_38sc2"), ExtResource("3_ycnjh"), ExtResource("4_ofc4i"), ExtResource("5_76qvv"), ExtResource("6_b6j7k"), ExtResource("7_3e1so"), ExtResource("8_4wxsx"), ExtResource("9_65mer"), ExtResource("10_s5bhe")]
+piece_storage = [ExtResource("1_xcqt0"), ExtResource("2_38sc2"), ExtResource("3_ycnjh"), ExtResource("4_ofc4i"), ExtResource("7_3e1so"), ExtResource("8_4wxsx"), ExtResource("9_65mer"), ExtResource("10_s5bhe")]
 player_1_character = ExtResource("11_g3eiq")
 player_2_character = ExtResource("12_oieob")
 is_story = true

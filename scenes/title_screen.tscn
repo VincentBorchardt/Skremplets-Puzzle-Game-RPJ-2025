@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://d2ao1qh6laidk"]
+[gd_scene load_steps=14 format=3 uid="uid://d2ao1qh6laidk"]
 
 [ext_resource type="Script" uid="uid://bosrbphhitant" path="res://scripts/title_screen.gd" id="1_fgkus"]
 [ext_resource type="Script" uid="uid://bl2ejcuqp3n7l" path="res://scripts/new_play_level_button.gd" id="2_s4lrb"]
 [ext_resource type="Texture2D" uid="uid://csjpcti861ph" path="res://assets/titlescreen.png" id="2_u26n3"]
 [ext_resource type="Resource" uid="uid://urjk1e4a6rak" path="res://resources/level_infos/test_scene_1.tres" id="3_mgrm8"]
-[ext_resource type="PackedScene" uid="uid://bgdtshogglm73" path="res://scenes/play_scene_test.tscn" id="3_s4lrb"]
 [ext_resource type="Resource" uid="uid://bcn78eat0j8f5" path="res://resources/level_infos/test_scene_2.tres" id="5_e54dn"]
 [ext_resource type="PackedScene" uid="uid://qykbik8pybjh" path="res://scenes/generic_play_scene.tscn" id="6_3yumr"]
 [ext_resource type="PackedScene" uid="uid://035l8y7rph61" path="res://scenes/title_screen_popup.tscn" id="7_3yumr"]
@@ -78,7 +77,7 @@ theme_override_font_sizes/font_size = 24
 text = "Test Match: Grymmt vs Orchk"
 script = ExtResource("2_s4lrb")
 level_info = ExtResource("3_mgrm8")
-attached_scene = ExtResource("3_s4lrb")
+attached_scene = ExtResource("6_3yumr")
 metadata/_custom_type_script = "uid://bl2ejcuqp3n7l"
 
 [node name="Test2Button" type="Button" parent="TestButtons"]

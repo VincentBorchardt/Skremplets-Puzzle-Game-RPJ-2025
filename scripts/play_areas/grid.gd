@@ -56,6 +56,7 @@ func get_legal_piece(piece):
 			for y in range(grid_y):
 				var location = Vector2i(x, y)
 				if is_legal_place(test_piece, location, grid_owner):
+					Pieces.confirmed_test_piece = test_piece
 					return location
 	return null
 
@@ -161,7 +162,7 @@ func spread_nightmare():
 func gather_and_remove_garbage():
 	var num_garbage = 0
 	var garbage_list = []
-	for piece in piece_list:
+	for piece in piece_list.get_pieces():
 		if piece.type == Pieces.Type.GARBAGE:
 			num_garbage = num_garbage + 1
 			garbage_list.append(piece)

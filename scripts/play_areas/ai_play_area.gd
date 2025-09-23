@@ -56,27 +56,27 @@ func start_ai_place():
 				place_selective_piece(piece_list)
 
 func place_fully_random_piece(num_of_failures):
+	var failure_count = 0
+	while failure_count < 5000:
 	# TODO turn this into a while loop instead of recursion?
-	var rand_space = randi() % ($PlayGrid.grid_x * $PlayGrid.grid_y)
-	var rand_coord = Vector2i(rand_space % $PlayGrid.grid_x, floori(rand_space / $PlayGrid.grid_y))
-	var rand_rotation = randi() % 4
-	rotate_current_piece(rand_rotation * (TAU / 4))
-	if $PlayGrid.add_new_piece(current_piece, rand_coord, grid_owner):
-		print("successful adding piece")
-		return true
-	else:
-		var new_failures = num_of_failures + 1
-		#print("Failed placing piece " + str(new_failures) + " times")
-		if new_failures > 5000:
-			print("Giving up")
-			for i in range(4):
-				current_piece.rotate(TAU/4)
-				var legal_location = $PlayGrid.get_legal_piece(current_piece)
-				if legal_location:
-					$PlayGrid.add_new_piece(current_piece, legal_location, grid_owner)
-					break
+		var rand_space = randi() % ($PlayGrid.grid_x * $PlayGrid.grid_y)
+		var rand_coord = Vector2i(rand_space % $PlayGrid.grid_x, floori(rand_space / $PlayGrid.grid_y))
+		var rand_rotation = randi() % 4
+		rotate_current_piece(rand_rotation * (TAU / 4))
+		if $PlayGrid.add_new_piece(current_piece, rand_coord, grid_owner):
+			print("successful adding piece")
+			return true
 		else:
-			return place_fully_random_piece(new_failures)
+			failure_count = failure_count + 1
+			#print("Failed placing piece " + str(new_failures) + " times")
+	print("Giving up")
+	#current_piece.rotate(TAU/4)
+	var legal_location = $PlayGrid.get_legal_piece(current_piece)
+	set_current_piece(Pieces.confirmed_test_piece)
+	if legal_location:
+		$PlayGrid.add_new_piece(current_piece, legal_location, grid_owner)
+
+
 
 func place_selective_piece(piece_dict):
 	for piece in piece_dict.get_pieces():
@@ -88,24 +88,23 @@ func place_selective_piece(piece_dict):
 	return place_fully_random_piece(0)
 
 func try_to_place_connecting_piece(piece, num_of_failures) -> bool:
-	var rand_space = randi() % ($PlayGrid.grid_x * $PlayGrid.grid_y)
-	var rand_coord = Vector2i(rand_space % $PlayGrid.grid_x, floori(rand_space / $PlayGrid.grid_y))
-	var rand_rotation = randi() % 4
-	rotate_current_piece(rand_rotation * (TAU / 4))
-	var piece_attempt = current_piece.duplicate()
-	for i in range(piece_attempt.secondary_points.size()):
-		var point = piece_attempt.secondary_points[i]
-		piece_attempt.secondary_points[i] = point + rand_coord
-	if piece_attempt.points_on_grid($PlayGrid.grid_x, $PlayGrid.grid_y):
-		for point in piece_attempt.secondary_points:
-			if piece.get_adjacent_points().has(point):
-				if $PlayGrid.add_new_piece(current_piece, rand_coord, grid_owner):
-					print("successful adding connecting piece")
-					return true
-	var new_failures = num_of_failures + 1
-	#print("Failed placing piece " + str(new_failures) + " times")
-	if new_failures > 5000:
-		print("Giving up")
-		return false
-	else:
-		return try_to_place_connecting_piece(piece, new_failures)
+	var failure_count = 0
+	while failure_count < 5000:
+		var rand_space = randi() % ($PlayGrid.grid_x * $PlayGrid.grid_y)
+		var rand_coord = Vector2i(rand_space % $PlayGrid.grid_x, floori(rand_space / $PlayGrid.grid_y))
+		var rand_rotation = randi() % 4
+		rotate_current_piece(rand_rotation * (TAU / 4))
+		var piece_attempt = current_piece.duplicate()
+		for i in range(piece_attempt.secondary_points.size()):
+			var point = piece_attempt.secondary_points[i]
+			piece_attempt.secondary_points[i] = point + rand_coord
+		if piece_attempt.points_on_grid($PlayGrid.grid_x, $PlayGrid.grid_y):
+			for point in piece_attempt.secondary_points:
+				if piece.get_adjacent_points().has(point):
+					if $PlayGrid.add_new_piece(current_piece, rand_coord, grid_owner):
+						print("successful adding connecting piece")
+						return true
+		failure_count = failure_count + 1
+		#print("Failed placing piece " + str(new_failures) + " times")
+	print("Giving up")
+	return false
