@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://dadc0r7rjdhmc"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_7tu4g"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_7tu4g"]
+
+[resource]
+script = ExtResource("1_7tu4g")
+speaker = ExtResource("2_7tu4g")
+message = "What’s happening? Who are you? And what did you do with Boyhowdy?"
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

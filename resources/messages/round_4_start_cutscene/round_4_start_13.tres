@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://bnl3ple8mhoyx"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_7ouwa"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_7ouwa"]
+
+[resource]
+script = ExtResource("1_7ouwa")
+speaker = ExtResource("2_7ouwa")
+message = "This looks bad–I have a feeling I’ll need all the help I can get, so I’ll definitely use the dumpster. The ethics of fighting interdimensional beings are different from fighting helpless birds. Let’s Trash Battle!"
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

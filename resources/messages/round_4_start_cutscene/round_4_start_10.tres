@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://b2kdjinn4gvur"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_sg3qc"]
+[ext_resource type="Resource" uid="uid://bxgt238on15ay" path="res://resources/characters/dark_shippie_secret.tres" id="2_5ijyx"]
+
+[resource]
+script = ExtResource("1_sg3qc")
+speaker = ExtResource("2_5ijyx")
+message = "That bird was threatening to ruin my plans for the Skremplets, so I offered a little help to make sure he was eliminated."
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

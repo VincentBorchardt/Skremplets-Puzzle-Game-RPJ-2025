@@ -2,6 +2,9 @@ class_name HumanPlayArea extends BasePlayArea
 
 signal start_ai_place()
 
+func _ready() -> void:
+	special_grid = preload("res://assets/grid/gridspace_special.png")
+
 func _on_play_grid_clicked_on_space(location: Variant, player: Variant) -> void:
 	if current_piece:
 		$PlayGrid.add_new_piece(current_piece.duplicate(), location, player)

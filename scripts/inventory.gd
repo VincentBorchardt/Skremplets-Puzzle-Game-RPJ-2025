@@ -52,11 +52,13 @@ func set_up_story_level():
 		opponent_character = preload("res://resources/characters/boyhowdy.tres")
 		player_character.depowered = true
 		next_level_info = LevelInfoContainer.create_new_level_info(
-			player_character, opponent_character, pieces, true, [Pieces.sweater_power_up.duplicate()])
+			player_character, opponent_character, pieces, true, [Pieces.sweater_power_up.duplicate()]
+		)
 	
 
 func start_new_story_level():
 	# TODO add a parameter that checks if it's a restart, so this can be universal
+	# TODO this should be a match, either here or in set_up_story_level
 	current_level_number = current_level_number + 1
 	if current_level_number > tournament_rounds:
 		if player_character.has_sweater:
@@ -64,8 +66,14 @@ func start_new_story_level():
 			return
 		else:
 			# TODO The secret ending where you face DSD, assuming I get it done
-			# Set up a level with DSD, 
-			get_tree().change_scene_to_file("res://scenes/cutscenes/round_3_end_cutscene.tscn")
+			# Set up a level with DSD,
+			player_character.depowered = false
+			opponent_character = preload("res://resources/characters/dark_shippie_dues.tres")
+			var pieces = Pieces.level_pieces_array[current_level_number]
+			next_level_info = LevelInfoContainer.create_new_level_info(
+				player_character, opponent_character, pieces, true, []
+			)
+			get_tree().change_scene_to_file("res://scenes/cutscenes/round_4_start_cutscene.tscn")
 			return
 	set_up_story_level()
 	# TODO This check is done twice and probably shouldn't be

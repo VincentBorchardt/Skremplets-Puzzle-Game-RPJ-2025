@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://defoauyqblnvt"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_e1f73"]
+[ext_resource type="Resource" uid="uid://vjugt7a0gdj" path="res://resources/characters/dark_shippie_dues.tres" id="2_e1f73"]
+
+[resource]
+script = ExtResource("1_e1f73")
+speaker = ExtResource("2_e1f73")
+message = "You DO NOT refuse a gift from the almighty Dark Shippie Dues. As such, you are now an enemy, and thus we have one more Trash Battle to go–and if you won’t use the sweater, I will!"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

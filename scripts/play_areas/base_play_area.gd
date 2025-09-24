@@ -26,7 +26,8 @@ var current_piece: Piece:
 				$CharacterPortrait.position = new_character.player_2_position
 
 var garbage_piece = Pieces.garbage_block.duplicate()
-
+# TODO This breaks if Player 2 gets the sweater, but that should never happen
+var special_grid = preload("res://assets/grid/gridspace_special.png")
 
 @export var grid_owner: Inventory.Player
 
@@ -108,6 +109,7 @@ func _on_grid_activate_special_pieces(pieces, player) -> void:
 				elif grid_owner == Inventory.Player.PLAYER_2:
 					Inventory.opponent_character.has_sweater = true
 				# TODO Change the grid picture, assuming I get the asset for it
+				$GridBackground.texture = special_grid
 			_:
 				pass
 
