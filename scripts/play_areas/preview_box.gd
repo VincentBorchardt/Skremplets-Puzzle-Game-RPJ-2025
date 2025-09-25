@@ -1,6 +1,8 @@
 class_name PreviewBox extends Control
 
-@export var box_image: Texture2D
+@export var box_image: Texture2D:
+	set(image):
+		$BoxImage.texture = image
 
 func _ready() -> void:
 	if box_image:

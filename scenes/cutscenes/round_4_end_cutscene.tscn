@@ -1,0 +1,28 @@
+[gd_scene load_steps=13 format=3 uid="uid://dt6r3dr81panh"]
+
+[ext_resource type="Script" uid="uid://t8w2v1em8t33" path="res://scripts/cutscenes/cutscene.gd" id="1_oo68h"]
+[ext_resource type="Script" uid="uid://dnhu6g07egmm" path="res://scripts/cutscenes/message_queue.gd" id="2_b75fk"]
+[ext_resource type="PackedScene" uid="uid://hgb21nwch34j" path="res://scenes/cutscenes/cutscene_ui.tscn" id="3_q405m"]
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="3_s282o"]
+[ext_resource type="Resource" uid="uid://j5li34ic16fe" path="res://resources/messages/round_4_end_cutscene/round_4_end_1.tres" id="4_gd06h"]
+[ext_resource type="Resource" uid="uid://d2y0d6rmr5756" path="res://resources/messages/round_4_end_cutscene/round_4_end_2.tres" id="5_tc8jx"]
+[ext_resource type="Resource" uid="uid://p27sull4j4o5" path="res://resources/messages/round_4_end_cutscene/round_4_end_3.tres" id="6_3rank"]
+[ext_resource type="Resource" uid="uid://cbrwsx3vaxr44" path="res://resources/messages/round_4_end_cutscene/round_4_end_4.tres" id="7_6ta5p"]
+[ext_resource type="Resource" uid="uid://3t6y6aunjo7k" path="res://resources/messages/round_4_end_cutscene/round_4_end_5.tres" id="8_hvpsq"]
+[ext_resource type="Resource" uid="uid://blnp22xc4bstn" path="res://resources/messages/round_4_end_cutscene/round_4_end_6.tres" id="9_sdbi7"]
+[ext_resource type="Resource" uid="uid://cwd4rtoevc7s1" path="res://resources/messages/round_4_end_cutscene/round_4_end_7.tres" id="10_oflns"]
+[ext_resource type="Texture2D" uid="uid://b31qwec8f4pfd" path="res://assets/cutscenes/warehouse.png" id="12_fe2j4"]
+
+[node name="IntroCutsceneStart" type="Node2D"]
+script = ExtResource("1_oo68h")
+metadata/_custom_type_script = "uid://t8w2v1em8t33"
+
+[node name="MessageQueue" type="Node" parent="."]
+script = ExtResource("2_b75fk")
+messages = Array[ExtResource("3_s282o")]([ExtResource("4_gd06h"), ExtResource("5_tc8jx"), ExtResource("6_3rank"), ExtResource("7_6ta5p"), ExtResource("8_hvpsq"), ExtResource("9_sdbi7"), ExtResource("10_oflns")])
+metadata/_custom_type_script = "uid://dnhu6g07egmm"
+
+[node name="CutsceneUI" parent="." instance=ExtResource("3_q405m")]
+background_image = ExtResource("12_fe2j4")
+
+[connection signal="get_new_message" from="CutsceneUI" to="." method="_on_cutscene_ui_get_new_message"]

@@ -21,12 +21,14 @@ position = Vector2(700, 394)
 texture = ExtResource("1_jsn0a")
 
 [node name="WinnerLabel" type="Label" parent="."]
-offset_left = 385.0
+offset_left = 52.0
 offset_top = 50.0
-offset_right = 991.0
+offset_right = 1353.0
 offset_bottom = 149.0
 text = "The Winner Wins!"
 label_settings = SubResource("LabelSettings_lgvvg")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Player1Portrait" type="Sprite2D" parent="."]
 position = Vector2(280, 395)

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://d2y0d6rmr5756"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_5631x"]
+[ext_resource type="Resource" uid="uid://7fe4r6llc0tt" path="res://resources/characters/skremplets.tres" id="2_bb2dv"]
+
+[resource]
+script = ExtResource("1_5631x")
+speaker = ExtResource("2_bb2dv")
+message = "Hooray, the jester is gone!"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

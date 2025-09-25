@@ -22,17 +22,19 @@ func set_up_winner_popup(level_info, loser):
 
 
 func _on_continue_button_pressed() -> void:
-	Inventory.start_new_story_level()
+	if Inventory.current_level_number > Inventory.tournament_rounds:
+		get_tree().change_scene_to_file("res://scenes/cutscenes/round_4_end_cutscene.tscn")
+	else:
+		Inventory.start_new_story_level()
 
 func _on_retry_button_pressed() -> void:
 	# TODO does reloading the scene work, or do things break horribly?
 	Inventory.player_character.has_sweater = false
-	Inventory.opponent_character.has_sweater = false
+	#Inventory.opponent_character.has_sweater = false
 	if Inventory.current_level_number == Inventory.tournament_rounds:
 		get_tree().change_scene_to_file("res://scenes/cutscenes/round_3_start_cutscene.tscn")
 	elif Inventory.current_level_number > Inventory.tournament_rounds:
-		# restart DSD battle
-		pass
+		get_tree().change_scene_to_file("res://scenes/cutscenes/round_4_start_cutscene.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/cutscenes/generic_pregame.tscn")
 

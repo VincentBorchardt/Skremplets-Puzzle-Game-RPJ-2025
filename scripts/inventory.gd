@@ -24,6 +24,9 @@ Let’s meet our next competitors!"]
 var current_level_intro
 var tournament_rounds = 2
 
+var boyhowdy_unlocked = false
+var dsd_unlocked = false
+
 # TODO move Type and PowerUpType to PiecesContainer; they make sense there
 enum Player {PLAYER_1, PLAYER_2, UNOWNED}
 enum AIPickingPattern {RANDOM, MOST, BIGGEST}

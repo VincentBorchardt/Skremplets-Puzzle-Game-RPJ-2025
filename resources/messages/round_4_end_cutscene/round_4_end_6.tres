@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://blnp22xc4bstn"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_uf3b5"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_keory"]
+
+[resource]
+script = ExtResource("1_uf3b5")
+speaker = ExtResource("2_keory")
+message = "Who are you talking to? And aren’t you a Skremplet too? Why didn’t you recognize me earlier?"
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

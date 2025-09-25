@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://3t6y6aunjo7k"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_4hehu"]
+[ext_resource type="Resource" uid="uid://bg0pasjplfp8i" path="res://resources/characters/reporter.tres" id="2_s4dxj"]
+
+[resource]
+script = ExtResource("1_4hehu")
+speaker = ExtResource("2_s4dxj")
+message = "Dark Shippie Dues is now unlocked for Freeplay!"
+image_location = 1
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"

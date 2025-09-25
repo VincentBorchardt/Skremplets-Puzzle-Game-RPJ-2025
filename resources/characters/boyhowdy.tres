@@ -10,7 +10,7 @@
 script = ExtResource("1_a32a8")
 name = "Boyhowdy"
 select_description = "The host of the tournament also made the evil dumpsters that amplified the Skremplet's inherent Goblic Endowments."
-power_up_description = "Boyhowdy sends an extra load of garbage whenever his powerup activates"
+power_up_description = "Boyhowdy sends an extra load of garbage whenever his powerup activates."
 pregame_description = "the tournament host with the most"
 opening_statement = "You think you can beat the master of Trash Battles?"
 win_quote = "This will teach you to try and stop the mighty Boyhowdy!"

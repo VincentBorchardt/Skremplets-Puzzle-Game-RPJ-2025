@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Message" load_steps=3 format=3 uid="uid://p27sull4j4o5"]
+
+[ext_resource type="Script" uid="uid://bq7h7sx2xfral" path="res://scripts/cutscenes/message.gd" id="1_fn3vj"]
+[ext_resource type="Resource" uid="uid://64g7h3fibbr1" path="res://resources/characters/player.tres" id="2_b3icu"]
+
+[resource]
+script = ExtResource("1_fn3vj")
+speaker = ExtResource("2_b3icu")
+message = "Now we can hopefully Trash Battle in peace. However, I feel like Boyhowdy didn’t deserve whatever happened to him…"
+image_location = 0
+choices = false
+metadata/_custom_type_script = "uid://bq7h7sx2xfral"
