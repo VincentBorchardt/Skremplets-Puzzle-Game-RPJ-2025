@@ -107,3 +107,6 @@ func try_to_place_connecting_piece(piece, num_of_failures) -> bool:
 		#print("Failed placing piece " + str(new_failures) + " times")
 	print("Giving up")
 	return false
+
+func start_thinking(think_bool):
+	$ThinkingLabel.visible = think_bool

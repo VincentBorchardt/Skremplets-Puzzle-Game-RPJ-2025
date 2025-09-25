@@ -8,6 +8,7 @@ func _ready() -> void:
 		$Player1Grid.character = current_level_info.player_1_character
 		$Player2Grid.character = current_level_info.player_2_character
 		$NeutralGrid.piece_storage = current_level_info.piece_storage
+		$WinnerPopup.is_story = current_level_info.is_story
 		$NeutralGrid.populate_neutral_grid(current_level_info.starting_pieces)
 
 # TODO These should probably act like the grid spaces in grid to make them less hard-coded
@@ -34,11 +35,15 @@ func _on_neutral_grid_clicked_on_space(location: Variant, player: Variant) -> vo
 
 func _on_neutral_grid_start_ai_pick(piece_list, player) -> void:
 	#print("in _on_neutral_grid_start_ai_pick")
+	$Player2Grid.start_thinking(true)
 	var preferred_piece = $Player2Grid.get_preferred_piece(piece_list)
 	$NeutralGrid.grab_neutral_piece(preferred_piece.root_point_location, player)
+	$Player2Grid.start_thinking(false)
 
 func _on_player_1_grid_start_ai_place() -> void:
+	$Player2Grid.start_thinking(true)
 	$Player2Grid.start_ai_place()
+	$Player2Grid.start_thinking(false)
 
 
 func _on_grid_loss_condition(losing_player: Variant, losing_character: Variant) -> void:

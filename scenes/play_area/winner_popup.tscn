@@ -36,7 +36,7 @@ texture = ExtResource("2_qynvr")
 
 [node name="Player1Label" type="Label" parent="."]
 offset_left = 75.0
-offset_top = 630.0
+offset_top = 660.0
 offset_right = 575.0
 offset_bottom = 730.0
 theme_override_font_sizes/font_size = 24
@@ -49,7 +49,7 @@ texture = ExtResource("3_5ttei")
 
 [node name="Player2Label" type="Label" parent="."]
 offset_left = 850.0
-offset_top = 630.0
+offset_top = 660.0
 offset_right = 1350.0
 offset_bottom = 730.0
 theme_override_font_sizes/font_size = 24
@@ -71,6 +71,25 @@ offset_bottom = 50.0
 scale = Vector2(1.25, 1)
 theme_override_font_sizes/font_size = 24
 text = "Continue Story"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackToFreeplayButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 600.0
+offset_top = 370.0
+offset_right = 850.0
+offset_bottom = 420.0
+scale = Vector2(0.8, 1)
+texture_normal = ExtResource("4_5ttei")
+
+[node name="Label" type="Label" parent="BackToFreeplayButton"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 50.0
+scale = Vector2(1.25, 1)
+theme_override_font_sizes/font_size = 24
+text = "Back To FreePlay"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -111,5 +130,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="BackToFreeplayButton" to="." method="_on_back_to_freeplay_button_pressed"]
 [connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="TitleScreenButton" to="." method="_on_title_screen_button_pressed"]

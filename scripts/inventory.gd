@@ -65,6 +65,7 @@ func start_new_story_level():
 	current_level_number = current_level_number + 1
 	if current_level_number > tournament_rounds:
 		if player_character.has_sweater:
+			boyhowdy_unlocked = true
 			get_tree().change_scene_to_file("res://scenes/cutscenes/round_3_end_cutscene.tscn")
 			return
 		else:

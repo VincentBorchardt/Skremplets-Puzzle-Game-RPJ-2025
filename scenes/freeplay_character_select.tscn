@@ -50,6 +50,7 @@ text = "Player 1's Skremplet!"
 vertical_alignment = 1
 
 [node name="DescriptionLabel" type="Label" parent="Player1TextBackground/CharacterSelectLabels"]
+visible = false
 offset_left = 48.0
 offset_top = 467.0
 offset_right = 679.0
@@ -60,6 +61,7 @@ text = "This is a description of the character full of flavor and stuff"
 autowrap_mode = 2
 
 [node name="PowerUpLabel" type="Label" parent="Player1TextBackground/CharacterSelectLabels"]
+visible = false
 offset_left = 45.0
 offset_top = 643.0
 offset_right = 637.0
@@ -111,6 +113,7 @@ character = ExtResource("14_oh1fp")
 metadata/_custom_type_script = "uid://duvow72xymqqj"
 
 [node name="BoyhowdyButton" type="TextureButton" parent="Player1CharacterButtons"]
+visible = false
 offset_left = 25.0
 offset_top = 200.0
 offset_right = 175.0
@@ -124,6 +127,7 @@ character = ExtResource("17_uotxy")
 metadata/_custom_type_script = "uid://duvow72xymqqj"
 
 [node name="DSDButton" type="TextureButton" parent="Player1CharacterButtons"]
+visible = false
 offset_left = 200.0
 offset_top = 200.0
 offset_right = 350.0
@@ -155,6 +159,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="DescriptionLabel" type="Label" parent="Player2TextBackground/CharacterSelectLabels"]
+visible = false
 offset_left = 911.0
 offset_top = 467.0
 offset_right = 1542.0
@@ -166,6 +171,7 @@ autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="PowerUpLabel" type="Label" parent="Player2TextBackground/CharacterSelectLabels"]
+visible = false
 offset_left = 908.0
 offset_top = 643.0
 offset_right = 1500.0
@@ -221,6 +227,7 @@ metadata/_custom_type_script = "uid://duvow72xymqqj"
 metadata/_edit_use_anchors_ = true
 
 [node name="BoyhowdyButton" type="TextureButton" parent="Player2CharacterButtons"]
+visible = false
 offset_left = 889.0
 offset_top = 200.0
 offset_right = 1039.0
@@ -235,6 +242,7 @@ metadata/_custom_type_script = "uid://duvow72xymqqj"
 metadata/_edit_use_anchors_ = true
 
 [node name="DSDButton" type="TextureButton" parent="Player2CharacterButtons"]
+visible = false
 offset_left = 1064.0
 offset_top = 200.0
 offset_right = 1214.0

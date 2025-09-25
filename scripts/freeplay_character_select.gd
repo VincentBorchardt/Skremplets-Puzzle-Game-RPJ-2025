@@ -19,6 +19,14 @@ var player_2_character:
 		if player_1_character and player_2_character:
 			$StartMatchButton.visible = true
 
+func _ready() -> void:
+	if Inventory.boyhowdy_unlocked:
+		$Player1CharacterButtons/BoyhowdyButton.visible = true
+		$Player2CharacterButtons/BoyhowdyButton.visible = true
+	if Inventory.dsd_unlocked:
+		$Player1CharacterButtons/DSDButton.visible = true
+		$Player2CharacterButtons/DSDButton.visible = true
+
 func _on_start_match_button_pressed_with_scene(scene: Variant) -> void:
 	# TODO let you pick your starting piece lineup--even a custom lineup possibly
 	Inventory.next_level_info = LevelInfoContainer.create_new_level_info(

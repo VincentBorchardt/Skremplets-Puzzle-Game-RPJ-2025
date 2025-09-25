@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://d2ao1qh6laidk"]
+[gd_scene load_steps=15 format=3 uid="uid://d2ao1qh6laidk"]
 
 [ext_resource type="Script" uid="uid://bosrbphhitant" path="res://scripts/title_screen.gd" id="1_fgkus"]
 [ext_resource type="Script" uid="uid://bl2ejcuqp3n7l" path="res://scripts/new_play_level_button.gd" id="2_s4lrb"]
 [ext_resource type="Texture2D" uid="uid://csjpcti861ph" path="res://assets/titlescreen.png" id="2_u26n3"]
 [ext_resource type="Resource" uid="uid://urjk1e4a6rak" path="res://resources/level_infos/test_scene_1.tres" id="3_mgrm8"]
 [ext_resource type="Resource" uid="uid://bcn78eat0j8f5" path="res://resources/level_infos/test_scene_2.tres" id="5_e54dn"]
+[ext_resource type="PackedScene" uid="uid://lk13uf5obxbs" path="res://scenes/freeplay_character_select.tscn" id="5_frs5l"]
 [ext_resource type="PackedScene" uid="uid://qykbik8pybjh" path="res://scenes/generic_play_scene.tscn" id="6_3yumr"]
 [ext_resource type="PackedScene" uid="uid://035l8y7rph61" path="res://scenes/title_screen_popup.tscn" id="7_3yumr"]
 [ext_resource type="Resource" uid="uid://c8hcw4hhr06d1" path="res://resources/level_infos/test_scene_3.tres" id="7_cs5ya"]
@@ -40,6 +41,17 @@ theme_override_font_sizes/font_size = 36
 text = "Story Mode"
 script = ExtResource("8_mykxm")
 attached_scene = ExtResource("12_ib7db")
+metadata/_custom_type_script = "uid://cvukyo7xt2voj"
+
+[node name="FreePlayButton" type="Button" parent="."]
+offset_left = 91.0
+offset_top = 297.0
+offset_right = 356.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 36
+text = "FreePlay Mode"
+script = ExtResource("8_mykxm")
+attached_scene = ExtResource("5_frs5l")
 metadata/_custom_type_script = "uid://cvukyo7xt2voj"
 
 [node name="TitleScreenBottomBox" type="HBoxContainer" parent="."]
@@ -117,6 +129,7 @@ attached_scene = ExtResource("6_3yumr")
 metadata/_custom_type_script = "uid://bl2ejcuqp3n7l"
 
 [connection signal="pressed_with_scene" from="StoryModeButton" to="." method="_on_scene_button_pressed_with_scene"]
+[connection signal="pressed_with_scene" from="FreePlayButton" to="." method="_on_scene_button_pressed_with_scene"]
 [connection signal="pressed" from="TitleScreenBottomBox/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="TitleScreenBottomBox/LicensesButton" to="." method="_on_licenses_button_pressed"]
 [connection signal="pressed" from="TitleScreenBottomBox/InstructionsButton" to="." method="_on_instructions_button_pressed"]
